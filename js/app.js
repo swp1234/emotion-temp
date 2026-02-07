@@ -145,8 +145,8 @@
         document.getElementById('result-warnings').innerHTML = resultData.warnings.map(w => `<li>${w}</li>`).join('');
         document.getElementById('result-compat-text').textContent = resultData.compat;
 
-        // Set card gradient
-        document.getElementById('result-card').style.borderImage = `linear-gradient(135deg, ${resultData.color}, ${resultData.colorEnd}) 1`;
+        // Set card border color (borderImage breaks border-radius)
+        document.getElementById('result-card').style.borderColor = resultData.color;
 
         // GA tracking
         gtag('event', 'test_complete', { test_type: 'emotion_temperature', result: `${tempValue}C_${resultData.title}` });
@@ -336,6 +336,8 @@
     document.getElementById('btn-save-image').addEventListener('click', generateShareImage);
     document.getElementById('btn-premium').addEventListener('click', showPremium);
     document.getElementById('btn-retry').addEventListener('click', () => {
+        // Reset premium content visibility
+        document.getElementById('premium-result').classList.add('hidden');
         show(introScreen);
         updateTestCount();
     });
