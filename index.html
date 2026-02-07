@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>감정 온도계 테스트 - 나의 감정 온도는 몇 도? 🌡️</title>
+    <meta name="description" content="10가지 질문으로 알아보는 나의 감정 온도! 16가지 감정 유형 중 당신은? 2026 메타센싱 트렌드 기반 심리테스트.">
+    <meta name="keywords" content="감정테스트, 심리테스트, 감정온도, 성격테스트, HSP, 메타센싱, 감정분석, 무료심리테스트">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="감정 온도계 테스트 🌡️ - 나의 감정 온도는?">
+    <meta property="og:description" content="10가지 질문으로 알아보는 나의 감정 온도! 너는 몇 도야? 테스트 해봐!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://swp1234.github.io/emotion-temp/">
+    <meta property="og:image" content="https://swp1234.github.io/emotion-temp/icon-512.svg">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="감정 온도계 테스트 🌡️">
+    <meta name="twitter:description" content="나의 감정 온도는 몇 도? 테스트 해봐!">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0a0a1e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" type="image/svg+xml" href="icon-192.svg">
+    <link rel="apple-touch-icon" href="icon-192.svg">
+
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8GSWM40TV"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-J8GSWM40TV');</script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- === INTRO === -->
+        <div class="screen intro-screen active" id="intro-screen">
+            <div class="ad-banner ad-top"><span class="ad-placeholder">광고 영역</span></div>
+            <div class="intro-content">
+                <div class="thermo-icon">🌡️</div>
+                <h1>감정 온도계</h1>
+                <p class="intro-sub">나의 감정 온도는 몇 도일까?</p>
+                <p class="intro-desc">10가지 질문에 답하고<br>나만의 감정 온도를 확인하세요</p>
+                <div class="intro-meta">
+                    <span>📝 10문항</span>
+                    <span>⏱️ 약 2분</span>
+                    <span>🎯 16가지 유형</span>
+                </div>
+                <button class="btn-start" id="btn-start">테스트 시작하기</button>
+                <p class="intro-count" id="intro-count"></p>
+            </div>
+        </div>
+
+        <!-- === QUESTION === -->
+        <div class="screen question-screen hidden" id="question-screen">
+            <div class="progress-area">
+                <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+                <span class="progress-text" id="progress-text">1 / 10</span>
+            </div>
+            <div class="question-card" id="question-card">
+                <p class="q-text" id="q-text"></p>
+                <div class="q-options" id="q-options"></div>
+            </div>
+        </div>
+
+        <!-- === LOADING === -->
+        <div class="screen loading-screen hidden" id="loading-screen">
+            <div class="loading-content">
+                <div class="loading-thermo">🌡️</div>
+                <p class="loading-text">감정 온도 분석 중...</p>
+                <div class="loading-bar"><div class="loading-fill" id="loading-fill"></div></div>
+            </div>
+        </div>
+
+        <!-- === RESULT === -->
+        <div class="screen result-screen hidden" id="result-screen">
+            <div class="result-card" id="result-card">
+                <div class="result-temp-area">
+                    <div class="result-thermometer" id="result-thermometer">
+                        <div class="thermo-fill" id="thermo-fill"></div>
+                        <div class="thermo-bulb" id="thermo-bulb"></div>
+                    </div>
+                    <div class="result-temp-value" id="result-temp">28°C</div>
+                </div>
+                <h2 class="result-title" id="result-title"></h2>
+                <p class="result-desc" id="result-desc"></p>
+
+                <div class="result-details">
+                    <div class="detail-section">
+                        <h3>🌸 핵심 특징</h3>
+                        <ul id="result-traits"></ul>
+                    </div>
+                    <div class="detail-section">
+                        <h3>💡 추천 활동</h3>
+                        <ul id="result-activities"></ul>
+                    </div>
+                    <div class="detail-section">
+                        <h3>⚠️ 주의사항</h3>
+                        <ul id="result-warnings"></ul>
+                    </div>
+                </div>
+
+                <div class="result-compat">
+                    <h3>💕 잘 맞는 감정 온도</h3>
+                    <p id="result-compat-text"></p>
+                </div>
+            </div>
+
+            <button class="btn-premium" id="btn-premium">
+                <span class="premium-icon">✨</span>
+                <span>AI 심층 감정 분석 보기</span>
+                <span class="premium-badge">PREMIUM</span>
+            </button>
+
+            <!-- Premium Result -->
+            <div class="premium-result hidden" id="premium-result">
+                <div class="premium-card">
+                    <h3>🧠 AI 심층 감정 분석</h3>
+                    <div id="premium-content"></div>
+                </div>
+            </div>
+
+            <div class="result-actions">
+                <button class="btn-share" id="btn-share">📤 결과 공유하기</button>
+                <button class="btn-save-image" id="btn-save-image">📷 이미지 저장</button>
+                <button class="btn-retry" id="btn-retry">🔄 다시 하기</button>
+            </div>
+
+            <div class="ad-banner ad-bottom"><span class="ad-placeholder">광고 영역</span></div>
+        </div>
+
+        <!-- === AD OVERLAY === -->
+        <div class="overlay ad-overlay hidden" id="ad-overlay">
+            <div class="ad-modal">
+                <p class="ad-label">광고</p>
+                <div class="ad-placeholder-lg">광고 영역 (전면)</div>
+                <div class="ad-timer"><span id="ad-countdown">5</span>초 후 닫기</div>
+                <button class="btn-close-ad hidden" id="btn-close-ad">✕ 닫기</button>
+            </div>
+        </div>
+
+        <!-- Hidden canvas for share image -->
+        <canvas id="share-canvas" width="1080" height="1080" style="display:none;"></canvas>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
