@@ -1,0 +1,46 @@
+{
+  "app": {
+    "title": "Duygusal Sıcaklık Testi - Duygusal Sıcaklığın Nedir? 🌡️",
+    "description": "10 soruda duygusal sıcaklığını keşfet! 8 duygu tipinden hangisisin?"
+  },
+  "intro": {
+    "title": "Duygu Termometresi",
+    "sub": "Duygusal sıcaklığın nedir?",
+    "desc": "10 soruya cevap ver ve\nduygusal sıcaklığını keşfet",
+    "questions": "📝 10 Soru",
+    "time": "⏱️ ~2 dk",
+    "types": "🎯 8 Tip",
+    "start": "Testi Başlat"
+  },
+  "progress": {
+    "of": "/"
+  },
+  "loading": {
+    "text": "Duygusal sıcaklık analiz ediliyor..."
+  },
+  "result": {
+    "traits": "🌸 Temel Özellikler",
+    "activities": "💡 Önerilen Aktiviteler",
+    "warnings": "⚠️ Dikkat Et",
+    "compat": "💕 Uyumlu Sıcaklıklar"
+  },
+  "premium": {
+    "button": "YZ Derinlemesine Duygu Analizini Gör",
+    "badge": "PREMIUM",
+    "title": "🧠 YZ Derinlemesine Duygu Analizi"
+  },
+  "actions": {
+    "share": "📤 Sonucu Paylaş",
+    "saveImage": "📷 Resmi Kaydet",
+    "retry": "🔄 Tekrar Dene"
+  },
+  "ads": {
+    "banner": "Reklam",
+    "interstitial": "Reklam",
+    "close": "kapatılmaya saniye",
+    "closeBtn": "✕ Kapat"
+  },
+  "rec": {
+    "title": "Bunları da dene"
+  }
+}

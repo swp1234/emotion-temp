@@ -177,55 +177,83 @@
         const ctx = canvas.getContext('2d');
         const w = 1080, h = 1080;
 
-        // Background gradient
+        canvas.width = w;
+        canvas.height = h;
+
+        // Background gradient (dynamic based on temperature)
         const gradient = ctx.createLinearGradient(0, 0, w, h);
         gradient.addColorStop(0, resultData.color);
-        gradient.addColorStop(1, resultData.colorEnd);
+        gradient.addColorStop(1, resultData.colorEnd || '#0a0a1e');
         ctx.fillStyle = gradient;
         ctx.fillRect(0, 0, w, h);
 
-        // Subtle pattern
+        // Subtle pattern - circles
         ctx.fillStyle = 'rgba(255,255,255,0.03)';
         for (let i = 0; i < 50; i++) {
             ctx.beginPath();
-            ctx.arc(Math.random() * w, Math.random() * h, Math.random() * 40 + 10, 0, Math.PI * 2);
+            ctx.arc(Math.random() * w, Math.random() * h, Math.random() * 50 + 15, 0, Math.PI * 2);
             ctx.fill();
         }
 
-        // Top label
-        ctx.fillStyle = 'rgba(255,255,255,0.6)';
-        ctx.font = '32px sans-serif';
-        ctx.textAlign = 'center';
-        ctx.fillText('나의 감정 온도는', w / 2, 180);
+        // Thermometer visual (simple bars on sides)
+        ctx.fillStyle = 'rgba(255,255,255,0.1)';
+        const thermo_width = 30;
+        const thermo_height = 300;
+        const fill_percent = ((tempValue + 10) / 50) * 100;
+        ctx.fillRect(w * 0.08, 300, thermo_width, thermo_height);
+        ctx.fillStyle = resultData.color;
+        ctx.fillRect(w * 0.08, 300 + (thermo_height * (100 - fill_percent) / 100), thermo_width, (thermo_height * fill_percent / 100));
 
-        // Temperature
+        ctx.fillStyle = 'rgba(255,255,255,0.1)';
+        ctx.fillRect(w * 0.92 - thermo_width, 300, thermo_width, thermo_height);
+        ctx.fillStyle = resultData.color;
+        ctx.fillRect(w * 0.92 - thermo_width, 300 + (thermo_height * (100 - fill_percent) / 100), thermo_width, (thermo_height * fill_percent / 100));
+
+        // Top label
+        ctx.fillStyle = 'rgba(255,255,255,0.7)';
+        ctx.font = '36px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('나의 감정 온도는', w / 2, 150);
+
+        // Temperature (large, bold)
         ctx.fillStyle = '#ffffff';
         ctx.font = 'bold 160px sans-serif';
-        ctx.fillText(`${tempValue}°C`, w / 2, 400);
+        ctx.fillText(`${tempValue}°C`, w / 2, 380);
 
         // Emoji
-        ctx.font = '100px serif';
-        ctx.fillText(resultData.emoji, w / 2, 530);
+        ctx.font = '120px serif';
+        ctx.fillText(resultData.emoji, w / 2, 540);
 
         // Title
         ctx.fillStyle = '#ffffff';
-        ctx.font = 'bold 48px sans-serif';
-        ctx.fillText(`"${resultData.title}"`, w / 2, 660);
+        ctx.font = 'bold 52px sans-serif';
+        ctx.fillText(`"${resultData.title}"`, w / 2, 650);
 
         // Subtitle
-        ctx.fillStyle = 'rgba(255,255,255,0.7)';
+        ctx.fillStyle = 'rgba(255,255,255,0.8)';
         ctx.font = '32px sans-serif';
         ctx.fillText(resultData.subtitle, w / 2, 720);
 
+        // Divider
+        ctx.strokeStyle = 'rgba(255,255,255,0.2)';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(w * 0.15, 770);
+        ctx.lineTo(w * 0.85, 770);
+        ctx.stroke();
+
         // CTA
-        ctx.fillStyle = 'rgba(255,255,255,0.5)';
+        ctx.fillStyle = 'rgba(255,255,255,0.6)';
         ctx.font = '28px sans-serif';
-        ctx.fillText('너는 몇 도? 👉 감정 온도계 테스트', w / 2, 920);
+        ctx.fillText('너는 몇 도? 👇', w / 2, 850);
+        ctx.fillStyle = 'rgba(255,255,255,0.5)';
+        ctx.font = '24px sans-serif';
+        ctx.fillText('감정 온도계 테스트', w / 2, 900);
 
         // Branding
-        ctx.fillStyle = 'rgba(255,255,255,0.3)';
+        ctx.fillStyle = 'rgba(255,255,255,0.35)';
         ctx.font = '22px sans-serif';
-        ctx.fillText('🔥 DopaBrain', w / 2, 1010);
+        ctx.fillText('🔥 DopaBrain', w / 2, 1020);
 
         // Download
         const link = document.createElement('a');

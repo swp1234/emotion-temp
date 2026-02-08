@@ -1,0 +1,46 @@
+{
+  "app": {
+    "title": "Emotions-Temperatur-Test - Wie ist deine emotionale Temperatur? 🌡️",
+    "description": "Entdecke deine emotionale Temperatur durch 10 Fragen! Welcher der 8 Emotionstypen bist du?"
+  },
+  "intro": {
+    "title": "Emotions-Thermometer",
+    "sub": "Wie ist deine emotionale Temperatur?",
+    "desc": "Beantworte 10 Fragen und\nentdecke deine emotionale Temperatur",
+    "questions": "📝 10 Fragen",
+    "time": "⏱️ ~2 Min",
+    "types": "🎯 8 Typen",
+    "start": "Test starten"
+  },
+  "progress": {
+    "of": "/"
+  },
+  "loading": {
+    "text": "Analysiere emotionale Temperatur..."
+  },
+  "result": {
+    "traits": "🌸 Wichtige Merkmale",
+    "activities": "💡 Empfehlenswerte Aktivitäten",
+    "warnings": "⚠️ Achte auf",
+    "compat": "💕 Kompatible Temperaturen"
+  },
+  "premium": {
+    "button": "Tiefe KI-Emotionsanalyse anzeigen",
+    "badge": "PREMIUM",
+    "title": "🧠 Tiefe KI-Emotionsanalyse"
+  },
+  "actions": {
+    "share": "📤 Ergebnis teilen",
+    "saveImage": "📷 Bild speichern",
+    "retry": "🔄 Nochmal versuchen"
+  },
+  "ads": {
+    "banner": "Werbung",
+    "interstitial": "Anzeige",
+    "close": "Sekunden zum Schließen",
+    "closeBtn": "✕ Schließen"
+  },
+  "rec": {
+    "title": "Probiere auch diese"
+  }
+}

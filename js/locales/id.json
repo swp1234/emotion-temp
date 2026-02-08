@@ -1,0 +1,46 @@
+{
+  "app": {
+    "title": "Tes Suhu Emosi - Berapa Suhu Emosi Anda? 🌡️",
+    "description": "Temukan suhu emosi Anda melalui 10 pertanyaan! Anda termasuk tipe emosi yang mana dari 8 jenis?"
+  },
+  "intro": {
+    "title": "Termometer Emosi",
+    "sub": "Berapa suhu emosi Anda?",
+    "desc": "Jawab 10 pertanyaan dan\ntemukan suhu emosi Anda",
+    "questions": "📝 10 Pertanyaan",
+    "time": "⏱️ ~2 menit",
+    "types": "🎯 8 Jenis",
+    "start": "Mulai Tes"
+  },
+  "progress": {
+    "of": "/"
+  },
+  "loading": {
+    "text": "Menganalisis suhu emosi..."
+  },
+  "result": {
+    "traits": "🌸 Ciri Utama",
+    "activities": "💡 Aktivitas yang Direkomendasikan",
+    "warnings": "⚠️ Perhatikan",
+    "compat": "💕 Suhu Emosi yang Kompatibel"
+  },
+  "premium": {
+    "button": "Lihat Analisis Emosi Mendalam AI",
+    "badge": "PREMIUM",
+    "title": "🧠 Analisis Emosi Mendalam AI"
+  },
+  "actions": {
+    "share": "📤 Bagikan Hasil",
+    "saveImage": "📷 Simpan Gambar",
+    "retry": "🔄 Coba Lagi"
+  },
+  "ads": {
+    "banner": "Iklan",
+    "interstitial": "Iklan",
+    "close": "detik untuk menutup",
+    "closeBtn": "✕ Tutup"
+  },
+  "rec": {
+    "title": "Coba juga"
+  }
+}
