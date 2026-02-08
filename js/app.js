@@ -157,7 +157,7 @@
 
     // Share
     function shareResult() {
-        const url = 'https://swp1234.github.io/emotion-temp/';
+        const url = 'https://dopabrain.com/emotion-temp/';
         const text = `🌡️ 나의 감정 온도는 ${tempValue}°C!\n\n"${resultData.title}" ${resultData.emoji}\n${resultData.subtitle}\n\n너의 감정 온도는 몇 도? 👇\n${url}\n\n#감정온도계 #심리테스트 #감정테스트`;
 
         gtag('event', 'share', { method: 'native', test_type: 'emotion_temperature' });
@@ -225,7 +225,7 @@
         // Branding
         ctx.fillStyle = 'rgba(255,255,255,0.3)';
         ctx.font = '22px sans-serif';
-        ctx.fillText('🔥 FireTools', w / 2, 1010);
+        ctx.fillText('🔥 DopaBrain', w / 2, 1010);
 
         // Download
         const link = document.createElement('a');
