@@ -141,7 +141,14 @@
         scores = [];
         show(questionScreen);
         showQuestion();
-        gtag('event', 'test_start', { test_type: 'emotion_temperature' });
+        // GA4: 테스트 시작
+        if (typeof gtag === 'function') {
+            gtag('event', 'test_start', {
+                app_name: 'emotion-temp',
+                test_type: 'emotion_temperature',
+                content_type: 'test'
+            });
+        }
     }
 
     // Show question
