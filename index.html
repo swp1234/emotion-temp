@@ -12,15 +12,22 @@
     <meta name="keywords" content="감정테스트, 심리테스트, 감정온도, 성격테스트, HSP, 메타센싱, 감정분석, 무료심리테스트">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="감정 온도계 테스트 🌡️ - 나의 감정 온도는?">
-    <meta property="og:description" content="10가지 질문으로 알아보는 나의 감정 온도! 너는 몇 도야? 테스트 해봐!">
+    <meta property="og:title" content="감정 온도계 테스트 🌡️ - 나의 감정 온도는 몇 도?">
+    <meta property="og:description" content="10가지 질문으로 알아보는 나의 감정 온도! 🌡️ 8가지 감정 유형 중 당신은? 지금 테스트 해봐!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dopabrain.com/emotion-temp/">
     <meta property="og:image" content="https://dopabrain.com/emotion-temp/icon-512.svg">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:type" content="image/svg+xml">
     <meta property="og:locale" content="ko_KR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="ja_JP">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="감정 온도계 테스트 🌡️">
-    <meta name="twitter:description" content="나의 감정 온도는 몇 도? 테스트 해봐!">
+    <meta name="twitter:title" content="감정 온도계 테스트 🌡️ - 나의 감정은?">
+    <meta name="twitter:description" content="10가지 질문으로 알아보는 나의 감정 온도! 🌡️">
+    <meta name="twitter:image" content="https://dopabrain.com/emotion-temp/icon-512.svg">
+    <meta name="twitter:site" content="@dopabrain">
 
     <!-- Schema.org -->
     <script type="application/ld+json">
@@ -61,6 +68,14 @@
     <link rel="preload" href="js/app.js" as="script">
 </head>
 <body>
+    <div class="app-loader" id="app-loader">
+        <div class="loader-content">
+            <div class="loader-emoji">🌡️</div>
+            <div class="loader-spinner"></div>
+            <div class="loader-text" data-i18n="app.loading">로딩 중...</div>
+        </div>
+    </div>
+
     <div class="app-container">
         <div class="language-selector">
             <button id="lang-toggle" class="lang-btn" aria-label="Language">🌐</button>
