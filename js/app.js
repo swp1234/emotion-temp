@@ -15,27 +15,52 @@
     const resultScreen = document.getElementById('result-screen');
     const adOverlay = document.getElementById('ad-overlay');
 
-    // Update test count display
+    // Update test count display with error handling
     function updateTestCount() {
         try {
-            const count = parseInt(localStorage.getItem('emotion_test_count') || '0');
+            if (typeof localStorage === 'undefined') return;
+            const savedCount = localStorage.getItem('emotion_test_count');
+            const count = savedCount ? parseInt(savedCount, 10) : 0;
+            if (isNaN(count)) return;
             const el = document.getElementById('intro-count');
-            if (count > 0) el.textContent = `${count.toLocaleString()}명이 참여했어요!`;
-        } catch (e) {}
+            if (el && count > 0) {
+                el.textContent = `${count.toLocaleString()}명이 참여했어요!`;
+            }
+        } catch (e) {
+            console.warn('Could not update test count:', e.message);
+        }
     }
 
     function incrementTestCount() {
         try {
-            const count = parseInt(localStorage.getItem('emotion_test_count') || '0') + 1;
+            if (typeof localStorage === 'undefined') return;
+            const savedCount = localStorage.getItem('emotion_test_count');
+            const count = (savedCount ? parseInt(savedCount, 10) : 0) + 1;
+            if (isNaN(count) || count < 0) return;
             localStorage.setItem('emotion_test_count', count.toString());
-        } catch (e) {}
+        } catch (e) {
+            console.warn('Could not increment test count:', e.message);
+        }
     }
 
-    // Emotion history tracker
+    // Emotion history tracker with error handling
     function saveEmotionHistory(temp) {
         try {
+            if (typeof localStorage === 'undefined') return;
+            if (isNaN(temp) || !resultData || !resultData.title) return;
+
             const today = new Date().toISOString().split('T')[0];
-            const history = JSON.parse(localStorage.getItem('emotion_history') || '[]');
+            let history = [];
+
+            try {
+                const saved = localStorage.getItem('emotion_history');
+                history = saved ? JSON.parse(saved) : [];
+            } catch (parseErr) {
+                console.warn('History corrupted, resetting:', parseErr.message);
+                history = [];
+            }
+
+            if (!Array.isArray(history)) history = [];
 
             // Add today's result
             history.push({ date: today, temp: temp, title: resultData.title });
@@ -46,7 +71,9 @@
 
             // Update streak
             updateStreak(today, history);
-        } catch (e) {}
+        } catch (e) {
+            console.warn('Could not save emotion history:', e.message);
+        }
     }
 
     function updateStreak(today, history) {
