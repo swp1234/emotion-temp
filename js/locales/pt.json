@@ -42,5 +42,14 @@
   },
   "rec": {
     "title": "Experimente também"
+  },
+  "tracker": {
+    "streak": "dias seguidos!",
+    "comparison": "em relação a ontem",
+    "warmer": "Suas emoções ficaram mais quentes",
+    "cooler": "Suas emoções ficaram mais calmas",
+    "same": "Suas emoções permanecem iguais",
+    "saved": "Sua emoção foi salva. Volte amanhã! 🌡️",
+    "comeback": "Volte amanhã 🌡️"
   }
 }

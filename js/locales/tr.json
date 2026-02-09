@@ -42,5 +42,14 @@
   },
   "rec": {
     "title": "Bunları da dene"
+  },
+  "tracker": {
+    "streak": "gün arka arkaya!",
+    "comparison": "dünle karşılaştırma",
+    "warmer": "Duygularınız daha sıcak hale geldi",
+    "cooler": "Duygularınız daha sakin hale geldi",
+    "same": "Duygularınız aynı kaldı",
+    "saved": "Duygularınız kaydedildi. Yarın geri dön! 🌡️",
+    "comeback": "Yarın geri dön 🌡️"
   }
 }

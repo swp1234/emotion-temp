@@ -42,5 +42,14 @@
   },
   "rec": {
     "title": "Try these too"
+  },
+  "tracker": {
+    "streak": "day streak!",
+    "comparison": "vs yesterday",
+    "warmer": "Your emotions warmed up",
+    "cooler": "Your emotions cooled down",
+    "same": "Your emotions are similar",
+    "saved": "Your emotion has been saved. Come back tomorrow! 🌡️",
+    "comeback": "Measure again tomorrow 🌡️"
   }
 }

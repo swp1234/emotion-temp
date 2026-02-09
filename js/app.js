@@ -31,6 +31,73 @@
         } catch (e) {}
     }
 
+    // Emotion history tracker
+    function saveEmotionHistory(temp) {
+        try {
+            const today = new Date().toISOString().split('T')[0];
+            const history = JSON.parse(localStorage.getItem('emotion_history') || '[]');
+
+            // Add today's result
+            history.push({ date: today, temp: temp, title: resultData.title });
+
+            // Keep last 30 days
+            if (history.length > 30) history.shift();
+            localStorage.setItem('emotion_history', JSON.stringify(history));
+
+            // Update streak
+            updateStreak(today, history);
+        } catch (e) {}
+    }
+
+    function updateStreak(today, history) {
+        try {
+            let streak = 0;
+            let currentDate = new Date(today);
+
+            for (let i = history.length - 1; i >= 0; i--) {
+                const expectedDate = new Date(today);
+                expectedDate.setDate(expectedDate.getDate() - (history.length - 1 - i));
+                const expected = expectedDate.toISOString().split('T')[0];
+
+                if (history[i].date === expected) {
+                    streak++;
+                } else {
+                    break;
+                }
+            }
+
+            localStorage.setItem('emotion_streak', streak.toString());
+
+            // Show badge if streak >= 7
+            if (streak >= 7) {
+                const badge = document.createElement('div');
+                badge.style.cssText = 'position:fixed;top:20px;right:20px;background:linear-gradient(135deg,#ffd700,#ffed4e);padding:10px 20px;border-radius:50px;font-weight:bold;color:#000;z-index:9999;animation:bounceIn 0.5s ease;';
+                badge.innerHTML = `🏆 ${streak}일 연속 측정!`;
+                document.body.appendChild(badge);
+                setTimeout(() => badge.remove(), 5000);
+            }
+        } catch (e) {}
+    }
+
+    // Show emotion change tracker
+    function getEmotionComparison() {
+        try {
+            const history = JSON.parse(localStorage.getItem('emotion_history') || '[]');
+            if (history.length < 2) return '';
+
+            const latest = history[history.length - 1];
+            const previous = history[history.length - 2];
+
+            const diff = latest.temp - previous.temp;
+            const arrow = diff > 0 ? '📈' : diff < 0 ? '📉' : '➡️';
+            const changeText = diff > 0 ? '감정이 더 따뜻해졌어요' : diff < 0 ? '감정이 더 차가워졌어요' : '감정이 비슷해요';
+
+            return `<div style="background:rgba(255,255,255,0.05);padding:1em;margin:1em 0;border-radius:8px;"><small>${arrow} 어제 대비: ${changeText} (${diff > 0 ? '+' : ''}${diff}°C)</small></div>`;
+        } catch (e) {
+            return '';
+        }
+    }
+
     // Show screen
     function show(screen) {
         [introScreen, questionScreen, loadingScreen, resultScreen].forEach(s => {
@@ -126,6 +193,7 @@
 
         show(resultScreen);
         incrementTestCount();
+        saveEmotionHistory(tempValue);
 
         // Temperature display
         document.getElementById('result-temp').textContent = `${tempValue}°C`;
@@ -143,7 +211,24 @@
         document.getElementById('result-traits').innerHTML = resultData.traits.map(t => `<li>${t}</li>`).join('');
         document.getElementById('result-activities').innerHTML = resultData.activities.map(a => `<li>${a}</li>`).join('');
         document.getElementById('result-warnings').innerHTML = resultData.warnings.map(w => `<li>${w}</li>`).join('');
-        document.getElementById('result-compat-text').textContent = resultData.compat;
+
+        // Emotion change tracker
+        const emotionComparison = getEmotionComparison();
+
+        // New enrichment content
+        let compatText = emotionComparison || '';
+        compatText += resultData.compat;
+        if (resultData.advice) {
+            compatText += `<br><br><strong>💡 ${resultData.advice}</strong>`;
+        }
+        if (resultData.quote) {
+            compatText += `<br><blockquote style="font-style:italic;margin:1em 0;padding:1em;border-left:3px solid ${resultData.color};opacity:0.9">❝${resultData.quote}❞</blockquote>`;
+        }
+        if (resultData.statistics) {
+            compatText += `<br><small>${resultData.statistics}</small>`;
+        }
+        compatText += `<br><small style="opacity:0.6;">💾 당신의 감정이 저장되었습니다. 내일도 다시 측정해보세요!</small>`;
+        document.getElementById('result-compat-text').innerHTML = compatText;
 
         // Set card border color (borderImage breaks border-radius)
         document.getElementById('result-card').style.borderColor = resultData.color;

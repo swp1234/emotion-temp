@@ -42,5 +42,14 @@
   },
   "rec": {
     "title": "Prueba estos también"
+  },
+  "tracker": {
+    "streak": "días seguidos!",
+    "comparison": "comparado con ayer",
+    "warmer": "Tus emociones se volvieron más cálidas",
+    "cooler": "Tus emociones se volvieron más tranquilas",
+    "same": "Tus emociones siguen igual",
+    "saved": "Tu emoción ha sido guardada. ¡Vuelve mañana! 🌡️",
+    "comeback": "Vuelve mañana 🌡️"
   }
 }

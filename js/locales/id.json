@@ -42,5 +42,14 @@
   },
   "rec": {
     "title": "Coba juga"
+  },
+  "tracker": {
+    "streak": "hari berturut-turut!",
+    "comparison": "dibandingkan kemarin",
+    "warmer": "Emosi Anda menjadi lebih hangat",
+    "cooler": "Emosi Anda menjadi lebih tenang",
+    "same": "Emosi Anda tetap sama",
+    "saved": "Emosi Anda telah disimpan. Kembali besok! 🌡️",
+    "comeback": "Kembali besok 🌡️"
   }
 }

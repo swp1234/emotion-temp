@@ -42,5 +42,14 @@
   },
   "rec": {
     "title": "Essaie aussi"
+  },
+  "tracker": {
+    "streak": "jours d'affilée!",
+    "comparison": "comparé à hier",
+    "warmer": "Tes émotions sont devenues plus chaleureuses",
+    "cooler": "Tes émotions sont devenues plus calmes",
+    "same": "Tes émotions restent les mêmes",
+    "saved": "Ton émotion a été enregistrée. Reviens demain! 🌡️",
+    "comeback": "Reviens demain 🌡️"
   }
 }
