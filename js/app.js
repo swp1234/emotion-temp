@@ -281,15 +281,17 @@
     // Share
     function shareResult() {
         const url = 'https://dopabrain.com/emotion-temp/';
-        const text = `🌡️ 나의 감정 온도는 ${tempValue}°C!\n\n"${resultData.title}" ${resultData.emoji}\n${resultData.subtitle}\n\n너의 감정 온도는 몇 도? 👇\n${url}\n\n#감정온도계 #심리테스트 #감정테스트`;
+        const shareTitle = i18n?.t('share.title') || 'Emotional Temperature';
+        const shareText = i18n?.t('share.text') || 'My emotional temperature is';
+        const text = `${shareText} ${tempValue}°C!\n\n"${resultData.title}" ${resultData.emoji}\n${resultData.subtitle}\n\n${url}`;
 
         gtag('event', 'share', { method: 'native', test_type: 'emotion_temperature' });
 
         if (navigator.share) {
-            navigator.share({ title: `감정 온도 ${tempValue}°C ${resultData.emoji}`, text, url }).catch(() => {});
+            navigator.share({ title: `${shareTitle} ${tempValue}°C ${resultData.emoji}`, text, url }).catch(() => {});
         } else {
             navigator.clipboard.writeText(text).then(() => {
-                const copyMessage = i18n?.t('share.copied') || '결과가 복사되었습니다! 친구에게 공유해보세요 🌡️';
+                const copyMessage = i18n?.t('share.copied') || 'Result copied!';
                 alert(copyMessage);
             }).catch(() => {});
         }
@@ -384,8 +386,8 @@
 
         // Download
         const link = document.createElement('a');
-        const downloadName = i18n?.t('canvas.downloadName') || '감정온도';
-        link.download = `${downloadName}_${tempValue}도.png`;
+        const downloadName = i18n?.t('canvas.downloadName') || 'emotion_temp';
+        link.download = `${downloadName}_${tempValue}.png`;
         link.href = canvas.toDataURL('image/png');
         link.click();
 
@@ -449,13 +451,13 @@
             <div class="premium-section">
                 <h4>${routineLabel}</h4>
                 <ul>
-                    <li>월: 감정 일기 쓰기 (5분)</li>
-                    <li>화: 좋아하는 음악 듣기 (15분)</li>
-                    <li>수: 산책하며 생각 정리 (20분)</li>
-                    <li>목: 친구에게 안부 메시지 보내기</li>
-                    <li>금: 나를 위한 작은 선물 사기</li>
-                    <li>토: 새로운 경험 하나 해보기</li>
-                    <li>일: 다음 주 감정 목표 세우기</li>
+                    <li>${i18n?.t('routine.monday') || 'Mon: Write emotion journal (5 min)'}</li>
+                    <li>${i18n?.t('routine.tuesday') || 'Tue: Listen to favorite music (15 min)'}</li>
+                    <li>${i18n?.t('routine.wednesday') || 'Wed: Walking & organizing thoughts (20 min)'}</li>
+                    <li>${i18n?.t('routine.thursday') || 'Thu: Send message to friend'}</li>
+                    <li>${i18n?.t('routine.friday') || 'Fri: Buy a small gift for yourself'}</li>
+                    <li>${i18n?.t('routine.saturday') || 'Sat: Try something new'}</li>
+                    <li>${i18n?.t('routine.sunday') || 'Sun: Set next week\'s emotion goal'}</li>
                 </ul>
             </div>
         `;
@@ -468,28 +470,47 @@
 
     function getMonthlyAdvice() {
         const month = new Date().getMonth();
-        const advice = [
-            "새해의 에너지를 활용하세요. 감정 목표를 세우기 좋은 달입니다.",
-            "겨울의 끝, 봄의 시작. 변화에 대한 기대감을 즐기세요.",
-            "봄기운과 함께 새로운 관계를 시작해보세요.",
-            "벚꽃처럼 감정도 활짝 피어나는 시기입니다.",
-            "에너지가 넘치는 달! 야외활동으로 감정을 해소하세요.",
-            "중반기 점검 시기. 상반기 감정을 돌아보세요.",
-            "여름 더위처럼 감정도 뜨거워질 수 있어요. 쿨다운 시간을 가지세요.",
-            "무더위 속 자기 관리가 중요합니다. 충분히 쉬세요.",
-            "가을의 시작, 감정 정리에 최적의 시기입니다.",
-            "독서의 계절. 감성을 자극하는 책을 읽어보세요.",
-            "연말이 다가옵니다. 감사한 사람에게 마음을 전하세요.",
-            "한 해를 마무리하며 감정을 정리하고 내년을 준비하세요."
+        const defaultAdvice = [
+            "Harness the energy of a new year. It's a great time to set emotional goals.",
+            "End of winter, start of spring. Enjoy the anticipation of change.",
+            "With spring energy, try starting new relationships.",
+            "Like cherry blossoms, your emotions flourish during this season.",
+            "A month full of energy! Release emotions through outdoor activities.",
+            "Mid-year check-in time. Reflect on your emotions in the first half.",
+            "Like summer heat, emotions can intensify. Take time to cool down.",
+            "Self-care is important in the heat. Rest sufficiently.",
+            "Beginning of autumn, the perfect time to organize emotions.",
+            "Season of reading. Try reading books that stimulate your emotions.",
+            "Year-end approaches. Share your feelings with grateful people.",
+            "Wrap up the year by organizing your emotions and preparing for next year."
         ];
-        return advice[month];
+        try {
+            const adviceList = i18n?.translations?.advice || defaultAdvice;
+            return adviceList[month] || defaultAdvice[month];
+        } catch (e) {
+            return defaultAdvice[month];
+        }
     }
 
     function getEmotionPattern() {
-        if (tempValue <= 0) return "당신은 감정을 내면에서 깊이 처리하는 '내향 감정형'입니다. 겉으로는 차분해 보이지만 속마음은 풍부합니다. 신뢰할 수 있는 사람에게 조금씩 마음을 열어보세요.";
-        if (tempValue <= 10) return "당신은 '균형 감정형'입니다. 이성과 감성의 조화가 뛰어나 대부분의 상황에서 적절히 대처할 수 있습니다. 다만 자신의 진짜 감정을 놓치지 않도록 주의하세요.";
-        if (tempValue <= 20) return "당신은 '따뜻한 공감형'입니다. 타인의 감정에 민감하게 반응하며 자연스럽게 위로와 지지를 줍니다. 자신의 감정 에너지도 잘 관리해주세요.";
-        return "당신은 '열정 감정형'입니다. 모든 감정을 깊게 느끼고 크게 표현합니다. 이것은 큰 강점이지만, 감정 소진을 방지하기 위해 규칙적인 자기 관리가 필수입니다.";
+        const defaultPatterns = [
+            "You are an 'Introverted Emotional Type' who processes emotions deeply within. You appear calm outwardly, but your inner world is rich. Try opening your heart gradually to people you can trust.",
+            "You are a 'Balanced Emotional Type'. Your harmony of logic and emotion allows you to respond appropriately in most situations. Just make sure not to lose sight of your true feelings.",
+            "You are a 'Warm Empathic Type'. You respond sensitively to others' emotions and naturally provide comfort and support. Also take good care of your own emotional energy.",
+            "You are a 'Passionate Emotional Type'. You feel all emotions deeply and express them greatly. This is a great strength, but regular self-care is essential to prevent emotional burnout."
+        ];
+        try {
+            const patterns = i18n?.translations?.patterns || defaultPatterns;
+            if (tempValue <= 0) return patterns[0] || defaultPatterns[0];
+            if (tempValue <= 10) return patterns[1] || defaultPatterns[1];
+            if (tempValue <= 20) return patterns[2] || defaultPatterns[2];
+            return patterns[3] || defaultPatterns[3];
+        } catch (e) {
+            if (tempValue <= 0) return defaultPatterns[0];
+            if (tempValue <= 10) return defaultPatterns[1];
+            if (tempValue <= 20) return defaultPatterns[2];
+            return defaultPatterns[3];
+        }
     }
 
     // Event listeners

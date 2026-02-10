@@ -70,5 +70,38 @@
     "compatLabel": "💕 Température Compatible",
     "compatNote": "Rencontrer quelqu'un de température opposée aide à remplir les lacunes mutuelles.",
     "routineLabel": "🧘 Routine Personnalisée (1 Semaine)"
-  }
+  },
+  "routine": {
+    "monday": "Lundi: Écrire un journal émotionnel (5 min)",
+    "tuesday": "Mardi: Écouter votre musique préférée (15 min)",
+    "wednesday": "Mercredi: Marcher pour organiser ses pensées (20 min)",
+    "thursday": "Jeudi: Envoyer un message à un ami",
+    "friday": "Vendredi: Vous offrir un petit cadeau",
+    "saturday": "Samedi: Essayer quelque chose de nouveau",
+    "sunday": "Dimanche: Définir l'objectif émotionnel de la semaine prochaine"
+  },
+  "share": {
+    "title": "Température Émotionnelle",
+    "text": "🌡️ Ma température émotionnelle est"
+  },
+  "advice": [
+    "Exploitez l'énergie de la nouvelle année. C'est un bon moment pour définir des objectifs émotionnels.",
+    "Fin de l'hiver, début du printemps. Profitez de l'anticipation du changement.",
+    "Avec l'énergie printanière, essayez de commencer de nouvelles relations.",
+    "Comme les fleurs de cerisier, vos émotions s'épanouissent en cette saison.",
+    "Un mois rempli d'énergie! Libérez les émotions par des activités en plein air.",
+    "Temps de révision de mi-année. Réfléchissez à vos émotions du premier semestre.",
+    "Comme la chaleur estivale, les émotions peuvent s'intensifier. Prenez du temps pour vous rafraîchir.",
+    "L'auto-soin est important dans la chaleur. Reposez-vous suffisamment.",
+    "Début de l'automne, le moment idéal pour organiser les émotions.",
+    "Saison de la lecture. Essayez de lire des livres qui stimulent vos émotions.",
+    "La fin de l'année approche. Partagez vos sentiments avec des personnes reconnaissantes.",
+    "Terminez l'année en organisant vos émotions et en vous préparant pour l'année prochaine."
+  ],
+  "patterns": [
+    "Vous êtes un 'Type Émotionnel Introverti' qui traite les émotions profondément. Vous semblez calme extérieurement, mais votre monde intérieur est riche. Essayez d'ouvrir votre cœur graduellement à des personnes de confiance.",
+    "Vous êtes un 'Type Émotionnel Équilibré'. Votre harmonie entre logique et émotion vous permet de réagir de manière appropriée dans la plupart des situations. Assurez-vous simplement de ne pas perdre de vue vos véritables sentiments.",
+    "Vous êtes un 'Type Empathique Chaleureux'. Vous réagissez sensiblement aux émotions des autres et offrez naturellement du réconfort et du soutien. Prenez également soin de votre propre énergie émotionnelle.",
+    "Vous êtes un 'Type Émotionnel Passionné'. Vous ressentez profondément toutes les émotions et les exprimez hardiment. C'est une grande force, mais l'auto-soin régulier est essentiel pour prévenir l'épuisement émotionnel."
+  ]
 }

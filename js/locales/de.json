@@ -70,5 +70,38 @@
     "compatLabel": "💕 Kompatible Temperatur",
     "compatNote": "Das Treffen mit jemandem mit gegensätzlicher Temperatur hilft, Lücken gegenseitig zu füllen.",
     "routineLabel": "🧘 Personalisierte Routine (1 Woche)"
-  }
+  },
+  "routine": {
+    "monday": "Montag: Emotionales Tagebuch schreiben (5 Min)",
+    "tuesday": "Dienstag: Lieblingsmusik hören (15 Min)",
+    "wednesday": "Mittwoch: Spaziergang zum Gedankenordnen (20 Min)",
+    "thursday": "Donnerstag: Freund eine Nachricht senden",
+    "friday": "Freitag: Ein kleines Geschenk für sich selbst kaufen",
+    "saturday": "Samstag: Etwas Neues ausprobieren",
+    "sunday": "Sonntag: Emotionales Ziel für nächste Woche setzen"
+  },
+  "share": {
+    "title": "Emotionale Temperatur",
+    "text": "🌡️ Meine emotionale Temperatur ist"
+  },
+  "advice": [
+    "Nutzen Sie die Energie des neuen Jahres. Es ist eine gute Zeit, um emotionale Ziele zu setzen.",
+    "Winterende, Frühlingsbeginn. Genießen Sie die Vorfreude auf Veränderungen.",
+    "Mit Frühjahrsenergie versuchen Sie, neue Beziehungen zu beginnen.",
+    "Wie Kirschblüten erblühen Ihre Gefühle in dieser Jahreszeit.",
+    "Ein Monat voller Energie! Befreien Sie Gefühle durch Outdoor-Aktivitäten.",
+    "Zeit der Jahreshälfte-Überprüfung. Reflektieren Sie Ihre Gefühle im ersten Halbjahr.",
+    "Wie Sommerhitze können sich Gefühle intensivieren. Nehmen Sie sich Zeit zum Abkühlen.",
+    "Selbstfürsorge ist wichtig in der Hitze. Ruhen Sie sich ausreichend aus.",
+    "Herbstbeginn, die perfekte Zeit, um Gefühle zu organisieren.",
+    "Jahreszeit des Lesens. Versuchen Sie, Bücher zu lesen, die Ihre Gefühle stimulieren.",
+    "Jahresende nähert sich. Teilen Sie Ihre Gefühle mit dankbaren Menschen.",
+    "Beenden Sie das Jahr, indem Sie Ihre Gefühle organisieren und sich auf das nächste Jahr vorbereiten."
+  ],
+  "patterns": [
+    "Sie sind ein 'introvertierter emotionaler Typ', der Gefühle tief verarbeitet. Sie wirken äußerlich ruhig, aber Ihre innere Welt ist reich. Versuchen Sie, Ihr Herz für Menschen zu öffnen, denen Sie vertrauen.",
+    "Sie sind ein 'ausgewogener emotionaler Typ'. Ihre Harmonie von Logik und Emotion ermöglicht es Ihnen, in den meisten Situationen angemessen zu reagieren. Stellen Sie einfach sicher, dass Sie Ihre wahren Gefühle nicht aus den Augen verlieren.",
+    "Sie sind ein 'warmer empathischer Typ'. Sie reagieren sensibel auf die Gefühle anderer und bieten auf natürliche Weise Trost und Unterstützung. Kümmern Sie sich auch um Ihre eigene emotionale Energie.",
+    "Sie sind ein 'leidenschaftlicher emotionaler Typ'. Sie fühlen alle Gefühle tief und drücken sie kühn aus. Dies ist eine große Stärke, aber regelmäßige Selbstfürsorge ist wichtig, um emotionales Burnout zu vermeiden."
+  ]
 }

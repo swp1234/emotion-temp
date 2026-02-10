@@ -70,5 +70,38 @@
     "compatLabel": "💕 Compatible Temperature",
     "compatNote": "Meeting someone with opposite temperature helps you both fill each other's gaps.",
     "routineLabel": "🧘 Personalized Routine (1 Week)"
-  }
+  },
+  "routine": {
+    "monday": "Mon: Write emotion journal (5 min)",
+    "tuesday": "Tue: Listen to favorite music (15 min)",
+    "wednesday": "Wed: Walking & organizing thoughts (20 min)",
+    "thursday": "Thu: Send message to friend",
+    "friday": "Fri: Buy a small gift for yourself",
+    "saturday": "Sat: Try something new",
+    "sunday": "Sun: Set next week's emotion goal"
+  },
+  "share": {
+    "title": "Emotional Temperature",
+    "text": "🌡️ My emotional temperature is"
+  },
+  "advice": [
+    "Harness the energy of a new year. It's a great time to set emotional goals.",
+    "End of winter, start of spring. Enjoy the anticipation of change.",
+    "With spring energy, try starting new relationships.",
+    "Like cherry blossoms, your emotions flourish during this season.",
+    "A month full of energy! Release emotions through outdoor activities.",
+    "Mid-year check-in time. Reflect on your emotions in the first half.",
+    "Like summer heat, emotions can intensify. Take time to cool down.",
+    "Self-care is important in the heat. Rest sufficiently.",
+    "Beginning of autumn, the perfect time to organize emotions.",
+    "Season of reading. Try reading books that stimulate your emotions.",
+    "Year-end approaches. Share your feelings with grateful people.",
+    "Wrap up the year by organizing your emotions and preparing for next year."
+  ],
+  "patterns": [
+    "You are an 'Introverted Emotional Type' who processes emotions deeply within. You appear calm outwardly, but your inner world is rich. Try opening your heart gradually to people you can trust.",
+    "You are a 'Balanced Emotional Type'. Your harmony of logic and emotion allows you to respond appropriately in most situations. Just make sure not to lose sight of your true feelings.",
+    "You are a 'Warm Empathic Type'. You respond sensitively to others' emotions and naturally provide comfort and support. Also take good care of your own emotional energy.",
+    "You are a 'Passionate Emotional Type'. You feel all emotions deeply and express them greatly. This is a great strength, but regular self-care is essential to prevent emotional burnout."
+  ]
 }

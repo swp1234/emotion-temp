@@ -70,5 +70,38 @@
     "compatLabel": "💕 Uyumlu Sıcaklık",
     "compatNote": "Karşıt sıcaklığa sahip birisiyle buluşmak, birbirinizin boşluklarını doldurmaya yardımcı olur.",
     "routineLabel": "🧘 Kişiselleştirilmiş Rutini (1 Hafta)"
-  }
+  },
+  "routine": {
+    "monday": "Pazartesi: Duygu günlüğü yaz (5 dk)",
+    "tuesday": "Salı: Favori müzik dinle (15 dk)",
+    "wednesday": "Çarşamba: Düşünceleri düzenlemek için yürü (20 dk)",
+    "thursday": "Perşembe: Arkadaşına mesaj gönder",
+    "friday": "Cuma: Kendine küçük bir hediye al",
+    "saturday": "Cumartesi: Yeni bir şey dene",
+    "sunday": "Pazar: Gelecek hafta için duygu hedefi belirle"
+  },
+  "share": {
+    "title": "Duygusal Sıcaklık",
+    "text": "🌡️ Benim duygusal sıcaklığım"
+  },
+  "advice": [
+    "Yeni yıl enerjisinden yararlanın. Duygusal hedefler belirlemek için iyi bir zaman.",
+    "Kış sonu, ilkbahar başlangıcı. Değişimin beklentisini tadını çıkarın.",
+    "İlkbahar enerjisiyle yeni ilişkilere başlamayı deneyin.",
+    "Kirazçiçekleri gibi, duygularınız bu mevsimde açar.",
+    "Enerjiyle dolu bir ay! Açık hava aktiviteleri yoluyla duyguları serbest bırakın.",
+    "Yıl ortası gözden geçirme zamanı. İlk yarısındaki duygularınızı düşünün.",
+    "Yazın sıcağı gibi, duygular yoğunlaşabilir. Sakinleşmek için zaman ayırın.",
+    "Sıcakta öz bakım önemlidir. Yeterince dinlenin.",
+    "Sonbahar başlangıcı, duyguları düzenlemek için mükemmel zaman.",
+    "Okuma mevsimi. Duygularınızı uyaran kitaplar okumayı deneyin.",
+    "Yıl sonu yaklaşıyor. Minnettar kişilere duygularınızı paylaşın.",
+    "Yılı sonlandırarak duygularınızı düzenleyin ve gelecek yıla hazırlanın."
+  ],
+  "patterns": [
+    "Siz, duyguları derinlemesine işleyen 'İçe Dönük Duygusal Tip'iniz. Dışarıdan sakin görünüyor olsanız da, iç dünyanız zengindir. Güvendiğiniz insanlara yavaş yavaş kalbinizi açmayı deneyin.",
+    "Siz 'Dengeli Duygusal Tip'iniz. Mantık ve duygunun uyumunuz çoğu durumda uygun tepki vermenizi sağlar. Sadece gerçek duygularınızdan uzaklaşmadığınızdan emin olun.",
+    "Siz 'Sıcak Empati Tip'iniz. Başkalarının duygularına hassas tepki verir ve doğal olarak rahatlık ve destek sağlarsınız. Aynı zamanda kendi duygusal enerjinize de iyi bakın.",
+    "Siz 'Tutkulu Duygusal Tip'iniz. Tüm duyguları derinlemesine hisseder ve cesurca ifade edersiniz. Bu büyük bir güç, ancak duygusal tükenmişliği önlemek için düzenli öz bakım gereklidir."
+  ]
 }

@@ -70,5 +70,38 @@
     "compatLabel": "💕 Suhu Kompatibel",
     "compatNote": "Bertemu dengan seseorang dengan suhu berlawanan membantu mengisi celah satu sama lain.",
     "routineLabel": "🧘 Rutinitas yang Dipersonalisasi (1 Minggu)"
-  }
+  },
+  "routine": {
+    "monday": "Senin: Tulis jurnal emosi (5 menit)",
+    "tuesday": "Selasa: Dengarkan musik favorit (15 menit)",
+    "wednesday": "Rabu: Berjalan untuk mengatur pikiran (20 menit)",
+    "thursday": "Kamis: Kirim pesan ke teman",
+    "friday": "Jumat: Belikan hadiah kecil untuk diri sendiri",
+    "saturday": "Sabtu: Coba sesuatu yang baru",
+    "sunday": "Minggu: Tetapkan tujuan emosi untuk minggu depan"
+  },
+  "share": {
+    "title": "Suhu Emosional",
+    "text": "🌡️ Suhu emosional saya adalah"
+  },
+  "advice": [
+    "Manfaatkan energi tahun baru. Ini waktu yang tepat untuk menetapkan tujuan emosional.",
+    "Akhir musim dingin, awal musim semi. Nikmati antisipasi perubahan.",
+    "Dengan energi musim semi, coba mulai hubungan baru.",
+    "Seperti bunga sakura, emosi Anda mekar di musim ini.",
+    "Bulan penuh energi! Bebaskan emosi melalui aktivitas di luar ruangan.",
+    "Waktu tinjauan pertengahan tahun. Renungkan emosi Anda di semester pertama.",
+    "Seperti panas musim panas, emosi dapat meningkat. Ambil waktu untuk mendingin.",
+    "Perawatan diri penting dalam panas. Istirahat yang cukup.",
+    "Awal musim gugur, waktu yang sempurna untuk mengatur emosi.",
+    "Musim membaca. Cobalah membaca buku yang merangsang emosi Anda.",
+    "Akhir tahun mendekat. Bagikan perasaan Anda dengan orang yang bersyukur.",
+    "Akhiri tahun dengan mengatur emosi Anda dan mempersiapkan tahun depan."
+  ],
+  "patterns": [
+    "Anda adalah 'Tipe Emosional Introvert' yang memproses emosi secara mendalam. Terlihat tenang dari luar, tetapi dunia batin Anda kaya. Coba buka hati Anda secara bertahap kepada orang-orang yang Anda percayai.",
+    "Anda adalah 'Tipe Emosional Seimbang'. Keselarasan logika dan emosi Anda memungkinkan Anda merespons dengan tepat di sebagian besar situasi. Hanya pastikan Anda tidak kehilangan pandangan tentang perasaan sebenarnya.",
+    "Anda adalah 'Tipe Empatik Hangat'. Anda merespons dengan sensitif terhadap emosi orang lain dan secara alami memberikan kenyamanan dan dukungan. Juga jaga energi emosional Anda sendiri dengan baik.",
+    "Anda adalah 'Tipe Emosional Penuh Gairah'. Anda merasakan semua emosi secara mendalam dan mengekspresikannya dengan berani. Ini adalah kekuatan besar, tetapi perawatan diri yang teratur penting untuk mencegah kelelahan emosional."
+  ]
 }

@@ -70,5 +70,38 @@
     "compatLabel": "💕 Temperatura Compatible",
     "compatNote": "Encontrarse con una persona de temperatura opuesta ayuda a llenar los vacíos mutuos.",
     "routineLabel": "🧘 Rutina Personalizada (1 Semana)"
-  }
+  },
+  "routine": {
+    "monday": "Lunes: Escribir diario emocional (5 min)",
+    "tuesday": "Martes: Escuchar música favorita (15 min)",
+    "wednesday": "Miércoles: Caminar para organizar pensamientos (20 min)",
+    "thursday": "Jueves: Enviar mensaje a un amigo",
+    "friday": "Viernes: Comprarse un pequeño regalo",
+    "saturday": "Sábado: Probar algo nuevo",
+    "sunday": "Domingo: Establecer meta emocional para próxima semana"
+  },
+  "share": {
+    "title": "Temperatura Emocional",
+    "text": "🌡️ Mi temperatura emocional es"
+  },
+  "advice": [
+    "Aprovecha la energía del nuevo año. Es un buen momento para establecer metas emocionales.",
+    "Fin del invierno, comienzo de la primavera. Disfruta la anticipación del cambio.",
+    "Con energía primaveral, intenta comenzar nuevas relaciones.",
+    "Como flores de cerezo, tus emociones florecen en esta temporada.",
+    "¡Un mes lleno de energía! Libera emociones a través de actividades al aire libre.",
+    "Tiempo de revisión a mitad de año. Reflexiona sobre tus emociones en el primer semestre.",
+    "Como el calor del verano, las emociones pueden intensificarse. Tómate tiempo para enfriarte.",
+    "El autocuidado es importante en el calor. Descansa lo suficiente.",
+    "Comienzo del otoño, el momento perfecto para organizar emociones.",
+    "Temporada de lectura. Intenta leer libros que estimulen tus emociones.",
+    "Se acerca fin de año. Comparte tus sentimientos con personas agradecidas.",
+    "Termina el año organizando tus emociones y preparándote para el próximo."
+  ],
+  "patterns": [
+    "Eres un 'Tipo Emocional Introvertido' que procesa emociones profundamente. Pareces calmado externamente, pero tu mundo interior es rico. Intenta abrir tu corazón gradualmente a personas en las que confías.",
+    "Eres un 'Tipo Emocional Equilibrado'. Tu armonía de lógica y emoción te permite responder apropiadamente en la mayoría de situaciones. Solo asegúrate de no perder de vista tus sentimientos verdaderos.",
+    "Eres un 'Tipo Empático Cálido'. Respondes sensiblemente a las emociones de otros y proporcionas naturalmente consuelo y apoyo. También cuida bien tu propia energía emocional.",
+    "Eres un 'Tipo Emocional Apasionado'. Sientes todas las emociones profundamente y las expresas audazmente. Esta es una gran fortaleza, pero el autocuidado regular es esencial para prevenir el agotamiento emocional."
+  ]
 }
