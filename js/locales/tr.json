@@ -51,5 +51,24 @@
     "same": "Duygularınız aynı kaldı",
     "saved": "Duygularınız kaydedildi. Yarın geri dön! 🌡️",
     "comeback": "Yarın geri dön 🌡️"
+  },
+  "intro": {
+    "count": "kişi katıldı!"
+  },
+  "share": {
+    "copied": "Sonuç kopyalandı! Arkadaşlarınızla paylaşın 🌡️"
+  },
+  "canvas": {
+    "topLabel": "Benim duygusal sıcaklığım",
+    "cta": "Senin ki nedir? 👇",
+    "testName": "Duygusal Sıcaklık Testi",
+    "downloadName": "duygusal_sicaklik"
+  },
+  "premium": {
+    "patternAnalysis": "📊 Duygu Deseni Analizi",
+    "tipsLabel": "📅 Bu Ayın İpuçları",
+    "compatLabel": "💕 Uyumlu Sıcaklık",
+    "compatNote": "Karşıt sıcaklığa sahip birisiyle buluşmak, birbirinizin boşluklarını doldurmaya yardımcı olur.",
+    "routineLabel": "🧘 Kişiselleştirilmiş Rutini (1 Hafta)"
   }
 }

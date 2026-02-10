@@ -51,5 +51,24 @@
     "same": "你的情感保持一致",
     "saved": "你的情感已保存。明天再来测试吧！🌡️",
     "comeback": "明天再来测试 🌡️"
+  },
+  "intro": {
+    "count": "人参加了！"
+  },
+  "share": {
+    "copied": "结果已复制！分享给朋友吧 🌡️"
+  },
+  "canvas": {
+    "topLabel": "我的情感温度是",
+    "cta": "你的是多少度？👇",
+    "testName": "情感温度计测试",
+    "downloadName": "情感温度"
+  },
+  "premium": {
+    "patternAnalysis": "📊 情感模式分析",
+    "tipsLabel": "📅 本月情感管理建议",
+    "compatLabel": "💕 匹配的情感温度",
+    "compatNote": "与相反温度的人相遇，可以互补彼此的不足。",
+    "routineLabel": "🧘 个性化日常计划（1周）"
   }
 }

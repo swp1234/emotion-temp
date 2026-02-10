@@ -51,5 +51,24 @@
     "same": "Emosi Anda tetap sama",
     "saved": "Emosi Anda telah disimpan. Kembali besok! 🌡️",
     "comeback": "Kembali besok 🌡️"
+  },
+  "intro": {
+    "count": "orang telah berpartisipasi!"
+  },
+  "share": {
+    "copied": "Hasil disalin! Bagikan dengan teman 🌡️"
+  },
+  "canvas": {
+    "topLabel": "Suhu emosi saya adalah",
+    "cta": "Berapa milikmu? 👇",
+    "testName": "Tes Suhu Emosi",
+    "downloadName": "suhu_emosi"
+  },
+  "premium": {
+    "patternAnalysis": "📊 Analisis Pola Emosi",
+    "tipsLabel": "📅 Kiat Bulan Ini",
+    "compatLabel": "💕 Suhu Kompatibel",
+    "compatNote": "Bertemu dengan seseorang dengan suhu berlawanan membantu mengisi celah satu sama lain.",
+    "routineLabel": "🧘 Rutinitas yang Dipersonalisasi (1 Minggu)"
   }
 }

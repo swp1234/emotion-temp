@@ -51,5 +51,24 @@
     "same": "감정이 비슷해요",
     "saved": "당신의 감정이 저장되었습니다. 내일도 다시 측정해보세요!",
     "comeback": "내일 다시 측정해보세요 🌡️"
+  },
+  "intro": {
+    "count": "명이 참여했어요!"
+  },
+  "share": {
+    "copied": "결과가 복사되었습니다! 친구에게 공유해보세요 🌡️"
+  },
+  "canvas": {
+    "topLabel": "나의 감정 온도는",
+    "cta": "너는 몇 도? 👇",
+    "testName": "감정 온도계 테스트",
+    "downloadName": "감정온도"
+  },
+  "premium": {
+    "patternAnalysis": "📊 감정 패턴 분석",
+    "tipsLabel": "📅 이번 달 감정 관리 팁",
+    "compatLabel": "💕 나와 잘 맞는 감정 온도",
+    "compatNote": "반대 온도의 사람과 만나면 서로의 부족한 부분을 채워줄 수 있어요.",
+    "routineLabel": "🧘 맞춤 감정 루틴 (1주일)"
   }
 }

@@ -51,5 +51,24 @@
     "same": "Your emotions are similar",
     "saved": "Your emotion has been saved. Come back tomorrow! 🌡️",
     "comeback": "Measure again tomorrow 🌡️"
+  },
+  "intro": {
+    "count": "people participated!"
+  },
+  "share": {
+    "copied": "Result copied! Share it with friends 🌡️"
+  },
+  "canvas": {
+    "topLabel": "My emotional temperature is",
+    "cta": "What's yours? 👇",
+    "testName": "Emotion Thermometer Test",
+    "downloadName": "emotion_temp"
+  },
+  "premium": {
+    "patternAnalysis": "📊 Emotional Pattern Analysis",
+    "tipsLabel": "📅 This Month's Emotion Tips",
+    "compatLabel": "💕 Compatible Temperature",
+    "compatNote": "Meeting someone with opposite temperature helps you both fill each other's gaps.",
+    "routineLabel": "🧘 Personalized Routine (1 Week)"
   }
 }

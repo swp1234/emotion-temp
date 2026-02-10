@@ -24,7 +24,8 @@
             if (isNaN(count)) return;
             const el = document.getElementById('intro-count');
             if (el && count > 0) {
-                el.textContent = `${count.toLocaleString()}명이 참여했어요!`;
+                const countText = i18n?.t('intro.count');
+                el.textContent = `${count.toLocaleString()}${countText || '명이 참여했어요!'}`;
             }
         } catch (e) {
             console.warn('Could not update test count:', e.message);
@@ -99,7 +100,8 @@
             if (streak >= 7) {
                 const badge = document.createElement('div');
                 badge.style.cssText = 'position:fixed;top:20px;right:20px;background:linear-gradient(135deg,#ffd700,#ffed4e);padding:10px 20px;border-radius:50px;font-weight:bold;color:#000;z-index:9999;animation:bounceIn 0.5s ease;';
-                badge.innerHTML = `🏆 ${streak}일 연속 측정!`;
+                const streakText = i18n?.t('tracker.streak') || '일 연속 측정!';
+                badge.innerHTML = `🏆 ${streak}${streakText}`;
                 document.body.appendChild(badge);
                 setTimeout(() => badge.remove(), 5000);
             }
@@ -117,9 +119,10 @@
 
             const diff = latest.temp - previous.temp;
             const arrow = diff > 0 ? '📈' : diff < 0 ? '📉' : '➡️';
-            const changeText = diff > 0 ? '감정이 더 따뜻해졌어요' : diff < 0 ? '감정이 더 차가워졌어요' : '감정이 비슷해요';
+            const changeText = diff > 0 ? (i18n?.t('tracker.warmer') || '감정이 더 따뜻해졌어요') : diff < 0 ? (i18n?.t('tracker.cooler') || '감정이 더 차가워졌어요') : (i18n?.t('tracker.same') || '감정이 비슷해요');
+            const comparisonLabel = i18n?.t('tracker.comparison') || '어제 대비';
 
-            return `<div style="background:rgba(255,255,255,0.05);padding:1em;margin:1em 0;border-radius:8px;"><small>${arrow} 어제 대비: ${changeText} (${diff > 0 ? '+' : ''}${diff}°C)</small></div>`;
+            return `<div style="background:rgba(255,255,255,0.05);padding:1em;margin:1em 0;border-radius:8px;"><small>${arrow} ${comparisonLabel}: ${changeText} (${diff > 0 ? '+' : ''}${diff}°C)</small></div>`;
         } catch (e) {
             return '';
         }
@@ -261,7 +264,8 @@
         if (resultData.statistics) {
             compatText += `<br><small>${resultData.statistics}</small>`;
         }
-        compatText += `<br><small style="opacity:0.6;">💾 당신의 감정이 저장되었습니다. 내일도 다시 측정해보세요!</small>`;
+        const savedText = i18n?.t('tracker.saved') || '당신의 감정이 저장되었습니다. 내일도 다시 측정해보세요!';
+        compatText += `<br><small style="opacity:0.6;">💾 ${savedText}</small>`;
         document.getElementById('result-compat-text').innerHTML = compatText;
 
         // Set card border color (borderImage breaks border-radius)
@@ -285,7 +289,8 @@
             navigator.share({ title: `감정 온도 ${tempValue}°C ${resultData.emoji}`, text, url }).catch(() => {});
         } else {
             navigator.clipboard.writeText(text).then(() => {
-                alert('결과가 복사되었습니다! 친구에게 공유해보세요 🌡️');
+                const copyMessage = i18n?.t('share.copied') || '결과가 복사되었습니다! 친구에게 공유해보세요 🌡️';
+                alert(copyMessage);
             }).catch(() => {});
         }
     }
@@ -332,7 +337,8 @@
         ctx.fillStyle = 'rgba(255,255,255,0.7)';
         ctx.font = '36px sans-serif';
         ctx.textAlign = 'center';
-        ctx.fillText('나의 감정 온도는', w / 2, 150);
+        const topLabel = i18n?.t('canvas.topLabel') || '나의 감정 온도는';
+        ctx.fillText(topLabel, w / 2, 150);
 
         // Temperature (large, bold)
         ctx.fillStyle = '#ffffff';
@@ -364,10 +370,12 @@
         // CTA
         ctx.fillStyle = 'rgba(255,255,255,0.6)';
         ctx.font = '28px sans-serif';
-        ctx.fillText('너는 몇 도? 👇', w / 2, 850);
+        const ctaText = i18n?.t('canvas.cta') || '너는 몇 도? 👇';
+        ctx.fillText(ctaText, w / 2, 850);
         ctx.fillStyle = 'rgba(255,255,255,0.5)';
         ctx.font = '24px sans-serif';
-        ctx.fillText('감정 온도계 테스트', w / 2, 900);
+        const testName = i18n?.t('canvas.testName') || '감정 온도계 테스트';
+        ctx.fillText(testName, w / 2, 900);
 
         // Branding
         ctx.fillStyle = 'rgba(255,255,255,0.35)';
@@ -376,7 +384,8 @@
 
         // Download
         const link = document.createElement('a');
-        link.download = `감정온도_${tempValue}도.png`;
+        const downloadName = i18n?.t('canvas.downloadName') || '감정온도';
+        link.download = `${downloadName}_${tempValue}도.png`;
         link.href = canvas.toDataURL('image/png');
         link.click();
 
@@ -417,22 +426,28 @@
         const monthlyAdvice = getMonthlyAdvice();
         const emotionPattern = getEmotionPattern();
 
+        const patternLabel = i18n?.t('premium.patternAnalysis') || '📊 감정 패턴 분석';
+        const tipsLabel = i18n?.t('premium.tipsLabel') || '📅 이번 달 감정 관리 팁';
+        const compatLabel = i18n?.t('premium.compatLabel') || '💕 나와 잘 맞는 감정 온도';
+        const compatNote = i18n?.t('premium.compatNote') || '반대 온도의 사람과 만나면 서로의 부족한 부분을 채워줄 수 있어요.';
+        const routineLabel = i18n?.t('premium.routineLabel') || '🧘 맞춤 감정 루틴 (1주일)';
+
         contentEl.innerHTML = `
             <div class="premium-section">
-                <h4>📊 감정 패턴 분석</h4>
+                <h4>${patternLabel}</h4>
                 <p>${emotionPattern}</p>
             </div>
             <div class="premium-section">
-                <h4>📅 이번 달 감정 관리 팁</h4>
+                <h4>${tipsLabel}</h4>
                 <p>${monthlyAdvice}</p>
             </div>
             <div class="premium-section">
-                <h4>💕 나와 잘 맞는 감정 온도</h4>
+                <h4>${compatLabel}</h4>
                 <p>${resultData.compat}</p>
-                <p class="premium-note">반대 온도의 사람과 만나면 서로의 부족한 부분을 채워줄 수 있어요.</p>
+                <p class="premium-note">${compatNote}</p>
             </div>
             <div class="premium-section">
-                <h4>🧘 맞춤 감정 루틴 (1주일)</h4>
+                <h4>${routineLabel}</h4>
                 <ul>
                     <li>월: 감정 일기 쓰기 (5분)</li>
                     <li>화: 좋아하는 음악 듣기 (15분)</li>

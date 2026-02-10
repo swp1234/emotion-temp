@@ -51,5 +51,24 @@
     "same": "Tes émotions restent les mêmes",
     "saved": "Ton émotion a été enregistrée. Reviens demain! 🌡️",
     "comeback": "Reviens demain 🌡️"
+  },
+  "intro": {
+    "count": "personnes ont participé!"
+  },
+  "share": {
+    "copied": "Résultat copié! Partage avec tes amis 🌡️"
+  },
+  "canvas": {
+    "topLabel": "Ma température émotionnelle est",
+    "cta": "Quelle est la tienne? 👇",
+    "testName": "Test de Température Émotionnelle",
+    "downloadName": "temperature_emotionnelle"
+  },
+  "premium": {
+    "patternAnalysis": "📊 Analyse du Motif Émotionnel",
+    "tipsLabel": "📅 Conseils de ce Mois",
+    "compatLabel": "💕 Température Compatible",
+    "compatNote": "Rencontrer quelqu'un de température opposée aide à remplir les lacunes mutuelles.",
+    "routineLabel": "🧘 Routine Personnalisée (1 Semaine)"
   }
 }
