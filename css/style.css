@@ -10,6 +10,104 @@
     --radius: 16px;
     --transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1), transform 0.3s cubic-bezier(0.4,0,0.2,1), background-color 0.3s cubic-bezier(0.4,0,0.2,1);
 }
+
+/* Light mode overrides */
+[data-theme="light"] {
+    --bg: #faf5f0;
+    --surface: rgba(224, 122, 95, 0.06);
+    --border: rgba(224, 122, 95, 0.12);
+    --text: #1a1218;
+    --text-sec: #5a4a48;
+    --text-dim: #8a7a78;
+}
+[data-theme="light"] body {
+    background: var(--bg);
+    color: var(--text);
+}
+[data-theme="light"] .app-loader {
+    background: var(--bg);
+}
+[data-theme="light"] .question-card,
+[data-theme="light"] .result-card {
+    background: rgba(224, 122, 95, 0.05);
+    border-color: rgba(224, 122, 95, 0.12);
+    box-shadow: 0 4px 16px rgba(224, 122, 95, 0.05);
+}
+[data-theme="light"] .option-btn {
+    background: rgba(224, 122, 95, 0.06);
+    border-color: rgba(224, 122, 95, 0.15);
+    color: var(--text);
+    box-shadow: 0 2px 8px rgba(224, 122, 95, 0.04);
+}
+[data-theme="light"] .option-btn:hover,
+[data-theme="light"] .option-btn:active {
+    background: rgba(224, 122, 95, 0.12);
+    border-color: rgba(224, 122, 95, 0.3);
+}
+[data-theme="light"] .option-btn.selected {
+    background: rgba(224, 122, 95, 0.15);
+    border-color: var(--primary);
+}
+[data-theme="light"] .detail-section {
+    background: rgba(224, 122, 95, 0.04);
+    border-color: rgba(224, 122, 95, 0.1);
+}
+[data-theme="light"] .result-compat {
+    background: rgba(224, 122, 95, 0.04);
+    border-color: rgba(224, 122, 95, 0.1);
+}
+[data-theme="light"] .premium-card {
+    background: rgba(224, 122, 95, 0.05);
+    border-color: rgba(224, 122, 95, 0.12);
+}
+[data-theme="light"] .back-link {
+    color: var(--primary);
+}
+[data-theme="light"] .rec-card {
+    background: rgba(224, 122, 95, 0.05);
+    border-color: rgba(224, 122, 95, 0.12);
+}
+[data-theme="light"] .ad-banner {
+    background: rgba(224, 122, 95, 0.04);
+    border-color: rgba(224, 122, 95, 0.1);
+}
+[data-theme="light"] .ad-modal {
+    background: rgba(250, 245, 240, 0.95);
+}
+[data-theme="light"] .intro-meta {
+    color: var(--text-sec);
+}
+[data-theme="light"] .lang-btn {
+    background: rgba(224, 122, 95, 0.08);
+    color: var(--text);
+    border-color: rgba(224, 122, 95, 0.18);
+}
+[data-theme="light"] .lang-menu {
+    background: rgba(250, 245, 240, 0.95);
+    border-color: rgba(224, 122, 95, 0.18);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+[data-theme="light"] .lang-option {
+    color: #5a4a48;
+}
+[data-theme="light"] .lang-option:hover {
+    background: rgba(224, 122, 95, 0.1);
+    color: var(--text);
+}
+[data-theme="light"] .lang-option.active {
+    background: rgba(224, 122, 95, 0.15);
+    color: var(--text);
+}
+[data-theme="light"] .loader-spinner {
+    border-color: rgba(224, 122, 95, 0.12);
+    border-top-color: var(--primary);
+}
+/* Light mode: rec-card hover state */
+[data-theme="light"] .rec-card:hover,
+[data-theme="light"] .rec-card:active {
+    background: rgba(224, 122, 95, 0.1);
+}
+
 *,*::before,*::after {
     margin:0;
     padding:0;
