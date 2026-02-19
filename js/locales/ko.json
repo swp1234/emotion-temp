@@ -4,13 +4,7 @@
     "description": "10가지 질문으로 알아보는 나의 감정 온도! 8가지 감정 유형 중 당신은?"
   },
   "intro": {
-    "title": "감정 온도계",
-    "sub": "나의 감정 온도는 몇 도일까?",
-    "desc": "10가지 질문에 답하고\n나만의 감정 온도를 확인하세요",
-    "questions": "📝 10문항",
-    "time": "⏱️ 약 2분",
-    "types": "🎯 8가지 유형",
-    "start": "테스트 시작하기"
+    "count": "명이 참여했어요!"
   },
   "progress": {
     "of": "/"
@@ -25,8 +19,11 @@
     "compat": "💕 잘 맞는 감정 온도"
   },
   "premium": {
-    "button": "AI 심층 감정 분석 보기",
-    "badge": "PREMIUM",
+    "patternAnalysis": "📊 감정 패턴 분석",
+    "tipsLabel": "📅 이번 달 감정 관리 팁",
+    "compatLabel": "💕 나와 잘 맞는 감정 온도",
+    "compatNote": "반대 온도의 사람과 만나면 서로의 부족한 부분을 채워줄 수 있어요.",
+    "routineLabel": "🧘 맞춤 감정 루틴 (1주일)",
     "title": "🧠 AI 심층 감정 분석"
   },
   "actions": {
@@ -36,7 +33,7 @@
   },
   "ads": {
     "banner": "광고 영역",
-    "interstitial": "광고",
+    "interstitial": "광고 영역 (전면)",
     "close": "초 후 닫기",
     "closeBtn": "✕ 닫기"
   },
@@ -52,24 +49,15 @@
     "saved": "당신의 감정이 저장되었습니다. 내일도 다시 측정해보세요!",
     "comeback": "내일 다시 측정해보세요 🌡️"
   },
-  "intro": {
-    "count": "명이 참여했어요!"
-  },
   "share": {
-    "copied": "결과가 복사되었습니다! 친구에게 공유해보세요 🌡️"
+    "title": "감정 온도",
+    "text": "🌡️ 나의 감정 온도는"
   },
   "canvas": {
     "topLabel": "나의 감정 온도는",
     "cta": "너는 몇 도? 👇",
     "testName": "감정 온도계 테스트",
     "downloadName": "감정온도"
-  },
-  "premium": {
-    "patternAnalysis": "📊 감정 패턴 분석",
-    "tipsLabel": "📅 이번 달 감정 관리 팁",
-    "compatLabel": "💕 나와 잘 맞는 감정 온도",
-    "compatNote": "반대 온도의 사람과 만나면 서로의 부족한 부분을 채워줄 수 있어요.",
-    "routineLabel": "🧘 맞춤 감정 루틴 (1주일)"
   },
   "routine": {
     "monday": "월: 감정 일기 쓰기 (5분)",
@@ -79,10 +67,6 @@
     "friday": "금: 나를 위한 작은 선물 사기",
     "saturday": "토: 새로운 경험 하나 해보기",
     "sunday": "일: 다음 주 감정 목표 세우기"
-  },
-  "share": {
-    "title": "감정 온도",
-    "text": "🌡️ 나의 감정 온도는"
   },
   "advice": [
     "새해의 에너지를 활용하세요. 감정 목표를 세우기 좋은 달입니다.",

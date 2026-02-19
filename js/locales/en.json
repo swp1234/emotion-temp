@@ -4,13 +4,7 @@
     "description": "Discover your emotional temperature through 10 questions! Which of the 8 emotion types are you?"
   },
   "intro": {
-    "title": "Emotion Thermometer",
-    "sub": "What's your emotional temperature?",
-    "desc": "Answer 10 questions and\ndiscover your emotional temperature",
-    "questions": "📝 10 Questions",
-    "time": "⏱️ ~2 min",
-    "types": "🎯 8 Types",
-    "start": "Start Test"
+    "count": "people participated!"
   },
   "progress": {
     "of": "/"
@@ -25,8 +19,11 @@
     "compat": "💕 Compatible Temperatures"
   },
   "premium": {
-    "button": "View AI Deep Emotion Analysis",
-    "badge": "PREMIUM",
+    "patternAnalysis": "📊 Emotional Pattern Analysis",
+    "tipsLabel": "📅 This Month's Emotion Tips",
+    "compatLabel": "💕 Compatible Temperature",
+    "compatNote": "Meeting someone with opposite temperature helps you both fill each other's gaps.",
+    "routineLabel": "🧘 Personalized Routine (1 Week)",
     "title": "🧠 AI Deep Emotion Analysis"
   },
   "actions": {
@@ -36,7 +33,7 @@
   },
   "ads": {
     "banner": "Advertisement",
-    "interstitial": "Ad",
+    "interstitial": "Ad Space (Full Screen)",
     "close": "sec to close",
     "closeBtn": "✕ Close"
   },
@@ -52,24 +49,15 @@
     "saved": "Your emotion has been saved. Come back tomorrow! 🌡️",
     "comeback": "Measure again tomorrow 🌡️"
   },
-  "intro": {
-    "count": "people participated!"
-  },
   "share": {
-    "copied": "Result copied! Share it with friends 🌡️"
+    "title": "Emotional Temperature",
+    "text": "🌡️ My emotional temperature is"
   },
   "canvas": {
     "topLabel": "My emotional temperature is",
     "cta": "What's yours? 👇",
     "testName": "Emotion Thermometer Test",
     "downloadName": "emotion_temp"
-  },
-  "premium": {
-    "patternAnalysis": "📊 Emotional Pattern Analysis",
-    "tipsLabel": "📅 This Month's Emotion Tips",
-    "compatLabel": "💕 Compatible Temperature",
-    "compatNote": "Meeting someone with opposite temperature helps you both fill each other's gaps.",
-    "routineLabel": "🧘 Personalized Routine (1 Week)"
   },
   "routine": {
     "monday": "Mon: Write emotion journal (5 min)",
@@ -79,10 +67,6 @@
     "friday": "Fri: Buy a small gift for yourself",
     "saturday": "Sat: Try something new",
     "sunday": "Sun: Set next week's emotion goal"
-  },
-  "share": {
-    "title": "Emotional Temperature",
-    "text": "🌡️ My emotional temperature is"
   },
   "advice": [
     "Harness the energy of a new year. It's a great time to set emotional goals.",

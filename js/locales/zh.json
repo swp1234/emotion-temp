@@ -4,13 +4,7 @@
     "description": "通过10个问题发现你的情感温度！8种情感类型中你属于哪一种？"
   },
   "intro": {
-    "title": "情感温度计",
-    "sub": "你的情感温度是多少度？",
-    "desc": "回答10个问题\n发现你的情感温度",
-    "questions": "📝 10题",
-    "time": "⏱️ 约2分钟",
-    "types": "🎯 8种类型",
-    "start": "开始测试"
+    "count": "人参加了！"
   },
   "progress": {
     "of": "/"
@@ -25,9 +19,12 @@
     "compat": "💕 匹配的情感温度"
   },
   "premium": {
-    "button": "查看AI深度情感分析",
-    "badge": "高级",
-    "title": "🧠 AI深度情感分析"
+    "patternAnalysis": "📊 情感模式分析",
+    "tipsLabel": "📅 本月情感管理建议",
+    "compatLabel": "💕 匹配的情感温度",
+    "compatNote": "与相反温度的人相遇，可以互补彼此的不足。",
+    "routineLabel": "🧘 个性化日常计划（1周）",
+    "title": "🧠 AI 深度情感分析"
   },
   "actions": {
     "share": "📤 分享结果",
@@ -36,7 +33,7 @@
   },
   "ads": {
     "banner": "广告区域",
-    "interstitial": "广告",
+    "interstitial": "广告区域 (全屏)",
     "close": "秒后关闭",
     "closeBtn": "✕ 关闭"
   },
@@ -52,24 +49,15 @@
     "saved": "你的情感已保存。明天再来测试吧！🌡️",
     "comeback": "明天再来测试 🌡️"
   },
-  "intro": {
-    "count": "人参加了！"
-  },
   "share": {
-    "copied": "结果已复制！分享给朋友吧 🌡️"
+    "title": "情感温度",
+    "text": "🌡️ 我的情感温度是"
   },
   "canvas": {
     "topLabel": "我的情感温度是",
     "cta": "你的是多少度？👇",
     "testName": "情感温度计测试",
     "downloadName": "情感温度"
-  },
-  "premium": {
-    "patternAnalysis": "📊 情感模式分析",
-    "tipsLabel": "📅 本月情感管理建议",
-    "compatLabel": "💕 匹配的情感温度",
-    "compatNote": "与相反温度的人相遇，可以互补彼此的不足。",
-    "routineLabel": "🧘 个性化日常计划（1周）"
   },
   "routine": {
     "monday": "周一：写感情日记（5分钟）",
@@ -79,10 +67,6 @@
     "friday": "周五：为自己买个小礼物",
     "saturday": "周六：尝试一个新体验",
     "sunday": "周日：制定下周情感目标"
-  },
-  "share": {
-    "title": "情感温度",
-    "text": "🌡️ 我的情感温度是"
   },
   "advice": [
     "利用新年的能量，这是制定情感目标的好时机。",

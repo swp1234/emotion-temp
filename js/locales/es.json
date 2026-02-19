@@ -4,13 +4,7 @@
     "description": "¡Descubre tu temperatura emocional a través de 10 preguntas! ¿Cuál de los 8 tipos de emociones eres?"
   },
   "intro": {
-    "title": "Termómetro Emocional",
-    "sub": "¿Cuál es tu temperatura emocional?",
-    "desc": "Responde 10 preguntas y\ndescubre tu temperatura emocional",
-    "questions": "📝 10 Preguntas",
-    "time": "⏱️ ~2 min",
-    "types": "🎯 8 Tipos",
-    "start": "Iniciar Prueba"
+    "count": "¡personas participaron!"
   },
   "progress": {
     "of": "/"
@@ -25,9 +19,12 @@
     "compat": "💕 Temperaturas Compatibles"
   },
   "premium": {
-    "button": "Ver Análisis Profundo Emocional de IA",
-    "badge": "PREMIUM",
-    "title": "🧠 Análisis Profundo Emocional de IA"
+    "patternAnalysis": "📊 Análisis de Patrón Emocional",
+    "tipsLabel": "📅 Consejos de Este Mes",
+    "compatLabel": "💕 Temperatura Compatible",
+    "compatNote": "Encontrarse con una persona de temperatura opuesta ayuda a llenar los vacíos mutuos.",
+    "routineLabel": "🧘 Rutina Personalizada (1 Semana)",
+    "title": "🧠 Análisis profundo de emociones IA"
   },
   "actions": {
     "share": "📤 Compartir Resultado",
@@ -36,7 +33,7 @@
   },
   "ads": {
     "banner": "Publicidad",
-    "interstitial": "Anuncio",
+    "interstitial": "Espacio publicitario",
     "close": "seg para cerrar",
     "closeBtn": "✕ Cerrar"
   },
@@ -52,24 +49,15 @@
     "saved": "Tu emoción ha sido guardada. ¡Vuelve mañana! 🌡️",
     "comeback": "Vuelve mañana 🌡️"
   },
-  "intro": {
-    "count": "¡personas participaron!"
-  },
   "share": {
-    "copied": "¡Resultado copiado! Comparte con amigos 🌡️"
+    "title": "Temperatura Emocional",
+    "text": "🌡️ Mi temperatura emocional es"
   },
   "canvas": {
     "topLabel": "Mi temperatura emocional es",
     "cta": "¿Cuál es la tuya? 👇",
     "testName": "Prueba de Temperatura Emocional",
     "downloadName": "temperatura_emocional"
-  },
-  "premium": {
-    "patternAnalysis": "📊 Análisis de Patrón Emocional",
-    "tipsLabel": "📅 Consejos de Este Mes",
-    "compatLabel": "💕 Temperatura Compatible",
-    "compatNote": "Encontrarse con una persona de temperatura opuesta ayuda a llenar los vacíos mutuos.",
-    "routineLabel": "🧘 Rutina Personalizada (1 Semana)"
   },
   "routine": {
     "monday": "Lunes: Escribir diario emocional (5 min)",
@@ -79,10 +67,6 @@
     "friday": "Viernes: Comprarse un pequeño regalo",
     "saturday": "Sábado: Probar algo nuevo",
     "sunday": "Domingo: Establecer meta emocional para próxima semana"
-  },
-  "share": {
-    "title": "Temperatura Emocional",
-    "text": "🌡️ Mi temperatura emocional es"
   },
   "advice": [
     "Aprovecha la energía del nuevo año. Es un buen momento para establecer metas emocionales.",

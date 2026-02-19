@@ -4,13 +4,7 @@
     "description": "Temukan suhu emosi Anda melalui 10 pertanyaan! Anda termasuk tipe emosi yang mana dari 8 jenis?"
   },
   "intro": {
-    "title": "Termometer Emosi",
-    "sub": "Berapa suhu emosi Anda?",
-    "desc": "Jawab 10 pertanyaan dan\ntemukan suhu emosi Anda",
-    "questions": "📝 10 Pertanyaan",
-    "time": "⏱️ ~2 menit",
-    "types": "🎯 8 Jenis",
-    "start": "Mulai Tes"
+    "count": "orang telah berpartisipasi!"
   },
   "progress": {
     "of": "/"
@@ -25,9 +19,12 @@
     "compat": "💕 Suhu Emosi yang Kompatibel"
   },
   "premium": {
-    "button": "Lihat Analisis Emosi Mendalam AI",
-    "badge": "PREMIUM",
-    "title": "🧠 Analisis Emosi Mendalam AI"
+    "patternAnalysis": "📊 Analisis Pola Emosi",
+    "tipsLabel": "📅 Kiat Bulan Ini",
+    "compatLabel": "💕 Suhu Kompatibel",
+    "compatNote": "Bertemu dengan seseorang dengan suhu berlawanan membantu mengisi celah satu sama lain.",
+    "routineLabel": "🧘 Rutinitas yang Dipersonalisasi (1 Minggu)",
+    "title": "🧠 Analisis emosi mendalam AI"
   },
   "actions": {
     "share": "📤 Bagikan Hasil",
@@ -36,7 +33,7 @@
   },
   "ads": {
     "banner": "Iklan",
-    "interstitial": "Iklan",
+    "interstitial": "Area iklan",
     "close": "detik untuk menutup",
     "closeBtn": "✕ Tutup"
   },
@@ -52,24 +49,15 @@
     "saved": "Emosi Anda telah disimpan. Kembali besok! 🌡️",
     "comeback": "Kembali besok 🌡️"
   },
-  "intro": {
-    "count": "orang telah berpartisipasi!"
-  },
   "share": {
-    "copied": "Hasil disalin! Bagikan dengan teman 🌡️"
+    "title": "Suhu Emosional",
+    "text": "🌡️ Suhu emosional saya adalah"
   },
   "canvas": {
     "topLabel": "Suhu emosi saya adalah",
     "cta": "Berapa milikmu? 👇",
     "testName": "Tes Suhu Emosi",
     "downloadName": "suhu_emosi"
-  },
-  "premium": {
-    "patternAnalysis": "📊 Analisis Pola Emosi",
-    "tipsLabel": "📅 Kiat Bulan Ini",
-    "compatLabel": "💕 Suhu Kompatibel",
-    "compatNote": "Bertemu dengan seseorang dengan suhu berlawanan membantu mengisi celah satu sama lain.",
-    "routineLabel": "🧘 Rutinitas yang Dipersonalisasi (1 Minggu)"
   },
   "routine": {
     "monday": "Senin: Tulis jurnal emosi (5 menit)",
@@ -79,10 +67,6 @@
     "friday": "Jumat: Belikan hadiah kecil untuk diri sendiri",
     "saturday": "Sabtu: Coba sesuatu yang baru",
     "sunday": "Minggu: Tetapkan tujuan emosi untuk minggu depan"
-  },
-  "share": {
-    "title": "Suhu Emosional",
-    "text": "🌡️ Suhu emosional saya adalah"
   },
   "advice": [
     "Manfaatkan energi tahun baru. Ini waktu yang tepat untuk menetapkan tujuan emosional.",
