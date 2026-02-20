@@ -1,9 +1,18 @@
 {
   "app": {
     "title": "Test de Température Émotionnelle - Quelle est ta Température Émotionnelle? 🌡️",
-    "description": "Découvre ta température émotionnelle à travers 10 questions! Lequel des 8 types d'émotion es-tu?"
+    "description": "Découvre ta température émotionnelle à travers 10 questions! Lequel des 8 types d'émotion es-tu?",
+    "loading": "Chargement...",
+    "skipLink": "Aller au contenu principal"
   },
   "intro": {
+    "title": "Thermomètre Émotionnel",
+    "sub": "Quelle est ta température émotionnelle ?",
+    "desc": "Réponds à 10 questions et\ndécouvre ta température émotionnelle",
+    "questions": "📝 10 Questions",
+    "time": "⏱️ Environ 2 min",
+    "types": "🎯 8 Types",
+    "start": "Commencer le Test",
     "count": "personnes ont participé!"
   },
   "progress": {
@@ -24,7 +33,12 @@
     "compatLabel": "💕 Température Compatible",
     "compatNote": "Rencontrer quelqu'un de température opposée aide à remplir les lacunes mutuelles.",
     "routineLabel": "🧘 Routine Personnalisée (1 Semaine)",
-    "title": "🧠 Analyse émotionnelle approfondie IA"
+    "title": "🧠 Analyse émotionnelle approfondie IA",
+    "button": "Voir l'Analyse Approfondie IA",
+    "badge": "PREMIUM"
+  },
+  "game": {
+    "back": "← DopaBrain Accueil"
   },
   "actions": {
     "share": "📤 Partager le Résultat",

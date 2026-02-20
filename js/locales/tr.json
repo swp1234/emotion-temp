@@ -1,9 +1,18 @@
 {
   "app": {
     "title": "Duygusal Sıcaklık Testi - Duygusal Sıcaklığın Nedir? 🌡️",
-    "description": "10 soruda duygusal sıcaklığını keşfet! 8 duygu tipinden hangisisin?"
+    "description": "10 soruda duygusal sıcaklığını keşfet! 8 duygu tipinden hangisisin?",
+    "loading": "Yükleniyor...",
+    "skipLink": "Ana içeriğe geç"
   },
   "intro": {
+    "title": "Duygusal Termometre",
+    "sub": "Duygusal sıcaklığın kaç derece?",
+    "desc": "10 soruyu yanıtla ve\nduygusal sıcaklığını keşfet",
+    "questions": "📝 10 Soru",
+    "time": "⏱️ Yaklaşık 2 dk",
+    "types": "🎯 8 Tip",
+    "start": "Teste Başla",
     "count": "kişi katıldı!"
   },
   "progress": {
@@ -24,7 +33,12 @@
     "compatLabel": "💕 Uyumlu Sıcaklık",
     "compatNote": "Karşıt sıcaklığa sahip birisiyle buluşmak, birbirinizin boşluklarını doldurmaya yardımcı olur.",
     "routineLabel": "🧘 Kişiselleştirilmiş Rutini (1 Hafta)",
-    "title": "🧠 AI Derin Duygu Analizi"
+    "title": "🧠 AI Derin Duygu Analizi",
+    "button": "AI Derin Analizi Gör",
+    "badge": "PREMIUM"
+  },
+  "game": {
+    "back": "← DopaBrain Ana Sayfa"
   },
   "actions": {
     "share": "📤 Sonucu Paylaş",

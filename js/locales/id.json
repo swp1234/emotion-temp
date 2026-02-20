@@ -1,9 +1,18 @@
 {
   "app": {
     "title": "Tes Suhu Emosi - Berapa Suhu Emosi Anda? 🌡️",
-    "description": "Temukan suhu emosi Anda melalui 10 pertanyaan! Anda termasuk tipe emosi yang mana dari 8 jenis?"
+    "description": "Temukan suhu emosi Anda melalui 10 pertanyaan! Anda termasuk tipe emosi yang mana dari 8 jenis?",
+    "loading": "Memuat...",
+    "skipLink": "Langsung ke konten utama"
   },
   "intro": {
+    "title": "Termometer Emosi",
+    "sub": "Berapa suhu emosi Anda?",
+    "desc": "Jawab 10 pertanyaan dan\ntemukan suhu emosi Anda",
+    "questions": "📝 10 Pertanyaan",
+    "time": "⏱️ Sekitar 2 menit",
+    "types": "🎯 8 Tipe",
+    "start": "Mulai Tes",
     "count": "orang telah berpartisipasi!"
   },
   "progress": {
@@ -24,7 +33,12 @@
     "compatLabel": "💕 Suhu Kompatibel",
     "compatNote": "Bertemu dengan seseorang dengan suhu berlawanan membantu mengisi celah satu sama lain.",
     "routineLabel": "🧘 Rutinitas yang Dipersonalisasi (1 Minggu)",
-    "title": "🧠 Analisis emosi mendalam AI"
+    "title": "🧠 Analisis emosi mendalam AI",
+    "button": "Lihat Analisis Mendalam AI",
+    "badge": "PREMIUM"
+  },
+  "game": {
+    "back": "← DopaBrain Beranda"
   },
   "actions": {
     "share": "📤 Bagikan Hasil",

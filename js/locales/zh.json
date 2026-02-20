@@ -1,9 +1,18 @@
 {
   "app": {
     "title": "情感温度计测试 - 你的情感温度是多少度？🌡️",
-    "description": "通过10个问题发现你的情感温度！8种情感类型中你属于哪一种？"
+    "description": "通过10个问题发现你的情感温度！8种情感类型中你属于哪一种？",
+    "loading": "加载中...",
+    "skipLink": "跳转到主内容"
   },
   "intro": {
+    "title": "情感温度计",
+    "sub": "你的情感温度是多少度？",
+    "desc": "回答10个问题\n发现你的情感温度",
+    "questions": "📝 10道题",
+    "time": "⏱️ 约2分钟",
+    "types": "🎯 8种类型",
+    "start": "开始测试",
     "count": "人参加了！"
   },
   "progress": {
@@ -24,7 +33,12 @@
     "compatLabel": "💕 匹配的情感温度",
     "compatNote": "与相反温度的人相遇，可以互补彼此的不足。",
     "routineLabel": "🧘 个性化日常计划（1周）",
-    "title": "🧠 AI 深度情感分析"
+    "title": "🧠 AI 深度情感分析",
+    "button": "查看AI深度情感分析",
+    "badge": "PREMIUM"
+  },
+  "game": {
+    "back": "← DopaBrain 首页"
   },
   "actions": {
     "share": "📤 分享结果",

@@ -1,9 +1,18 @@
 {
   "app": {
     "title": "Emotions-Temperatur-Test - Wie ist deine emotionale Temperatur? 🌡️",
-    "description": "Entdecke deine emotionale Temperatur durch 10 Fragen! Welcher der 8 Emotionstypen bist du?"
+    "description": "Entdecke deine emotionale Temperatur durch 10 Fragen! Welcher der 8 Emotionstypen bist du?",
+    "loading": "Wird geladen...",
+    "skipLink": "Zum Hauptinhalt springen"
   },
   "intro": {
+    "title": "Emotionales Thermometer",
+    "sub": "Wie hoch ist deine emotionale Temperatur?",
+    "desc": "Beantworte 10 Fragen und\nentdecke deine emotionale Temperatur",
+    "questions": "📝 10 Fragen",
+    "time": "⏱️ Ca. 2 Min",
+    "types": "🎯 8 Typen",
+    "start": "Test starten",
     "count": "Personen haben teilgenommen!"
   },
   "progress": {
@@ -24,7 +33,12 @@
     "compatLabel": "💕 Kompatible Temperatur",
     "compatNote": "Das Treffen mit jemandem mit gegensätzlicher Temperatur hilft, Lücken gegenseitig zu füllen.",
     "routineLabel": "🧘 Personalisierte Routine (1 Woche)",
-    "title": "🧠 KI Tiefe Emotionsanalyse"
+    "title": "🧠 KI Tiefe Emotionsanalyse",
+    "button": "KI-Tiefenanalyse ansehen",
+    "badge": "PREMIUM"
+  },
+  "game": {
+    "back": "← DopaBrain Startseite"
   },
   "actions": {
     "share": "📤 Ergebnis teilen",
