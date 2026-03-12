@@ -48,7 +48,7 @@
     function saveEmotionHistory(temp) {
         try {
             if (typeof localStorage === 'undefined') return;
-            if (isNaN(temp) || !resultData || !resultData.title) return;
+            if (isNaN(temp) || !resultData || !resultData.titleKey) return;
 
             const today = new Date().toISOString().split('T')[0];
             let history = [];
@@ -64,7 +64,7 @@
             if (!Array.isArray(history)) history = [];
 
             // Add today's result
-            history.push({ date: today, temp: temp, title: resultData.title });
+            history.push({ date: today, temp: temp, title: i18n.t(resultData.titleKey) });
 
             // Keep last 30 days
             if (history.length > 30) history.shift();
@@ -162,7 +162,7 @@
         document.getElementById('progress-fill').style.width = `${((currentQ) / total) * 100}%`;
         document.getElementById('progress-text').textContent = `${currentQ + 1} / ${total}`;
 
-        document.getElementById('q-text').textContent = q.text;
+        document.getElementById('q-text').textContent = i18n.t(q.textKey);
 
         const optionsEl = document.getElementById('q-options');
         // Shuffle options for variety
@@ -170,7 +170,7 @@
 
         optionsEl.innerHTML = shuffled.map((opt, i) => `
             <button class="option-btn" data-score="${opt.score}" style="animation-delay: ${i * 0.08}s">
-                ${opt.text}
+                ${i18n.t(opt.textKey)}
             </button>
         `).join('');
 
@@ -234,8 +234,8 @@
 
         // Temperature display
         document.getElementById('result-temp').textContent = `${tempValue}°C`;
-        document.getElementById('result-title').textContent = `"${resultData.title}"`;
-        document.getElementById('result-desc').textContent = resultData.desc;
+        document.getElementById('result-title').textContent = `"${i18n.t(resultData.titleKey)}"`;
+        document.getElementById('result-desc').textContent = i18n.t(resultData.descKey);
 
         // Thermometer fill animation
         const fillPercent = ((tempValue + 10) / 50) * 100;
@@ -245,24 +245,24 @@
         }, 100);
 
         // Traits
-        document.getElementById('result-traits').innerHTML = resultData.traits.map(t => `<li>${t}</li>`).join('');
-        document.getElementById('result-activities').innerHTML = resultData.activities.map(a => `<li>${a}</li>`).join('');
-        document.getElementById('result-warnings').innerHTML = resultData.warnings.map(w => `<li>${w}</li>`).join('');
+        document.getElementById('result-traits').innerHTML = resultData.traitsKeys.map(k => `<li>${i18n.t(k)}</li>`).join('');
+        document.getElementById('result-activities').innerHTML = resultData.activitiesKeys.map(k => `<li>${i18n.t(k)}</li>`).join('');
+        document.getElementById('result-warnings').innerHTML = resultData.warningsKeys.map(k => `<li>${i18n.t(k)}</li>`).join('');
 
         // Emotion change tracker
         const emotionComparison = getEmotionComparison();
 
         // New enrichment content
         let compatText = emotionComparison || '';
-        compatText += resultData.compat;
-        if (resultData.advice) {
-            compatText += `<br><br><strong>💡 ${resultData.advice}</strong>`;
+        compatText += i18n.t(resultData.compatKey);
+        if (resultData.adviceKey) {
+            compatText += `<br><br><strong>\u{1F4A1} ${i18n.t(resultData.adviceKey)}</strong>`;
         }
-        if (resultData.quote) {
-            compatText += `<br><blockquote style="font-style:italic;margin:1em 0;padding:1em;border-left:3px solid ${resultData.color};opacity:0.9">❝${resultData.quote}❞</blockquote>`;
+        if (resultData.quoteKey) {
+            compatText += `<br><blockquote style="font-style:italic;margin:1em 0;padding:1em;border-left:3px solid ${resultData.color};opacity:0.9">\u275D${i18n.t(resultData.quoteKey)}\u275E</blockquote>`;
         }
-        if (resultData.statistics) {
-            compatText += `<br><small>${resultData.statistics}</small>`;
+        if (resultData.statisticsKey) {
+            compatText += `<br><small>${i18n.t(resultData.statisticsKey)}</small>`;
         }
         const savedText = i18n?.t('tracker.saved') || '당신의 감정이 저장되었습니다. 내일도 다시 측정해보세요!';
         compatText += `<br><small style="opacity:0.6;">💾 ${savedText}</small>`;
@@ -272,7 +272,7 @@
         document.getElementById('result-card').style.borderColor = resultData.color;
 
         // GA tracking
-        gtag('event', 'test_complete', { test_type: 'emotion_temperature', result: `${tempValue}C_${resultData.title}` });
+        gtag('event', 'test_complete', { test_type: 'emotion_temperature', result: `${tempValue}C_${i18n.t(resultData.titleKey)}` });
 
         // Scroll to top
         resultScreen.scrollTop = 0;
@@ -283,12 +283,12 @@
         const url = 'https://dopabrain.com/emotion-temp/';
         const shareTitle = i18n?.t('share.title') || 'Emotional Temperature';
         const shareText = i18n?.t('share.text') || 'My emotional temperature is';
-        const text = `${shareText} ${tempValue}°C!\n\n"${resultData.title}" ${resultData.emoji}\n${resultData.subtitle}\n\n${url}`;
+        const text = `${shareText} ${tempValue}°C!\n\n"${i18n.t(resultData.titleKey)}" ${resultData.emoji}\n${i18n.t(resultData.subtitleKey)}\n\n${url}`;
 
         gtag('event', 'share', { method: 'native', test_type: 'emotion_temperature' });
 
         if (navigator.share) {
-            navigator.share({ title: `${shareTitle} ${tempValue}°C ${resultData.emoji}`, text, url }).catch(() => {});
+            navigator.share({ title: `${shareTitle} ${tempValue}°C ${resultData.emoji}`, text: text, url }).catch(() => {});
         } else {
             navigator.clipboard.writeText(text).then(() => {
                 const copyMessage = i18n?.t('share.copied') || 'Result copied!';
@@ -354,12 +354,12 @@
         // Title
         ctx.fillStyle = '#ffffff';
         ctx.font = 'bold 52px sans-serif';
-        ctx.fillText(`"${resultData.title}"`, w / 2, 650);
+        ctx.fillText(`"${i18n.t(resultData.titleKey)}"`, w / 2, 650);
 
         // Subtitle
         ctx.fillStyle = 'rgba(255,255,255,0.8)';
         ctx.font = '32px sans-serif';
-        ctx.fillText(resultData.subtitle, w / 2, 720);
+        ctx.fillText(i18n.t(resultData.subtitleKey), w / 2, 720);
 
         // Divider
         ctx.strokeStyle = 'rgba(255,255,255,0.2)';
@@ -445,7 +445,7 @@
             </div>
             <div class="premium-section">
                 <h4>${compatLabel}</h4>
-                <p>${resultData.compat}</p>
+                <p>${i18n.t(resultData.compatKey)}</p>
                 <p class="premium-note">${compatNote}</p>
             </div>
             <div class="premium-section">

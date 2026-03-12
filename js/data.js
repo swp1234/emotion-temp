@@ -1,210 +1,211 @@
 // Emotion Temperature Test - Questions & Results Data
+// All user-facing strings use i18n keys resolved at display time
 
 const QUESTIONS = [
     {
-        text: "친한 친구가 갑자기 울기 시작하면?",
+        textKey: "questions.q1.text",
         options: [
-            { text: "같이 울어버린다 😢", score: 4 },
-            { text: "안아주고 위로한다 🤗", score: 3 },
-            { text: "왜 우는지 이유를 물어본다 🤔", score: 1 },
-            { text: "어색해서 뭘 해야 할지 모르겠다 😶", score: 0 }
+            { textKey: "questions.q1.o1", score: 4 },
+            { textKey: "questions.q1.o2", score: 3 },
+            { textKey: "questions.q1.o3", score: 1 },
+            { textKey: "questions.q1.o4", score: 0 }
         ]
     },
     {
-        text: "주말 아침, 갑자기 약속이 취소됐을 때?",
+        textKey: "questions.q2.text",
         options: [
-            { text: "혼자만의 시간이 생겨서 기쁘다 ☺️", score: 0 },
-            { text: "살짝 아쉽지만 금방 다른 계획을 세운다 😌", score: 2 },
-            { text: "허전하고 심심하다 😕", score: 3 },
-            { text: "서운하고 기분이 가라앉는다 😔", score: 4 }
+            { textKey: "questions.q2.o1", score: 0 },
+            { textKey: "questions.q2.o2", score: 2 },
+            { textKey: "questions.q2.o3", score: 3 },
+            { textKey: "questions.q2.o4", score: 4 }
         ]
     },
     {
-        text: "감동적인 영화를 볼 때 나는?",
+        textKey: "questions.q3.text",
         options: [
-            { text: "눈물이 멈추지 않는다 😭", score: 4 },
-            { text: "눈시울이 붉어진다 🥺", score: 3 },
-            { text: "감동은 하지만 울진 않는다 😊", score: 1 },
-            { text: "별로 감동을 못 느낀다 😐", score: 0 }
+            { textKey: "questions.q3.o1", score: 4 },
+            { textKey: "questions.q3.o2", score: 3 },
+            { textKey: "questions.q3.o3", score: 1 },
+            { textKey: "questions.q3.o4", score: 0 }
         ]
     },
     {
-        text: "새로운 사람을 만날 때 나는?",
+        textKey: "questions.q4.text",
         options: [
-            { text: "에너지가 넘치고 신난다! 🎉", score: 4 },
-            { text: "적당히 대화하며 즐긴다 😄", score: 2 },
-            { text: "관찰하며 천천히 다가간다 👀", score: 1 },
-            { text: "에너지가 빠지고 피곤하다 😫", score: 0 }
+            { textKey: "questions.q4.o1", score: 4 },
+            { textKey: "questions.q4.o2", score: 2 },
+            { textKey: "questions.q4.o3", score: 1 },
+            { textKey: "questions.q4.o4", score: 0 }
         ]
     },
     {
-        text: "스트레스를 받으면 주로?",
+        textKey: "questions.q5.text",
         options: [
-            { text: "친구에게 전화해서 수다를 떤다 📱", score: 3 },
-            { text: "맛있는 걸 먹으러 간다 🍰", score: 2 },
-            { text: "혼자 조용히 산책한다 🚶", score: 1 },
-            { text: "아무것도 하기 싫고 누워있는다 🛋️", score: 0 }
+            { textKey: "questions.q5.o1", score: 3 },
+            { textKey: "questions.q5.o2", score: 2 },
+            { textKey: "questions.q5.o3", score: 1 },
+            { textKey: "questions.q5.o4", score: 0 }
         ]
     },
     {
-        text: "SNS에서 누군가 나를 비난하는 댓글을 달았다면?",
+        textKey: "questions.q6.text",
         options: [
-            { text: "며칠간 계속 신경 쓰인다 💭", score: 4 },
-            { text: "기분이 나쁘지만 하루면 잊는다 😤", score: 2 },
-            { text: "논리적으로 반박한다 ✍️", score: 1 },
-            { text: "무시하고 넘어간다 🙂", score: 0 }
+            { textKey: "questions.q6.o1", score: 4 },
+            { textKey: "questions.q6.o2", score: 2 },
+            { textKey: "questions.q6.o3", score: 1 },
+            { textKey: "questions.q6.o4", score: 0 }
         ]
     },
     {
-        text: "좋아하는 것에 대해 이야기할 때 나는?",
+        textKey: "questions.q7.text",
         options: [
-            { text: "온몸으로 표현하며 흥분한다 🤩", score: 4 },
-            { text: "밝은 표정으로 열심히 설명한다 😃", score: 3 },
-            { text: "차분하게 이야기한다 🙂", score: 1 },
-            { text: "별로 티를 안 낸다 😶", score: 0 }
+            { textKey: "questions.q7.o1", score: 4 },
+            { textKey: "questions.q7.o2", score: 3 },
+            { textKey: "questions.q7.o3", score: 1 },
+            { textKey: "questions.q7.o4", score: 0 }
         ]
     },
     {
-        text: "길에서 귀여운 강아지를 보면?",
+        textKey: "questions.q8.text",
         options: [
-            { text: "소리 지르며 달려간다 🐶💕", score: 4 },
-            { text: "쓰다듬으며 환하게 웃는다 😊", score: 3 },
-            { text: "바라보며 미소 짓는다 🙂", score: 1 },
-            { text: "그냥 지나간다 🚶", score: 0 }
+            { textKey: "questions.q8.o1", score: 4 },
+            { textKey: "questions.q8.o2", score: 3 },
+            { textKey: "questions.q8.o3", score: 1 },
+            { textKey: "questions.q8.o4", score: 0 }
         ]
     },
     {
-        text: "혼자 있는 시간에 대해 어떻게 생각해?",
+        textKey: "questions.q9.text",
         options: [
-            { text: "외롭고 불안하다 😰", score: 4 },
-            { text: "가끔은 필요하지만 오래는 싫다 🤷", score: 3 },
-            { text: "충전하는 시간이라 좋다 🔋", score: 1 },
-            { text: "혼자가 가장 편하다 😌", score: 0 }
+            { textKey: "questions.q9.o1", score: 4 },
+            { textKey: "questions.q9.o2", score: 3 },
+            { textKey: "questions.q9.o3", score: 1 },
+            { textKey: "questions.q9.o4", score: 0 }
         ]
     },
     {
-        text: "누군가 나에게 '사랑해'라고 말하면?",
+        textKey: "questions.q10.text",
         options: [
-            { text: "감동해서 눈물이 날 것 같다 🥹", score: 4 },
-            { text: "행복하고 고맙다 💕", score: 3 },
-            { text: "고맙다고 답한다 😊", score: 1 },
-            { text: "약간 어색하다 😅", score: 0 }
+            { textKey: "questions.q10.o1", score: 4 },
+            { textKey: "questions.q10.o2", score: 3 },
+            { textKey: "questions.q10.o3", score: 1 },
+            { textKey: "questions.q10.o4", score: 0 }
         ]
     }
 ];
 
 const RESULTS = [
     {
-        min: -10, max: -5, temp: -8, emoji: "🧊",
-        title: "절대영도의 냉정함",
-        subtitle: "차가운 겨울 바람 같은 당신",
+        min: -10, max: -5, temp: -8, emoji: "\uD83E\uDDCA",
+        titleKey: "results.r1.title",
+        subtitleKey: "results.r1.subtitle",
         color: "#1e3a5f", colorEnd: "#0a1628",
-        desc: "감정을 잘 드러내지 않는 당신은 이성적이고 분석적입니다. 주변 사람들은 당신을 신비로운 사람이라고 느낍니다.",
-        traits: ["감정 표현: 매우 절제된 편", "의사결정: 논리적이고 빠름", "에너지원: 혼자만의 사색 시간", "대인관계: 소수의 깊은 관계 선호"],
-        activities: ["독서와 지적 탐구", "전략 게임", "명상과 사색", "다큐멘터리 시청"],
-        warnings: ["감정 억압은 건강에 해로울 수 있어요", "가끔은 감정을 표현하는 연습을 해보세요"],
-        compat: "따뜨한 봄날 (25~30°C) - 당신의 냉정함을 녹여줄 따뜻한 사람",
-        advice: "차분함이 최고의 무기예요. 당신의 침착함은 위기 상황에서 빛을 발합니다.",
-        quote: "침묵도 금이고, 생각도 금이다. - 세네카",
-        statistics: "약 12%의 사람들이 당신과 같은 감정 유형을 가지고 있어요."
+        descKey: "results.r1.desc",
+        traitsKeys: ["results.r1.t1", "results.r1.t2", "results.r1.t3", "results.r1.t4"],
+        activitiesKeys: ["results.r1.a1", "results.r1.a2", "results.r1.a3", "results.r1.a4"],
+        warningsKeys: ["results.r1.w1", "results.r1.w2"],
+        compatKey: "results.r1.compat",
+        adviceKey: "results.r1.advice",
+        quoteKey: "results.r1.quote",
+        statisticsKey: "results.r1.statistics"
     },
     {
-        min: -4, max: 0, temp: -2, emoji: "❄️",
-        title: "서늘한 새벽 이슬",
-        subtitle: "조용하고 섬세한 당신",
+        min: -4, max: 0, temp: -2, emoji: "\u2744\uFE0F",
+        titleKey: "results.r2.title",
+        subtitleKey: "results.r2.subtitle",
         color: "#2d4a7a", colorEnd: "#142236",
-        desc: "차분하고 관찰력이 뛰어난 당신. 감정은 있지만 표현이 절제됩니다. 깊은 생각으로 세상을 바라봅니다.",
-        traits: ["감정 표현: 내면에서 느끼지만 밖으로 잘 안 드러냄", "의사결정: 신중하고 깊이 있음", "에너지원: 조용한 환경", "대인관계: 신뢰를 쌓는 데 시간이 걸림"],
-        activities: ["글쓰기와 일기", "자연 속 산책", "클래식 음악 감상", "카페에서 사색"],
-        warnings: ["오해받기 쉬우니 가끔 마음을 표현해주세요", "감정을 무시하지 말고 인정해주세요"],
-        compat: "따뜻한 햇살 (20~25°C) - 부담 없이 당신을 이해해주는 사람",
-        advice: "당신의 조용함은 세상에 대한 깊은 이해를 낳습니다. 그것이 당신의 힘이에요.",
-        quote: "침묵 속에서 가장 큰 진실을 찾을 수 있다. - 라마크리슈나",
-        statistics: "약 15%의 사람들이 당신과 같은 감정 유형을 가지고 있어요."
+        descKey: "results.r2.desc",
+        traitsKeys: ["results.r2.t1", "results.r2.t2", "results.r2.t3", "results.r2.t4"],
+        activitiesKeys: ["results.r2.a1", "results.r2.a2", "results.r2.a3", "results.r2.a4"],
+        warningsKeys: ["results.r2.w1", "results.r2.w2"],
+        compatKey: "results.r2.compat",
+        adviceKey: "results.r2.advice",
+        quoteKey: "results.r2.quote",
+        statisticsKey: "results.r2.statistics"
     },
     {
-        min: 1, max: 5, temp: 3, emoji: "🌧️",
-        title: "잔잔한 빗소리",
-        subtitle: "고요하지만 깊은 당신",
+        min: 1, max: 5, temp: 3, emoji: "\uD83C\uDF27\uFE0F",
+        titleKey: "results.r3.title",
+        subtitleKey: "results.r3.subtitle",
         color: "#3d5a80", colorEnd: "#1a2a40",
-        desc: "잔잔한 빗소리처럼 조용하지만 깊은 감수성을 가졌습니다. 혼자만의 시간을 사랑하면서도 따뜨한 마음을 지녔습니다.",
-        traits: ["감정 표현: 은은하게, 조용히", "의사결정: 직관과 논리의 균형", "에너지원: 비 오는 날의 아늑함", "대인관계: 편안한 소수와 깊은 대화"],
-        activities: ["비 오는 날 창가에서 차 마시기", "일기 쓰기", "팟캐스트 듣기", "요리하기"],
-        warnings: ["우울감을 비와 혼동하지 마세요", "가끔 밖으로 나가 활력을 충전하세요"],
-        compat: "화창한 오후 (15~20°C) - 당신에게 에너지를 주는 밝은 사람",
-        advice: "당신의 내향적 감수성은 창의성과 공감 능력으로 이어집니다. 세상을 깊이 있게 봐요.",
-        quote: "감수성은 인간의 가장 아름다운 자질이다. - 루소",
-        statistics: "약 18%의 사람들이 당신과 같은 감정 유형을 가지고 있어요."
+        descKey: "results.r3.desc",
+        traitsKeys: ["results.r3.t1", "results.r3.t2", "results.r3.t3", "results.r3.t4"],
+        activitiesKeys: ["results.r3.a1", "results.r3.a2", "results.r3.a3", "results.r3.a4"],
+        warningsKeys: ["results.r3.w1", "results.r3.w2"],
+        compatKey: "results.r3.compat",
+        adviceKey: "results.r3.advice",
+        quoteKey: "results.r3.quote",
+        statisticsKey: "results.r3.statistics"
     },
     {
-        min: 6, max: 10, temp: 8, emoji: "🌤️",
-        title: "선선한 가을 바람",
-        subtitle: "균형 잡힌 당신",
+        min: 6, max: 10, temp: 8, emoji: "\uD83C\uDF24\uFE0F",
+        titleKey: "results.r4.title",
+        subtitleKey: "results.r4.subtitle",
         color: "#457b9d", colorEnd: "#1d3557",
-        desc: "감정과 이성의 균형이 좋은 당신. 상황에 맞게 감정을 조절하며 안정적인 에너지를 전달합니다.",
-        traits: ["감정 표현: 상황에 맞게 적절히", "의사결정: 균형 잡힌 판단력", "에너지원: 다양한 활동", "대인관계: 다양한 사람과 잘 어울림"],
-        activities: ["운동과 야외활동", "친구와 카페 데이트", "새로운 취미 도전", "여행 계획 세우기"],
-        warnings: ["너무 균형만 맞추려다 자신의 감정을 놓칠 수 있어요", "가끔은 감정에 솔직해져 보세요"],
-        compat: "비슷한 온도 (5~15°C) - 함께 편안한 리듬을 만드는 사람",
-        advice: "당신의 균형감각은 주변 사람들에게 안정감을 줍니다. 계속 그 리듬을 유지하세요.",
-        quote: "균형 있는 삶이 가장 아름다운 삶이다. - 아리스토텔레스",
-        statistics: "약 22%의 사람들이 당신과 같은 감정 유형을 가지고 있어요."
+        descKey: "results.r4.desc",
+        traitsKeys: ["results.r4.t1", "results.r4.t2", "results.r4.t3", "results.r4.t4"],
+        activitiesKeys: ["results.r4.a1", "results.r4.a2", "results.r4.a3", "results.r4.a4"],
+        warningsKeys: ["results.r4.w1", "results.r4.w2"],
+        compatKey: "results.r4.compat",
+        adviceKey: "results.r4.advice",
+        quoteKey: "results.r4.quote",
+        statisticsKey: "results.r4.statistics"
     },
     {
-        min: 11, max: 15, temp: 13, emoji: "🌸",
-        title: "포근한 봄 햇살",
-        subtitle: "따뜨하고 배려심 깊은 당신",
+        min: 11, max: 15, temp: 13, emoji: "\uD83C\uDF38",
+        titleKey: "results.r5.title",
+        subtitleKey: "results.r5.subtitle",
         color: "#e07a5f", colorEnd: "#8c3e2a",
-        desc: "봄 햇살처럼 따뜬한 당신은 주변 사람들에게 안정감을 줍니다. 공감 능력이 뛰어나고 배려심이 깊습니다.",
-        traits: ["감정 표현: 자연스럽고 따뜬함", "타인 공감: 80%", "에너지원: 좋은 사람들과의 시간", "대인관계: 모두에게 편안한 존재"],
-        activities: ["친구들과 소소한 모임", "봉사활동", "원예/꽃 가꾸기", "편지 쓰기"],
-        warnings: ["남의 감정에 너무 많이 휘둘리지 마세요", "자신의 감정도 중요하게 챙기세요"],
-        compat: "선선한 바람 (5~10°C) - 당신의 따뜬함에 안정을 더해주는 사람",
-        advice: "당신의 따뜬함은 타인의 마음을 치유합니다. 자신도 그렇게 돌봐주세요.",
-        quote: "따뜬한 말 한 마디가 겨울을 녹인다. - 벌린",
-        statistics: "약 18%의 사람들이 당신과 같은 감정 유형을 가지고 있어요."
+        descKey: "results.r5.desc",
+        traitsKeys: ["results.r5.t1", "results.r5.t2", "results.r5.t3", "results.r5.t4"],
+        activitiesKeys: ["results.r5.a1", "results.r5.a2", "results.r5.a3", "results.r5.a4"],
+        warningsKeys: ["results.r5.w1", "results.r5.w2"],
+        compatKey: "results.r5.compat",
+        adviceKey: "results.r5.advice",
+        quoteKey: "results.r5.quote",
+        statisticsKey: "results.r5.statistics"
     },
     {
-        min: 16, max: 20, temp: 18, emoji: "☀️",
-        title: "화창한 오후의 햇빛",
-        subtitle: "밝고 긍정적인 당신",
+        min: 16, max: 20, temp: 18, emoji: "\u2600\uFE0F",
+        titleKey: "results.r6.title",
+        subtitleKey: "results.r6.subtitle",
         color: "#f4a261", colorEnd: "#a85d18",
-        desc: "밝은 에너지로 주변을 환하게 만드는 당신! 긍정적이고 사교적이며 어디서든 분위기 메이커입니다.",
-        traits: ["감정 표현: 솔직하고 밝음", "타인 공감: 85%", "에너지원: 사람들과의 교류", "대인관계: 넓고 활발한 인맥"],
-        activities: ["파티와 모임 참석", "새로운 맛집 탐방", "SNS 활동", "여행과 모험"],
-        warnings: ["에너지 소진에 주의하세요 (주 1회 혼자만의 시간 권장)", "모든 사람의 기대에 부응하려 하지 마세요"],
-        compat: "잔잔한 빗소리 (1~5°C) - 당신을 차분하게 만들어주는 사려 깊은 사람",
-        advice: "당신의 긍정적 에너지가 세상을 밝힙니다. 그 빛을 계속 나누세요.",
-        quote: "밝은 마음이 밝은 미래를 만든다. - 탈레스",
-        statistics: "약 15%의 사람들이 당신과 같은 감정 유형을 가지고 있어요."
+        descKey: "results.r6.desc",
+        traitsKeys: ["results.r6.t1", "results.r6.t2", "results.r6.t3", "results.r6.t4"],
+        activitiesKeys: ["results.r6.a1", "results.r6.a2", "results.r6.a3", "results.r6.a4"],
+        warningsKeys: ["results.r6.w1", "results.r6.w2"],
+        compatKey: "results.r6.compat",
+        adviceKey: "results.r6.advice",
+        quoteKey: "results.r6.quote",
+        statisticsKey: "results.r6.statistics"
     },
     {
-        min: 21, max: 25, temp: 23, emoji: "🌻",
-        title: "열정적인 한여름",
-        subtitle: "감정이 풍부한 에너자이저",
+        min: 21, max: 25, temp: 23, emoji: "\uD83C\uDF3B",
+        titleKey: "results.r7.title",
+        subtitleKey: "results.r7.subtitle",
         color: "#e76f51", colorEnd: "#9c3a1e",
-        desc: "뜨거운 열정과 풍부한 감정을 지닌 당신! 사랑과 우정에 진심이며 온몸으로 감정을 표현합니다.",
-        traits: ["감정 표현: 진솔하고 강렬함", "타인 공감: 90%", "에너지원: 열정적인 도전", "대인관계: 깊고 진한 관계 선호"],
-        activities: ["창작 활동 (그림, 음악, 글)", "열정적인 토론", "봉사와 나눔", "감동적인 콘텐츠 소비"],
-        warnings: ["감정 기복이 클 수 있어요 (마음 정리 시간 필요)", "타인의 감정을 과도하게 흡수하지 마세요"],
-        compat: "서늘한 새벽 (-4~0°C) - 당신의 열정을 안정시켜주는 차분한 사람",
-        advice: "당신의 열정은 무한한 에너지입니다. 그것을 잘 관리하면 큰 성과를 이룰 수 있어요.",
-        quote: "열정은 모든 위대한 업적의 원동력이다. - 토마스",
-        statistics: "약 12%의 사람들이 당신과 같은 감정 유형을 가지고 있어요."
+        descKey: "results.r7.desc",
+        traitsKeys: ["results.r7.t1", "results.r7.t2", "results.r7.t3", "results.r7.t4"],
+        activitiesKeys: ["results.r7.a1", "results.r7.a2", "results.r7.a3", "results.r7.a4"],
+        warningsKeys: ["results.r7.w1", "results.r7.w2"],
+        compatKey: "results.r7.compat",
+        adviceKey: "results.r7.advice",
+        quoteKey: "results.r7.quote",
+        statisticsKey: "results.r7.statistics"
     },
     {
-        min: 26, max: 40, temp: 35, emoji: "🔥",
-        title: "타오르는 불꽃",
-        subtitle: "감정의 화산, 순수한 열정가",
+        min: 26, max: 40, temp: 35, emoji: "\uD83D\uDD25",
+        titleKey: "results.r8.title",
+        subtitleKey: "results.r8.subtitle",
         color: "#d62828", colorEnd: "#6b1010",
-        desc: "모든 감정을 120%로 느끼는 당신! HSP(고감수성)에 가까운 감정 처리 능력을 가졌습니다. 웃을 때 가장 밝고, 슬플 때 가장 깊습니다.",
-        traits: ["감정 표현: 온몸으로, 숨기기 불가능", "타인 공감: 95% (거의 텔레파시)", "에너지원: 사랑하는 사람들", "대인관계: 소울메이트를 찾는 타입"],
-        activities: ["예술 감상과 창작", "깊은 대화와 소통", "자연 속에서 감정 정리", "일기와 감정 일지 쓰기"],
-        warnings: ["감정 소진 주의! (주 2회 혼자만의 시간 필수)", "경계를 세우는 연습이 필요해요", "모든 것을 느끼려 하지 말고, 자신을 보호하세요"],
-        compat: "절대영도 (-10~-5°C) - 극과 극은 통한다! 냉정함이 당신을 지켜줄 사람",
-        advice: "당신의 깊은 감정은 세상에 필요한 것입니다. 자신의 감정을 조절하는 법을 배워 소진을 막으세요.",
-        quote: "깊은 감정 속에 진정한 예술이 태어난다. - 고흐",
-        statistics: "약 8%의 사람들이 당신과 같은 감정 유형을 가지고 있어요."
+        descKey: "results.r8.desc",
+        traitsKeys: ["results.r8.t1", "results.r8.t2", "results.r8.t3", "results.r8.t4"],
+        activitiesKeys: ["results.r8.a1", "results.r8.a2", "results.r8.a3", "results.r8.a4"],
+        warningsKeys: ["results.r8.w1", "results.r8.w2", "results.r8.w3"],
+        compatKey: "results.r8.compat",
+        adviceKey: "results.r8.advice",
+        quoteKey: "results.r8.quote",
+        statisticsKey: "results.r8.statistics"
     }
 ];
 
