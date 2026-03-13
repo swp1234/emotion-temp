@@ -6,13 +6,13 @@
     "skipLink": "Skip to main"
   },
   "intro": {
-    "title": "Emotional Thermometer",
+    "title": "Emotion Temperature Test",
     "sub": "What's your emotional temperature?",
     "desc": "Answer 10 questions and\ndiscover your emotional temperature",
     "questions": "📝 10 Questions",
     "time": "⏱️ About 2 min",
     "types": "🎯 8 Types",
-    "start": "Start Test",
+    "start": "Check My Emotion Temp - Free",
     "count": "people participated!"
   },
   "progress": {
@@ -336,5 +336,18 @@
       "quote": "True art is born from deep emotion. - Van Gogh",
       "statistics": "About 8% of people share your emotional type."
     }
+  },
+  "engage": {
+    "result1": "36.5°C Normal -- Balanced & Stable",
+    "result2": "39°C Passionate -- Intense & Driven",
+    "result3": "34°C Cool -- Calm & Analytical",
+    "socialProof": "2,800+ emotional temperatures measured"
+  },
+  "about": {
+    "toggle": "About the Emotion Temperature Test",
+    "heading1": "How the Emotion Temperature Test Works",
+    "text1": "The Emotion Temperature Test uses 10 carefully designed questions about your emotional responses to everyday situations. Your answers determine your emotional intensity level, expressed as a temperature reading across 8 distinct types.",
+    "heading2": "Understanding Your Emotional Temperature",
+    "text2": "Your emotional temperature reflects how intensely you experience and express feelings. A higher temperature indicates passionate responses, while a lower temperature suggests calm processing. Each type has unique strengths and compatible partners."
   }
 }

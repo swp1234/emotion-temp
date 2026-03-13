@@ -6,13 +6,13 @@
     "skipLink": "Langsung ke konten utama"
   },
   "intro": {
-    "title": "Termometer Emosi",
+    "title": "Tes Suhu Emosi",
     "sub": "Berapa suhu emosi Anda?",
     "desc": "Jawab 10 pertanyaan dan\ntemukan suhu emosi Anda",
     "questions": "📝 10 Pertanyaan",
     "time": "⏱️ Sekitar 2 menit",
     "types": "🎯 8 Tipe",
-    "start": "Mulai Tes",
+    "start": "Ukur Suhu Emosi - Gratis",
     "count": "orang telah berpartisipasi!"
   },
   "progress": {
@@ -336,5 +336,18 @@
       "quote": "True art is born from deep emotion. - Van Gogh",
       "statistics": "About 8% of people share your emotional type."
     }
+  },
+  "engage": {
+    "result1": "36.5°C Normal -- Seimbang & Stabil",
+    "result2": "39°C Bergairah -- Intens & Termotivasi",
+    "result3": "34°C Dingin -- Tenang & Analitis",
+    "socialProof": "2,800+ suhu emosi diukur hari ini"
+  },
+  "about": {
+    "toggle": "Tentang Tes Ini",
+    "heading1": "Cara Kerja",
+    "text1": "10 pertanyaan menganalisis respons emosional Anda.",
+    "heading2": "Memahami Suhu Emosi Anda",
+    "text2": "Suhu emosi mencerminkan intensitas perasaan Anda."
   }
 }

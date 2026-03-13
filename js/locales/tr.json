@@ -6,13 +6,13 @@
     "skipLink": "Ana içeriğe geç"
   },
   "intro": {
-    "title": "Duygusal Termometre",
+    "title": "Duygusal Sıcaklık Testi",
     "sub": "Duygusal sıcaklığın kaç derece?",
     "desc": "10 soruyu yanıtla ve\nduygusal sıcaklığını keşfet",
     "questions": "📝 10 Soru",
     "time": "⏱️ Yaklaşık 2 dk",
     "types": "🎯 8 Tip",
-    "start": "Teste Başla",
+    "start": "Sıcaklığımı Ölç - Ücretsiz",
     "count": "kişi katıldı!"
   },
   "progress": {
@@ -336,5 +336,18 @@
       "quote": "True art is born from deep emotion. - Van Gogh",
       "statistics": "About 8% of people share your emotional type."
     }
+  },
+  "engage": {
+    "result1": "36.5°C Normal -- Dengeli & Stabil",
+    "result2": "39°C Tutkulu -- Yoğun & Motiveli",
+    "result3": "34°C Soğuk -- Sakin & Analitik",
+    "socialProof": "Bugün 2,800+ ölçüm yapıldı"
+  },
+  "about": {
+    "toggle": "Bu Test Hakkında",
+    "heading1": "Nasıl Çalışır",
+    "text1": "10 soru duygusal tepkilerinizi analiz eder.",
+    "heading2": "Duygusal Sıcaklığınızı Anlamak",
+    "text2": "Duygusal sıcaklık duygularınızın yoğunluğunu yansıtır."
   }
 }

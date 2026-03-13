@@ -7,8 +7,8 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3600813755953882" crossorigin="anonymous"></script>
 
     <!-- SEO -->
-    <title>Emotion Temperature Test - Free Mood Check | DopaBrain</title>
-    <meta name="description" content="Discover your emotional temperature with 10 quick questions. Find which of 8 emotion types matches you and get personalized tips. Play free!">
+    <title>Emotion Temperature Test - Free Online Quiz | DopaBrain</title>
+    <meta name="description" content="What is your emotional temperature? Take this free 10-question mood test to discover your emotion type. 8 results with personalized tips - try now!">
     <meta name="keywords" content="감정테스트, 심리테스트, 감정온도, 성격테스트, HSP, 메타센싱, 감정분석, 무료심리테스트">
 
     <!-- Open Graph -->
@@ -88,6 +88,68 @@
         "featureList": "10 Questions, 8 Emotion Type Analysis, Emotion Management Tips, Result Save"
     }
     </script>
+    <!-- BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dopabrain.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Tests", "item": "https://dopabrain.com/portal/" },
+            { "@type": "ListItem", "position": 3, "name": "Emotion Tests", "item": "https://dopabrain.com/portal/" },
+            { "@type": "ListItem", "position": 4, "name": "Emotion Temperature", "item": "https://dopabrain.com/emotion-temp/" }
+        ]
+    }
+    </script>
+    <!-- FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is an emotional temperature test?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "An emotional temperature test measures your current emotional state using a temperature metaphor. Like body temperature indicates physical health, your emotional temperature reveals how intensely you experience and process emotions, ranging from cool and calm to hot and passionate."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the 8 emotion temperature types?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The test classifies you into 8 types based on emotional intensity: from sub-zero cool (highly analytical, detached) through normal temperature (balanced, stable) to boiling point (intensely passionate, deeply feeling). Each type includes unique traits, recommended activities, and compatibility insights."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How accurate is the emotion temperature test?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "This test is designed for self-reflection and entertainment, not clinical diagnosis. It uses 10 carefully crafted questions about emotional responses to everyday situations. While not scientifically validated, many users find the results surprisingly relatable and useful for self-awareness."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can my emotional temperature change?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely! Your emotional temperature can fluctuate based on life circumstances, stress levels, relationships, and personal growth. Retaking the test periodically can help you track how your emotional patterns evolve over time."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which emotional temperatures are most compatible?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Compatibility depends on the specific types, but generally complementary temperatures work well together. A warm, passionate type often balances well with a cool, analytical type. The test provides specific compatibility matches for each result."
+                }
+            }
+        ]
+    }
+    </script>
 
     <!-- PWA -->
     <link rel="manifest" href="manifest.json">
@@ -143,15 +205,28 @@
             <div class="ad-banner ad-top"><span class="ad-placeholder" data-i18n="ads.banner">광고 영역</span></div>
             <div class="intro-content">
                 <div class="thermo-icon">🌡️</div>
-                <h1 data-i18n="intro.title">감정 온도계</h1>
-                <p class="intro-sub" data-i18n="intro.sub">나의 감정 온도는 몇 도일까?</p>
-                <p class="intro-desc" data-i18n="intro.desc">10가지 질문에 답하고<br>나만의 감정 온도를 확인하세요</p>
-                <div class="intro-meta">
-                    <span data-i18n="intro.questions">📝 10문항</span>
-                    <span data-i18n="intro.time">⏱️ 약 2분</span>
-                    <span data-i18n="intro.types">🎯 8가지 유형</span>
+                <h1 data-i18n="intro.title">Emotion Temperature Test</h1>
+                <p class="intro-sub" data-i18n="intro.sub">What is your emotional temperature?</p>
+                <p class="intro-desc" data-i18n="intro.desc">Answer 10 questions and<br>discover your emotional temperature</p>
+
+                <!-- Result Preview Carousel -->
+                <div class="result-carousel" aria-live="polite">
+                    <div class="carousel-track">
+                        <div class="carousel-item" data-i18n="engage.result1">36.5C Normal -- Balanced & Stable</div>
+                        <div class="carousel-item" data-i18n="engage.result2">39C Passionate -- Intense & Driven</div>
+                        <div class="carousel-item" data-i18n="engage.result3">34C Cool -- Calm & Analytical</div>
+                    </div>
                 </div>
-                <button class="btn-start" id="btn-start" data-i18n="intro.start">테스트 시작하기</button>
+
+                <!-- Social Proof Badge -->
+                <div class="social-proof-badge" data-i18n="engage.socialProof">2,800+ emotional temperatures measured</div>
+
+                <div class="intro-meta">
+                    <span data-i18n="intro.questions">📝 10 Questions</span>
+                    <span data-i18n="intro.time">⏱️ About 2 min</span>
+                    <span data-i18n="intro.types">🎯 8 Types</span>
+                </div>
+                <button class="btn-start" id="btn-start" data-i18n="intro.start">Check My Emotion Temp - Free</button>
                 <p class="intro-count" id="intro-count"></p>
             </div>
         </div>
@@ -278,6 +353,19 @@
         <!-- Hidden canvas for share image -->
         <canvas id="share-canvas" width="1080" height="1080" style="display:none;"></canvas>
     </div>
+
+    <!-- About Section -->
+    <section class="about-section collapsible-section" id="about-section">
+      <details>
+        <summary data-i18n="about.toggle">About the Emotion Temperature Test</summary>
+        <div class="about-content">
+          <h2 data-i18n="about.heading1">How the Emotion Temperature Test Works</h2>
+          <p data-i18n="about.text1">The Emotion Temperature Test uses 10 carefully designed questions about your emotional responses to everyday situations. Your answers are analyzed to determine your emotional intensity level, expressed as a temperature reading. The test maps your emotional patterns across 8 distinct temperature types, from cool and composed to passionately intense.</p>
+          <h2 data-i18n="about.heading2">Understanding Your Emotional Temperature</h2>
+          <p data-i18n="about.text2">Your emotional temperature reflects how intensely you experience and express feelings. A higher temperature indicates passionate, deeply-feeling responses, while a lower temperature suggests calm, analytical processing. Neither is better — each temperature type has unique strengths, compatible partners, and growth opportunities.</p>
+        </div>
+      </details>
+    </section>
 
     <script src="js/i18n.js" defer></script>
     <script src="js/data.js" defer></script>

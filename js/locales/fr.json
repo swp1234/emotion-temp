@@ -6,13 +6,13 @@
     "skipLink": "Aller au contenu principal"
   },
   "intro": {
-    "title": "Thermomètre Émotionnel",
+    "title": "Test de Température Émotionnelle",
     "sub": "Quelle est ta température émotionnelle ?",
     "desc": "Réponds à 10 questions et\ndécouvre ta température émotionnelle",
     "questions": "📝 10 Questions",
     "time": "⏱️ Environ 2 min",
     "types": "🎯 8 Types",
-    "start": "Commencer le Test",
+    "start": "Mesurer Ma Température - Gratuit",
     "count": "personnes ont participé!"
   },
   "progress": {
@@ -336,5 +336,18 @@
       "quote": "Le vrai art naît de l'émotion profonde. - Van Gogh",
       "statistics": "Environ 8% des gens partagent votre type émotionnel."
     }
+  },
+  "engage": {
+    "result1": "36.5°C Normal -- Équilibré & Stable",
+    "result2": "39°C Passionné -- Intense & Motivé",
+    "result3": "34°C Froid -- Calme & Analytique",
+    "socialProof": "2,800+ températures mesurées aujourd'hui"
+  },
+  "about": {
+    "toggle": "À propos de ce Test",
+    "heading1": "Comment ça fonctionne",
+    "text1": "10 questions analysent vos réponses émotionnelles.",
+    "heading2": "Comprendre Votre Température Émotionnelle",
+    "text2": "La température émotionnelle reflète l'intensité de vos émotions."
   }
 }
