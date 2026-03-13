@@ -25,7 +25,15 @@
     "traits": "🌸 핵심 특징",
     "activities": "💡 추천 활동",
     "warnings": "⚠️ 주의사항",
-    "compat": "💕 잘 맞는 감정 온도"
+    "compat": "💕 잘 맞는 감정 온도",
+    "moreTests": "더 많은 테스트",
+    "percentileStat": "참가자의 <strong>{percent}%</strong>만이 당신과 같은 감정 온도입니다"
+  },
+  "related": {
+    "hspTest": "HSP 테스트",
+    "stressCheck": "스트레스 체크",
+    "emotionIceberg": "감정 빙산",
+    "socialBattery": "소셜 배터리"
   },
   "premium": {
     "patternAnalysis": "📊 감정 패턴 분석",

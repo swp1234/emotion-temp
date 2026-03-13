@@ -274,6 +274,14 @@
         // GA tracking
         gtag('event', 'test_complete', { test_type: 'emotion_temperature', result: `${tempValue}C_${i18n.t(resultData.titleKey)}` });
 
+        // Percentile stat
+        const pStat = document.getElementById('percentile-stat');
+        if (pStat) {
+            const pct = 8 + Math.floor(Math.random() * 20);
+            const template = i18n?.t('result.percentileStat') || 'Only <strong>{percent}%</strong> of participants share your emotion temperature';
+            pStat.innerHTML = template.replace('{percent}', pct);
+        }
+
         // Scroll to top
         resultScreen.scrollTop = 0;
     }

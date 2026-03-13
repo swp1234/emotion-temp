@@ -25,7 +25,15 @@
     "traits": "🌸 核心特征",
     "activities": "💡 推荐活动",
     "warnings": "⚠️ 注意事项",
-    "compat": "💕 匹配的情感温度"
+    "compat": "💕 匹配的情感温度",
+    "moreTests": "探索更多测试",
+    "percentileStat": "仅 <strong>{percent}%</strong> 的参与者拥有与你相同的情感温度"
+  },
+  "related": {
+    "hspTest": "HSP测试",
+    "stressCheck": "压力检测",
+    "emotionIceberg": "情感冰山",
+    "socialBattery": "社交电量"
   },
   "premium": {
     "patternAnalysis": "📊 情感模式分析",

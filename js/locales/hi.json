@@ -25,7 +25,15 @@
     "traits": "🌸 मुख्य विशेषताएं",
     "activities": "💡 अनुशंसित गतिविधियाँ",
     "warnings": "⚠️ सावधानियाँ",
-    "compat": "💕 अनुकूल तापमान"
+    "compat": "💕 अनुकूल तापमान",
+    "moreTests": "और टेस्ट देखें",
+    "percentileStat": "केवल <strong>{percent}%</strong> प्रतिभागियों का आपके जैसा भावना तापमान है"
+  },
+  "related": {
+    "hspTest": "HSP परीक्षण",
+    "stressCheck": "तनाव जांच",
+    "emotionIceberg": "भावना हिमशैल",
+    "socialBattery": "सामाजिक बैटरी"
   },
   "premium": {
     "patternAnalysis": "📊 भावनात्मक पैटर्न विश्लेषण",

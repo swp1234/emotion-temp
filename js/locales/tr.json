@@ -25,7 +25,15 @@
     "traits": "🌸 Temel Özellikler",
     "activities": "💡 Önerilen Aktiviteler",
     "warnings": "⚠️ Dikkat Et",
-    "compat": "💕 Uyumlu Sıcaklıklar"
+    "compat": "💕 Uyumlu Sıcaklıklar",
+    "moreTests": "Daha fazla test keşfet",
+    "percentileStat": "Katılımcıların sadece <strong>{percent}%</strong>'i senin duygu sıcaklığına sahip"
+  },
+  "related": {
+    "hspTest": "HSP Testi",
+    "stressCheck": "Stres Kontrolü",
+    "emotionIceberg": "Duygu Buzdağı",
+    "socialBattery": "Sosyal Batarya"
   },
   "premium": {
     "patternAnalysis": "📊 Duygu Deseni Analizi",

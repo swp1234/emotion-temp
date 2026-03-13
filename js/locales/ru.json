@@ -25,7 +25,15 @@
     "traits": "🌸 Ключевые черты",
     "activities": "💡 Рекомендованные занятия",
     "warnings": "⚠️ На что обратить внимание",
-    "compat": "💕 Совместимые температуры"
+    "compat": "💕 Совместимые температуры",
+    "moreTests": "Ещё тесты",
+    "percentileStat": "Только <strong>{percent}%</strong> участников имеют такую же температуру эмоций"
+  },
+  "related": {
+    "hspTest": "HSP Тест",
+    "stressCheck": "Проверка стресса",
+    "emotionIceberg": "Айсберг эмоций",
+    "socialBattery": "Социальная батарея"
   },
   "premium": {
     "patternAnalysis": "📊 Анализ эмоциональной схемы",

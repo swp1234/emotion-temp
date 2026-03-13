@@ -25,7 +25,15 @@
     "traits": "🌸 Características Principais",
     "activities": "💡 Atividades Recomendadas",
     "warnings": "⚠️ Cuidado Com",
-    "compat": "💕 Temperaturas Compatíveis"
+    "compat": "💕 Temperaturas Compatíveis",
+    "moreTests": "Explorar mais testes",
+    "percentileStat": "Apenas <strong>{percent}%</strong> compartilham sua temperatura emocional"
+  },
+  "related": {
+    "hspTest": "Teste HSP",
+    "stressCheck": "Verificação de Estresse",
+    "emotionIceberg": "Iceberg Emocional",
+    "socialBattery": "Bateria Social"
   },
   "premium": {
     "patternAnalysis": "📊 Análise de Padrão Emocional",

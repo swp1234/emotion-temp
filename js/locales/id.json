@@ -25,7 +25,15 @@
     "traits": "🌸 Ciri Utama",
     "activities": "💡 Aktivitas yang Direkomendasikan",
     "warnings": "⚠️ Perhatikan",
-    "compat": "💕 Suhu Emosi yang Kompatibel"
+    "compat": "💕 Suhu Emosi yang Kompatibel",
+    "moreTests": "Jelajahi tes lainnya",
+    "percentileStat": "Hanya <strong>{percent}%</strong> peserta memiliki suhu emosi yang sama"
+  },
+  "related": {
+    "hspTest": "Tes HSP",
+    "stressCheck": "Cek Stres",
+    "emotionIceberg": "Gunung Es Emosi",
+    "socialBattery": "Baterai Sosial"
   },
   "premium": {
     "patternAnalysis": "📊 Analisis Pola Emosi",
