@@ -35,7 +35,8 @@
     "emotionIceberg": "Duygu Buzdağı",
     "socialBattery": "Sosyal Batarya",
     "burnoutTest": "Tükenmişlik Testi",
-    "stressResponse": "Stres Tepkisi"
+    "stressResponse": "Stres Tepkisi",
+    "anxietyType": "Kaygı Tipi"
   },
   "premium": {
     "patternAnalysis": "📊 Duygu Deseni Analizi",

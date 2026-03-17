@@ -35,7 +35,8 @@
     "emotionIceberg": "Iceberg Emocional",
     "socialBattery": "Bateria Social",
     "burnoutTest": "Teste de Burnout",
-    "stressResponse": "Resposta ao Estresse"
+    "stressResponse": "Resposta ao Estresse",
+    "anxietyType": "Tipo de Ansiedade"
   },
   "premium": {
     "patternAnalysis": "📊 Análise de Padrão Emocional",

@@ -35,7 +35,8 @@
     "emotionIceberg": "Emotions-Eisberg",
     "socialBattery": "Soziale Batterie",
     "burnoutTest": "Burnout-Test",
-    "stressResponse": "Stressreaktion"
+    "stressResponse": "Stressreaktion",
+    "anxietyType": "Angsttyp"
   },
   "premium": {
     "patternAnalysis": "📊 Analyse des Emotionsmusters",

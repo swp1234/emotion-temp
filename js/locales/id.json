@@ -35,7 +35,8 @@
     "emotionIceberg": "Gunung Es Emosi",
     "socialBattery": "Baterai Sosial",
     "burnoutTest": "Tes Burnout",
-    "stressResponse": "Respons Stres"
+    "stressResponse": "Respons Stres",
+    "anxietyType": "Tipe Kecemasan"
   },
   "premium": {
     "patternAnalysis": "📊 Analisis Pola Emosi",

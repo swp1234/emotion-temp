@@ -35,7 +35,8 @@
     "emotionIceberg": "Айсберг эмоций",
     "socialBattery": "Социальная батарея",
     "burnoutTest": "Тест на выгорание",
-    "stressResponse": "Стресс-реакция"
+    "stressResponse": "Стресс-реакция",
+    "anxietyType": "Тип тревожности"
   },
   "premium": {
     "patternAnalysis": "📊 Анализ эмоциональной схемы",
