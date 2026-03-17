@@ -33,7 +33,8 @@
     "hspTest": "Test HSP",
     "stressCheck": "Control de Estrés",
     "emotionIceberg": "Iceberg Emocional",
-    "socialBattery": "Batería Social"
+    "socialBattery": "Batería Social",
+    "burnoutTest": "Test de Burnout"
   },
   "premium": {
     "patternAnalysis": "📊 Análisis de Patrón Emocional",

@@ -33,7 +33,8 @@
     "hspTest": "HSP 테스트",
     "stressCheck": "스트레스 체크",
     "emotionIceberg": "감정 빙산",
-    "socialBattery": "소셜 배터리"
+    "socialBattery": "소셜 배터리",
+    "burnoutTest": "번아웃 테스트"
   },
   "premium": {
     "patternAnalysis": "📊 감정 패턴 분석",

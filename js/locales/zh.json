@@ -33,7 +33,8 @@
     "hspTest": "HSP测试",
     "stressCheck": "压力检测",
     "emotionIceberg": "情感冰山",
-    "socialBattery": "社交电量"
+    "socialBattery": "社交电量",
+    "burnoutTest": "职业倦怠测试"
   },
   "premium": {
     "patternAnalysis": "📊 情感模式分析",
