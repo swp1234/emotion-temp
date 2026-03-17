@@ -34,7 +34,8 @@
     "stressCheck": "Проверка стресса",
     "emotionIceberg": "Айсберг эмоций",
     "socialBattery": "Социальная батарея",
-    "burnoutTest": "Тест на выгорание"
+    "burnoutTest": "Тест на выгорание",
+    "stressResponse": "Стресс-реакция"
   },
   "premium": {
     "patternAnalysis": "📊 Анализ эмоциональной схемы",
