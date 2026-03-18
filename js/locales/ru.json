@@ -36,7 +36,8 @@
     "socialBattery": "Социальная батарея",
     "burnoutTest": "Тест на выгорание",
     "stressResponse": "Стресс-реакция",
-    "anxietyType": "Тип тревожности"
+    "anxietyType": "Тип тревожности",
+    "eqTest": "Тест EQ"
   },
   "premium": {
     "patternAnalysis": "📊 Анализ эмоциональной схемы",

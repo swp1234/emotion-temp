@@ -36,7 +36,8 @@
     "socialBattery": "Bateria Social",
     "burnoutTest": "Teste de Burnout",
     "stressResponse": "Resposta ao Estresse",
-    "anxietyType": "Tipo de Ansiedade"
+    "anxietyType": "Tipo de Ansiedade",
+    "eqTest": "Teste EQ"
   },
   "premium": {
     "patternAnalysis": "📊 Análise de Padrão Emocional",

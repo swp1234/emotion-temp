@@ -36,7 +36,8 @@
     "socialBattery": "社交电量",
     "burnoutTest": "职业倦怠测试",
     "stressResponse": "压力反应",
-    "anxietyType": "焦虑类型"
+    "anxietyType": "焦虑类型",
+    "eqTest": "EQ测试"
   },
   "premium": {
     "patternAnalysis": "📊 情感模式分析",

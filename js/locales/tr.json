@@ -36,7 +36,8 @@
     "socialBattery": "Sosyal Batarya",
     "burnoutTest": "Tükenmişlik Testi",
     "stressResponse": "Stres Tepkisi",
-    "anxietyType": "Kaygı Tipi"
+    "anxietyType": "Kaygı Tipi",
+    "eqTest": "EQ Testi"
   },
   "premium": {
     "patternAnalysis": "📊 Duygu Deseni Analizi",
