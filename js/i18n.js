@@ -22,24 +22,35 @@ class I18n {
             this.translations[lang] = await response.json();
             return true;
         } catch (e) {
-            if (lang !== 'en') return this.loadTranslations('en');
+            if (lang !== 'en') {
+                const result = await this.loadTranslations('en');
+                if (result) this.currentLang = 'en';
+                return result;
+            }
             return false;
         }
     }
 
     t(key) {
+        if (!key) return '';
         const keys = key.split('.');
         let value = this.translations[this.currentLang];
+        if (!value) {
+            // Fallback: try any loaded language
+            const fallbackLang = Object.keys(this.translations)[0];
+            if (fallbackLang) value = this.translations[fallbackLang];
+            if (!value) return key;
+        }
 
         for (const k of keys) {
-            if (value && value[k]) {
+            if (value != null && typeof value === 'object' && k in value) {
                 value = value[k];
             } else {
                 return key;
             }
         }
 
-        return value;
+        return value != null ? value : key;
     }
 
     async setLanguage(lang) {

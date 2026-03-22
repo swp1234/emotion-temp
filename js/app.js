@@ -232,54 +232,73 @@
         incrementTestCount();
         saveEmotionHistory(tempValue);
 
-        // Temperature display
-        document.getElementById('result-temp').textContent = `${tempValue}°C`;
-        document.getElementById('result-title').textContent = `"${i18n.t(resultData.titleKey)}"`;
-        document.getElementById('result-desc').textContent = i18n.t(resultData.descKey);
+        try {
+            // Temperature display
+            document.getElementById('result-temp').textContent = `${tempValue}°C`;
 
-        // Thermometer fill animation
-        const fillPercent = ((tempValue + 10) / 50) * 100;
-        setTimeout(() => {
-            document.getElementById('thermo-fill').style.height = `${Math.max(5, Math.min(fillPercent, 100))}%`;
-            document.getElementById('thermo-bulb').style.background = resultData.color;
-        }, 100);
+            const titleText = i18n.t(resultData.titleKey) || resultData.titleKey;
+            const descText = i18n.t(resultData.descKey) || resultData.descKey;
+            document.getElementById('result-title').textContent = `"${titleText}"`;
+            document.getElementById('result-desc').textContent = descText;
 
-        // Traits
-        document.getElementById('result-traits').innerHTML = resultData.traitsKeys.map(k => `<li>${i18n.t(k)}</li>`).join('');
-        document.getElementById('result-activities').innerHTML = resultData.activitiesKeys.map(k => `<li>${i18n.t(k)}</li>`).join('');
-        document.getElementById('result-warnings').innerHTML = resultData.warningsKeys.map(k => `<li>${i18n.t(k)}</li>`).join('');
+            // Thermometer fill animation
+            const fillPercent = ((tempValue + 10) / 50) * 100;
+            setTimeout(() => {
+                document.getElementById('thermo-fill').style.height = `${Math.max(5, Math.min(fillPercent, 100))}%`;
+                document.getElementById('thermo-bulb').style.background = resultData.color;
+            }, 100);
 
-        // Emotion change tracker
-        const emotionComparison = getEmotionComparison();
+            // Traits
+            const safeT = (k) => i18n.t(k) || k;
+            document.getElementById('result-traits').innerHTML = (resultData.traitsKeys || []).map(k => `<li>${safeT(k)}</li>`).join('');
+            document.getElementById('result-activities').innerHTML = (resultData.activitiesKeys || []).map(k => `<li>${safeT(k)}</li>`).join('');
+            document.getElementById('result-warnings').innerHTML = (resultData.warningsKeys || []).map(k => `<li>${safeT(k)}</li>`).join('');
 
-        // New enrichment content
-        let compatText = emotionComparison || '';
-        compatText += i18n.t(resultData.compatKey);
-        if (resultData.adviceKey) {
-            compatText += `<br><br><strong>\u{1F4A1} ${i18n.t(resultData.adviceKey)}</strong>`;
+            // Emotion change tracker
+            const emotionComparison = getEmotionComparison();
+
+            // New enrichment content
+            let compatText = emotionComparison || '';
+            compatText += safeT(resultData.compatKey);
+            if (resultData.adviceKey) {
+                compatText += `<br><br><strong>\u{1F4A1} ${safeT(resultData.adviceKey)}</strong>`;
+            }
+            if (resultData.quoteKey) {
+                compatText += `<br><blockquote style="font-style:italic;margin:1em 0;padding:1em;border-left:3px solid ${resultData.color};opacity:0.9">\u275D${safeT(resultData.quoteKey)}\u275E</blockquote>`;
+            }
+            if (resultData.statisticsKey) {
+                compatText += `<br><small>${safeT(resultData.statisticsKey)}</small>`;
+            }
+            const savedText = i18n?.t('tracker.saved') || '당신의 감정이 저장되었습니다. 내일도 다시 측정해보세요!';
+            compatText += `<br><small style="opacity:0.6;">💾 ${savedText}</small>`;
+            document.getElementById('result-compat-text').innerHTML = compatText;
+
+            // Set card border color (borderImage breaks border-radius)
+            document.getElementById('result-card').style.borderColor = resultData.color;
+
+            // GA tracking
+            if (typeof gtag === 'function') {
+                gtag('event', 'test_complete', { test_type: 'emotion_temperature', result: `${tempValue}C_${titleText}` });
+            }
+        } catch (e) {
+            console.error('Result rendering error:', e);
+            // Fallback: show at least basic result
+            const titleEl = document.getElementById('result-title');
+            const descEl = document.getElementById('result-desc');
+            if (titleEl && !titleEl.textContent) titleEl.textContent = `"${resultData.titleKey}"`;
+            if (descEl && !descEl.textContent) descEl.textContent = resultData.descKey;
         }
-        if (resultData.quoteKey) {
-            compatText += `<br><blockquote style="font-style:italic;margin:1em 0;padding:1em;border-left:3px solid ${resultData.color};opacity:0.9">\u275D${i18n.t(resultData.quoteKey)}\u275E</blockquote>`;
-        }
-        if (resultData.statisticsKey) {
-            compatText += `<br><small>${i18n.t(resultData.statisticsKey)}</small>`;
-        }
-        const savedText = i18n?.t('tracker.saved') || '당신의 감정이 저장되었습니다. 내일도 다시 측정해보세요!';
-        compatText += `<br><small style="opacity:0.6;">💾 ${savedText}</small>`;
-        document.getElementById('result-compat-text').innerHTML = compatText;
 
-        // Set card border color (borderImage breaks border-radius)
-        document.getElementById('result-card').style.borderColor = resultData.color;
-
-        // GA tracking
-        gtag('event', 'test_complete', { test_type: 'emotion_temperature', result: `${tempValue}C_${i18n.t(resultData.titleKey)}` });
-
-        // Percentile stat
-        const pStat = document.getElementById('percentile-stat');
-        if (pStat) {
-            const pct = 8 + Math.floor(Math.random() * 20);
-            const template = i18n?.t('result.percentileStat') || 'Only <strong>{percent}%</strong> of participants share your emotion temperature';
-            pStat.innerHTML = template.replace('{percent}', pct);
+        // Percentile stat (outside try-catch to always render)
+        try {
+            const pStat = document.getElementById('percentile-stat');
+            if (pStat) {
+                const pct = 8 + Math.floor(Math.random() * 20);
+                const template = i18n?.t('result.percentileStat') || 'Only <strong>{percent}%</strong> of participants share your emotion temperature';
+                pStat.innerHTML = template.replace('{percent}', pct);
+            }
+        } catch (e) {
+            console.warn('Percentile stat error:', e);
         }
 
         // Scroll to top
