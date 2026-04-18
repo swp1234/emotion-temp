@@ -7,6 +7,7 @@
     let scores = [];
     let resultData = null;
     let tempValue = 0;
+    let resultInlineAdLoaded = false;
 
     // DOM
     const introScreen = document.getElementById('intro-screen');
@@ -14,6 +15,104 @@
     const loadingScreen = document.getElementById('loading-screen');
     const resultScreen = document.getElementById('result-screen');
     const adOverlay = document.getElementById('ad-overlay');
+    const relatedGrid = document.getElementById('related-grid');
+    const relatedTests = Array.from(document.querySelectorAll('.related-card'));
+    const primaryRelatedEmoji = document.getElementById('primary-related-emoji');
+    const primaryRelatedTitle = document.getElementById('primary-related-title');
+    const primaryRelatedDesc = document.getElementById('primary-related-desc');
+    const primaryRelatedCta = document.getElementById('primary-related-cta');
+    const primaryRelatedCtaText = document.getElementById('primary-related-cta-text');
+    const relatedJumpBtn = document.getElementById('related-jump-btn');
+    const resultInlineAd = document.getElementById('result-inline-ad');
+
+    const recommendationMap = {
+        cold: ['emotion-iceberg', 'hsp-test', 'social-battery', 'eq-test', 'stress-check', 'anxiety-type', 'stress-response', 'burnout-test'],
+        cool: ['hsp-test', 'emotion-iceberg', 'social-battery', 'eq-test', 'stress-check', 'anxiety-type', 'stress-response', 'burnout-test'],
+        warm: ['stress-check', 'social-battery', 'burnout-test', 'stress-response', 'anxiety-type', 'eq-test', 'hsp-test', 'emotion-iceberg'],
+        hot: ['burnout-test', 'stress-response', 'anxiety-type', 'eq-test', 'stress-check', 'social-battery', 'hsp-test', 'emotion-iceberg']
+    };
+
+    function trackEvent(name, params = {}) {
+        if (typeof gtag !== 'function') return;
+        gtag('event', name, params);
+    }
+
+    function getCurrentLang() {
+        return i18n?.getCurrentLanguage?.() || document.documentElement.lang || 'en';
+    }
+
+    function getShareUrl() {
+        const lang = getCurrentLang();
+        if (typeof i18n?.getSeoHref === 'function') {
+            return i18n.getSeoHref(lang);
+        }
+
+        const baseUrl = 'https://dopabrain.com/emotion-temp/';
+        return lang && lang !== 'x-default' ? `${baseUrl}?lang=${lang}` : baseUrl;
+    }
+
+    function getTempBucket(temp) {
+        if (temp <= 0) return 'cold';
+        if (temp <= 10) return 'cool';
+        if (temp <= 20) return 'warm';
+        return 'hot';
+    }
+
+    function prioritizeRelatedCards(temp) {
+        if (!relatedGrid || !relatedTests.length) return;
+
+        const bucket = getTempBucket(temp);
+        const priority = recommendationMap[bucket] || recommendationMap.cool;
+        const priorityIndex = new Map(priority.map((key, index) => [key, index]));
+        const orderedCards = [...relatedTests].sort((a, b) => {
+            const aIndex = priorityIndex.get(a.dataset.relatedKey) ?? Number.MAX_SAFE_INTEGER;
+            const bIndex = priorityIndex.get(b.dataset.relatedKey) ?? Number.MAX_SAFE_INTEGER;
+            return aIndex - bIndex;
+        });
+
+        orderedCards.forEach((card, index) => {
+            card.dataset.relatedRank = String(index + 1);
+            card.classList.toggle('is-featured', index === 0);
+            relatedGrid.appendChild(card);
+        });
+    }
+
+    function updatePrimaryRecommendation() {
+        if (!primaryRelatedCta || !relatedGrid) return;
+
+        const featuredCard = relatedGrid.querySelector('.related-card.is-featured') || relatedGrid.querySelector('.related-card');
+        if (!featuredCard) return;
+
+        const emojiEl = featuredCard.querySelector('.card-emoji');
+        const titleEl = featuredCard.querySelector('.card-title');
+        const descEl = featuredCard.querySelector('.card-desc');
+
+        primaryRelatedCta.href = featuredCard.href;
+        primaryRelatedCta.dataset.relatedKey = featuredCard.dataset.relatedKey || '';
+        primaryRelatedCta.dataset.relatedRank = featuredCard.dataset.relatedRank || '1';
+
+        if (primaryRelatedEmoji && emojiEl) primaryRelatedEmoji.textContent = emojiEl.textContent;
+        if (primaryRelatedTitle && titleEl) primaryRelatedTitle.textContent = titleEl.textContent;
+        if (primaryRelatedDesc && descEl) primaryRelatedDesc.textContent = descEl.textContent;
+        if (primaryRelatedCtaText) {
+            primaryRelatedCtaText.textContent = i18n?.t('result.nextStepCta') || 'Open Follow-up';
+        }
+    }
+
+    function ensureResultAdLoaded() {
+        if (resultInlineAdLoaded || !resultInlineAd || typeof window.adsbygoogle === 'undefined') return;
+
+        try {
+            (window.adsbygoogle = window.adsbygoogle || []).push({});
+            resultInlineAdLoaded = true;
+            trackEvent('hub_ad_impression', {
+                app_name: 'emotion-temp',
+                ad_surface: 'result_inline'
+            });
+        } catch (error) {
+            console.warn('Inline ad init failed:', error.message);
+        }
+    }
 
     // Update test count display with error handling
     function updateTestCount() {
@@ -144,6 +243,11 @@
         scores = [];
         show(questionScreen);
         showQuestion();
+        trackEvent('quiz_start', {
+            app_name: 'emotion-temp',
+            test_type: 'emotion_temperature',
+            content_type: 'test'
+        });
         // GA4: 테스트 시작
         if (typeof gtag === 'function') {
             gtag('event', 'test_start', {
@@ -193,7 +297,14 @@
         options.forEach(o => o.disabled = true);
 
         btn.classList.add('selected');
-        scores.push(parseInt(btn.dataset.score));
+        const score = parseInt(btn.dataset.score, 10);
+        scores.push(score);
+        trackEvent('emotion_temp_option_select', {
+            app_name: 'emotion-temp',
+            test_type: 'emotion_temperature',
+            question_index: currentQ + 1,
+            option_score: score
+        });
 
         setTimeout(() => {
             currentQ++;
@@ -301,24 +412,60 @@
             console.warn('Percentile stat error:', e);
         }
 
+        prioritizeRelatedCards(tempValue);
+        updatePrimaryRecommendation();
+        ensureResultAdLoaded();
+
+        trackEvent('result_view', {
+            app_name: 'emotion-temp',
+            test_type: 'emotion_temperature',
+            result_key: resultData?.titleKey,
+            temp_bucket: getTempBucket(tempValue),
+            temperature_value: tempValue
+        });
+        trackEvent('quiz_complete', {
+            app_name: 'emotion-temp',
+            test_type: 'emotion_temperature',
+            result_key: resultData?.titleKey,
+            temperature_value: tempValue
+        });
+
         // Scroll to top
         resultScreen.scrollTop = 0;
     }
 
     // Share
     function shareResult() {
-        const url = 'https://dopabrain.com/emotion-temp/';
+        const url = getShareUrl();
         const shareTitle = i18n?.t('share.title') || 'Emotional Temperature';
         const shareText = i18n?.t('share.text') || 'My emotional temperature is';
         const text = `${shareText} ${tempValue}°C!\n\n"${i18n.t(resultData.titleKey)}" ${resultData.emoji}\n${i18n.t(resultData.subtitleKey)}\n\n${url}`;
 
-        gtag('event', 'share', { method: 'native', test_type: 'emotion_temperature' });
+        trackEvent('emotion_temp_share_open', {
+            app_name: 'emotion-temp',
+            test_type: 'emotion_temperature',
+            method: navigator.share ? 'native' : 'copy'
+        });
+        trackEvent('share', {
+            method: navigator.share ? 'native' : 'copy',
+            test_type: 'emotion_temperature'
+        });
 
         if (navigator.share) {
+            trackEvent('emotion_temp_share_click', {
+                app_name: 'emotion-temp',
+                test_type: 'emotion_temperature',
+                method: 'native'
+            });
             navigator.share({ title: `${shareTitle} ${tempValue}°C ${resultData.emoji}`, text: text, url }).catch(() => {});
         } else {
             navigator.clipboard.writeText(text).then(() => {
                 const copyMessage = i18n?.t('share.copied') || 'Result copied!';
+                trackEvent('emotion_temp_share_click', {
+                    app_name: 'emotion-temp',
+                    test_type: 'emotion_temperature',
+                    method: 'copy'
+                });
                 alert(copyMessage);
             }).catch(() => {});
         }
@@ -418,7 +565,11 @@
         link.href = canvas.toDataURL('image/png');
         link.click();
 
-        gtag('event', 'save_image', { test_type: 'emotion_temperature' });
+        trackEvent('save_image', { test_type: 'emotion_temperature' });
+        trackEvent('emotion_temp_save_click', {
+            app_name: 'emotion-temp',
+            test_type: 'emotion_temperature'
+        });
     }
 
     // Premium content
@@ -445,7 +596,12 @@
             displayPremiumContent();
         };
 
-        gtag('event', 'premium_click', { test_type: 'emotion_temperature' });
+        trackEvent('premium_click', { test_type: 'emotion_temperature' });
+        trackEvent('emotion_temp_premium_click', {
+            app_name: 'emotion-temp',
+            test_type: 'emotion_temperature',
+            result_key: resultData?.titleKey
+        });
     }
 
     function displayPremiumContent() {
@@ -492,7 +648,12 @@
         premiumEl.classList.remove('hidden');
         premiumEl.scrollIntoView({ behavior: 'smooth' });
 
-        gtag('event', 'premium_view', { test_type: 'emotion_temperature' });
+        trackEvent('premium_view', { test_type: 'emotion_temperature' });
+        trackEvent('emotion_temp_premium_view', {
+            app_name: 'emotion-temp',
+            test_type: 'emotion_temperature',
+            result_key: resultData?.titleKey
+        });
     }
 
     function getMonthlyAdvice() {
@@ -545,9 +706,42 @@
     document.getElementById('btn-share').addEventListener('click', shareResult);
     document.getElementById('btn-save-image').addEventListener('click', generateShareImage);
     document.getElementById('btn-premium').addEventListener('click', showPremium);
+    primaryRelatedCta?.addEventListener('click', () => {
+        trackEvent('emotion_temp_primary_cta_click', {
+            app_name: 'emotion-temp',
+            test_type: 'emotion_temperature',
+            related_key: primaryRelatedCta.dataset.relatedKey || '',
+            related_rank: Number(primaryRelatedCta.dataset.relatedRank || 1),
+            result_key: resultData?.titleKey
+        });
+    });
+    relatedJumpBtn?.addEventListener('click', () => {
+        relatedGrid?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        trackEvent('emotion_temp_related_jump_click', {
+            app_name: 'emotion-temp',
+            test_type: 'emotion_temperature',
+            result_key: resultData?.titleKey
+        });
+    });
+    relatedTests.forEach((card) => {
+        card.addEventListener('click', () => {
+            trackEvent('emotion_temp_related_click', {
+                app_name: 'emotion-temp',
+                test_type: 'emotion_temperature',
+                related_key: card.dataset.relatedKey || '',
+                related_rank: Number(card.dataset.relatedRank || 0),
+                result_key: resultData?.titleKey
+            });
+        });
+    });
     document.getElementById('btn-retry').addEventListener('click', () => {
         // Reset premium content visibility
         document.getElementById('premium-result').classList.add('hidden');
+        trackEvent('emotion_temp_retry_click', {
+            app_name: 'emotion-temp',
+            test_type: 'emotion_temperature',
+            result_key: resultData?.titleKey
+        });
         show(introScreen);
         updateTestCount();
     });
@@ -581,6 +775,10 @@
                     langOptions.forEach(o => o.classList.remove('active'));
                     opt.classList.add('active');
                     langMenu.classList.add('hidden');
+                    if (resultData) {
+                        prioritizeRelatedCards(tempValue);
+                        updatePrimaryRecommendation();
+                    }
                 });
             });
         } catch (e) {

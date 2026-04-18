@@ -27,7 +27,11 @@
     "warnings": "⚠️ Ten Cuidado Con",
     "compat": "💕 Temperaturas Compatibles",
     "moreTests": "Explorar más tests",
-    "percentileStat": "Solo el <strong>{percent}%</strong> comparten tu temperatura emocional"
+    "percentileStat": "Solo el <strong>{percent}%</strong> comparten tu temperatura emocional",
+    "nextStepLabel": "Siguiente paso ideal",
+    "nextStepDesc": "Abre la prueba de seguimiento que mejor encaja con tu temperatura emocional actual.",
+    "nextStepCta": "Abrir prueba recomendada",
+    "jumpToMore": "Ver m?s recomendaciones"
   },
   "related": {
     "hspTest": "Test HSP",

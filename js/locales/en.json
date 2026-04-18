@@ -27,7 +27,11 @@
     "warnings": "⚠️ Watch Out For",
     "compat": "💕 Compatible Temperatures",
     "moreTests": "Explore More Tests",
-    "percentileStat": "Only <strong>{percent}%</strong> of participants share your emotion temperature"
+    "percentileStat": "Only <strong>{percent}%</strong> of participants share your emotion temperature",
+    "nextStepLabel": "Best Next Step",
+    "nextStepDesc": "Open the strongest follow-up test for your current emotion temperature result.",
+    "nextStepCta": "Open Follow-up",
+    "jumpToMore": "See More Follow-ups"
   },
   "related": {
     "hspTest": "HSP Test",

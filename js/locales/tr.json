@@ -27,7 +27,11 @@
     "warnings": "⚠️ Dikkat Et",
     "compat": "💕 Uyumlu Sıcaklıklar",
     "moreTests": "Daha fazla test keşfet",
-    "percentileStat": "Katılımcıların sadece <strong>{percent}%</strong>'i senin duygu sıcaklığına sahip"
+    "percentileStat": "Katılımcıların sadece <strong>{percent}%</strong>'i senin duygu sıcaklığına sahip",
+    "nextStepLabel": "Senin i?in en iyi sonraki ad?m",
+    "nextStepDesc": "?u anki duygu s?cakl??? sonucuna en uygun takip testini a?.",
+    "nextStepCta": "Takip testini a?",
+    "jumpToMore": "Daha fazla ?neri g?r"
   },
   "related": {
     "hspTest": "HSP Testi",

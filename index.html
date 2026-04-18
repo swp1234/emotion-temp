@@ -30,21 +30,22 @@
     <meta name="twitter:description" content="What's your emotional temperature? 10 questions, 8 types. Try free!">
     <meta name="twitter:image" content="https://dopabrain.com/portal/img/og/emotion-temp.png">
     <meta name="twitter:site" content="@dopabrain">
+    <meta name="twitter:url" content="https://dopabrain.com/emotion-temp/">
 
     <!-- Canonical and hreflang -->
     <link rel="canonical" href="https://dopabrain.com/emotion-temp/">
-    <link rel="alternate" hreflang="ko" href="https://dopabrain.com/emotion-temp/">
-    <link rel="alternate" hreflang="en" href="https://dopabrain.com/emotion-temp/">
-    <link rel="alternate" hreflang="zh" href="https://dopabrain.com/emotion-temp/">
-    <link rel="alternate" hreflang="hi" href="https://dopabrain.com/emotion-temp/">
-    <link rel="alternate" hreflang="ru" href="https://dopabrain.com/emotion-temp/">
-    <link rel="alternate" hreflang="ja" href="https://dopabrain.com/emotion-temp/">
-    <link rel="alternate" hreflang="es" href="https://dopabrain.com/emotion-temp/">
-    <link rel="alternate" hreflang="pt" href="https://dopabrain.com/emotion-temp/">
-    <link rel="alternate" hreflang="id" href="https://dopabrain.com/emotion-temp/">
-    <link rel="alternate" hreflang="tr" href="https://dopabrain.com/emotion-temp/">
-    <link rel="alternate" hreflang="de" href="https://dopabrain.com/emotion-temp/">
-    <link rel="alternate" hreflang="fr" href="https://dopabrain.com/emotion-temp/">
+    <link rel="alternate" hreflang="ko" href="https://dopabrain.com/emotion-temp/?lang=ko">
+    <link rel="alternate" hreflang="en" href="https://dopabrain.com/emotion-temp/?lang=en">
+    <link rel="alternate" hreflang="zh" href="https://dopabrain.com/emotion-temp/?lang=zh">
+    <link rel="alternate" hreflang="hi" href="https://dopabrain.com/emotion-temp/?lang=hi">
+    <link rel="alternate" hreflang="ru" href="https://dopabrain.com/emotion-temp/?lang=ru">
+    <link rel="alternate" hreflang="ja" href="https://dopabrain.com/emotion-temp/?lang=ja">
+    <link rel="alternate" hreflang="es" href="https://dopabrain.com/emotion-temp/?lang=es">
+    <link rel="alternate" hreflang="pt" href="https://dopabrain.com/emotion-temp/?lang=pt">
+    <link rel="alternate" hreflang="id" href="https://dopabrain.com/emotion-temp/?lang=id">
+    <link rel="alternate" hreflang="tr" href="https://dopabrain.com/emotion-temp/?lang=tr">
+    <link rel="alternate" hreflang="de" href="https://dopabrain.com/emotion-temp/?lang=de">
+    <link rel="alternate" hreflang="fr" href="https://dopabrain.com/emotion-temp/?lang=fr">
     <link rel="alternate" hreflang="x-default" href="https://dopabrain.com/emotion-temp/">
 
     <!-- Schema.org -->
@@ -286,6 +287,20 @@
                 </div>
             </div>
 
+            <section class="next-step-card" id="next-step-card">
+                <p class="next-step-label" data-i18n="result.nextStepLabel">Best Next Step</p>
+                <div class="next-step-head">
+                    <span class="next-step-icon" id="primary-related-emoji">&#129504;</span>
+                    <div class="next-step-copy">
+                        <h3 class="next-step-title" id="primary-related-title">HSP Test</h3>
+                        <p class="next-step-desc" id="primary-related-desc" data-i18n="result.nextStepDesc">Open the strongest follow-up test for your current emotion temperature result.</p>
+                    </div>
+                </div>
+                <a href="/hsp-test/" class="next-step-cta" id="primary-related-cta" data-related-key="hsp-test" data-related-rank="1">
+                    <span id="primary-related-cta-text" data-i18n="result.nextStepCta">Open Follow-up</span>
+                </a>
+            </section>
+
             <button class="btn-premium" id="btn-premium">
                 <span class="premium-icon">✨</span>
                 <span data-i18n="premium.button">AI 심층 감정 분석 보기</span>
@@ -308,49 +323,50 @@
 
             <p class="percentile-stat" id="percentile-stat"></p>
 
+            <button class="related-jump-btn" id="related-jump-btn" data-i18n="result.jumpToMore">See More Follow-up Tests</button>
+
             <!-- In-article ad between result actions and recommendations -->
-            <div class="ad-container" style="margin: 24px auto; text-align: center; min-height: 100px;">
+            <div class="result-inline-ad" id="result-inline-ad">
               <ins class="adsbygoogle"
                    style="display:block"
                    data-ad-client="ca-pub-3600813755953882"
                    data-ad-slot="auto"
                    data-ad-format="auto"
                    data-full-width-responsive="true"></ins>
-              <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
             </div>
 
             <div class="related-tests">
               <h3 data-i18n="result.moreTests">Explore More Tests</h3>
-              <div class="related-grid">
-                <a href="/hsp-test/" class="related-card" style="--card-color: #7c3aed">
+              <div class="related-grid" id="related-grid">
+                <a href="/hsp-test/" class="related-card" data-related-key="hsp-test" style="--card-color: #7c3aed">
                   <span class="related-emoji">🧠</span>
                   <span class="related-name" data-i18n="related.hspTest">HSP Test</span>
                 </a>
-                <a href="/stress-check/" class="related-card" style="--card-color: #e74c3c">
+                <a href="/stress-check/" class="related-card" data-related-key="stress-check" style="--card-color: #e74c3c">
                   <span class="related-emoji">💆</span>
                   <span class="related-name" data-i18n="related.stressCheck">Stress Check</span>
                 </a>
-                <a href="/emotion-iceberg/" class="related-card" style="--card-color: #2E86AB">
+                <a href="/emotion-iceberg/" class="related-card" data-related-key="emotion-iceberg" style="--card-color: #2E86AB">
                   <span class="related-emoji">🧊</span>
                   <span class="related-name" data-i18n="related.emotionIceberg">Emotion Iceberg</span>
                 </a>
-                <a href="/social-battery/" class="related-card" style="--card-color: #2ecc71">
+                <a href="/social-battery/" class="related-card" data-related-key="social-battery" style="--card-color: #2ecc71">
                   <span class="related-emoji">🔋</span>
                   <span class="related-name" data-i18n="related.socialBattery">Social Battery</span>
                 </a>
-                <a href="/burnout-test/" class="related-card" style="--card-color: #ef4444">
+                <a href="/burnout-test/" class="related-card" data-related-key="burnout-test" style="--card-color: #ef4444">
                   <span class="related-emoji">&#128293;</span>
                   <span class="related-name" data-i18n="related.burnoutTest">Burnout Test</span>
                 </a>
-                <a href="/stress-response/" class="related-card" style="--card-color: #6366f1">
+                <a href="/stress-response/" class="related-card" data-related-key="stress-response" style="--card-color: #6366f1">
                   <span class="related-emoji">&#9889;</span>
                   <span class="related-name" data-i18n="related.stressResponse">Stress Response</span>
                 </a>
-                <a href="/anxiety-type/" class="related-card" style="--card-color: #10b981">
+                <a href="/anxiety-type/" class="related-card" data-related-key="anxiety-type" style="--card-color: #10b981">
                   <span class="related-emoji">&#127744;</span>
                   <span class="related-name" data-i18n="related.anxietyType">Anxiety Type</span>
                 </a>
-                <a href="/eq-test/" class="related-card" style="--card-color: #00bcd4">
+                <a href="/eq-test/" class="related-card" data-related-key="eq-test" style="--card-color: #00bcd4">
                   <span class="related-emoji">🧠</span>
                   <span class="related-name" data-i18n="related.eqTest">EQ Test</span>
                 </a>

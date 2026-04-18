@@ -27,7 +27,11 @@
     "warnings": "⚠️ Perhatikan",
     "compat": "💕 Suhu Emosi yang Kompatibel",
     "moreTests": "Jelajahi tes lainnya",
-    "percentileStat": "Hanya <strong>{percent}%</strong> peserta memiliki suhu emosi yang sama"
+    "percentileStat": "Hanya <strong>{percent}%</strong> peserta memiliki suhu emosi yang sama",
+    "nextStepLabel": "Langkah terbaik berikutnya",
+    "nextStepDesc": "Buka tes lanjutan yang paling cocok dengan hasil suhu emosimu saat ini.",
+    "nextStepCta": "Buka tes lanjutan",
+    "jumpToMore": "Lihat lebih banyak rekomendasi"
   },
   "related": {
     "hspTest": "Tes HSP",
