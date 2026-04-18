@@ -83,9 +83,8 @@
         const featuredCard = relatedGrid.querySelector('.related-card.is-featured') || relatedGrid.querySelector('.related-card');
         if (!featuredCard) return;
 
-        const emojiEl = featuredCard.querySelector('.card-emoji');
-        const titleEl = featuredCard.querySelector('.card-title');
-        const descEl = featuredCard.querySelector('.card-desc');
+        const emojiEl = featuredCard.querySelector('.related-emoji');
+        const titleEl = featuredCard.querySelector('.related-name');
 
         primaryRelatedCta.href = featuredCard.href;
         primaryRelatedCta.dataset.relatedKey = featuredCard.dataset.relatedKey || '';
@@ -93,7 +92,9 @@
 
         if (primaryRelatedEmoji && emojiEl) primaryRelatedEmoji.textContent = emojiEl.textContent;
         if (primaryRelatedTitle && titleEl) primaryRelatedTitle.textContent = titleEl.textContent;
-        if (primaryRelatedDesc && descEl) primaryRelatedDesc.textContent = descEl.textContent;
+        if (primaryRelatedDesc) {
+            primaryRelatedDesc.textContent = i18n?.t('result.nextStepDesc') || 'Open the strongest follow-up test for your current emotion temperature result.';
+        }
         if (primaryRelatedCtaText) {
             primaryRelatedCtaText.textContent = i18n?.t('result.nextStepCta') || 'Open Follow-up';
         }
