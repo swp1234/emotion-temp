@@ -1,123 +1,43 @@
 {
   "app": {
-    "title": "Tes Suhu Emosi - Berapa Suhu Emosi Anda? 🌡️",
-    "description": "Temukan suhu emosi Anda melalui 10 pertanyaan! Anda termasuk tipe emosi yang mana dari 8 jenis?",
+    "title": "Emotion Temperature Choices",
+    "description": "This author-created activity is entertainment, not a psychological or health assessment.",
     "loading": "Memuat...",
     "skipLink": "Langsung ke konten utama"
   },
+  "meta": {
+    "title": "Emotion Temperature Choices",
+    "description": "This author-created activity is entertainment, not a psychological or health assessment."
+  },
   "intro": {
-    "title": "Tes Suhu Emosi",
-    "sub": "Berapa suhu emosi Anda?",
-    "desc": "Jawab 10 pertanyaan dan\ntemukan suhu emosi Anda",
-    "questions": "📝 10 Pertanyaan",
-    "time": "⏱️ Sekitar 2 menit",
-    "types": "🎯 8 Tipe",
-    "start": "Ukur Suhu Emosi - Gratis",
-    "count": "orang telah berpartisipasi!"
-  },
-  "progress": {
-    "of": "/"
-  },
-  "loading": {
-    "text": "Menganalisis suhu emosi..."
+    "title": "Emotion Temperature Choices",
+    "sub": "Which temperature metaphor fits these ten choices?",
+    "desc": "Choose one response for each everyday situation.",
+    "start": "Start 10 choices",
+    "boundary": "This author-created activity is entertainment, not a psychological or health assessment.",
+    "method": "Each option shows 0–4 intensity points. Ten answers total 0–40; the published linear formula maps that total to −10–40°C and one of eight fixed ranges."
   },
   "result": {
-    "traits": "🌸 Ciri Utama",
-    "activities": "💡 Aktivitas yang Direkomendasikan",
-    "warnings": "⚠️ Perhatikan",
-    "compat": "💕 Suhu Emosi yang Kompatibel",
-    "moreTests": "Jelajahi tes lainnya",
-    "percentileStat": "Hanya <strong>{percent}%</strong> peserta memiliki suhu emosi yang sama",
-    "nextStepLabel": "Langkah terbaik berikutnya",
-    "nextStepDesc": "Buka tes lanjutan yang paling cocok dengan hasil suhu emosimu saat ini.",
-    "nextStepCta": "Buka tes lanjutan",
-    "jumpToMore": "Lihat lebih banyak rekomendasi"
+    "boundary": "This temperature is a playful label for these answers. It does not measure emotion, personality, health, or behavior outside this activity.",
+    "calculation": "Your displayed calculation: {total}/40 points → {temperature}°C.",
+    "nextAction": "Try a private Stress Check",
+    "moreTests": "Explore two related reflections"
   },
   "related": {
-    "hspTest": "Tes HSP",
-    "stressCheck": "Cek Stres",
-    "emotionIceberg": "Gunung Es Emosi",
-    "socialBattery": "Baterai Sosial",
-    "burnoutTest": "Tes Burnout",
-    "stressResponse": "Respons Stres",
-    "anxietyType": "Tipe Kecemasan",
-    "eqTest": "Tes EQ"
-  },
-  "premium": {
-    "patternAnalysis": "📊 Analisis Pola Emosi",
-    "tipsLabel": "📅 Kiat Bulan Ini",
-    "compatLabel": "💕 Suhu Kompatibel",
-    "compatNote": "Bertemu dengan seseorang dengan suhu berlawanan membantu mengisi celah satu sama lain.",
-    "routineLabel": "🧘 Rutinitas yang Dipersonalisasi (1 Minggu)",
-    "title": "🧠 Analisis emosi mendalam AI",
-    "button": "Lihat Analisis Mendalam AI",
-    "badge": "PREMIUM"
-  },
-  "game": {
-    "back": "← DopaBrain Beranda"
+    "hspTest": "Sensitivity reflection",
+    "emotionIceberg": "Emotion Iceberg reflection"
   },
   "actions": {
-    "share": "📤 Bagikan Hasil",
-    "saveImage": "📷 Simpan Gambar",
-    "retry": "🔄 Coba Lagi"
-  },
-  "ads": {
-    "banner": "Iklan",
-    "interstitial": "Area iklan",
-    "close": "detik untuk menutup",
-    "closeBtn": "✕ Tutup"
-  },
-  "rec": {
-    "title": "Coba juga"
-  },
-  "tracker": {
-    "streak": "hari berturut-turut!",
-    "comparison": "dibandingkan kemarin",
-    "warmer": "Emosi Anda menjadi lebih hangat",
-    "cooler": "Emosi Anda menjadi lebih tenang",
-    "same": "Emosi Anda tetap sama",
-    "saved": "Emosi Anda telah disimpan. Kembali besok! 🌡️",
-    "comeback": "Kembali besok 🌡️"
+    "share": "Share this activity",
+    "retry": "Try again"
   },
   "share": {
-    "title": "Suhu Emosional",
-    "text": "🌡️ Suhu emosional saya adalah"
+    "text": "Try this transparent ten-choice emotion-temperature activity.",
+    "success": "Link shared or copied."
   },
-  "canvas": {
-    "topLabel": "Suhu emosi saya adalah",
-    "cta": "Berapa milikmu? 👇",
-    "testName": "Tes Suhu Emosi",
-    "downloadName": "suhu_emosi"
+  "game": {
+    "back": "DopaBrain Home"
   },
-  "routine": {
-    "monday": "Senin: Tulis jurnal emosi (5 menit)",
-    "tuesday": "Selasa: Dengarkan musik favorit (15 menit)",
-    "wednesday": "Rabu: Berjalan untuk mengatur pikiran (20 menit)",
-    "thursday": "Kamis: Kirim pesan ke teman",
-    "friday": "Jumat: Belikan hadiah kecil untuk diri sendiri",
-    "saturday": "Sabtu: Coba sesuatu yang baru",
-    "sunday": "Minggu: Tetapkan tujuan emosi untuk minggu depan"
-  },
-  "advice": [
-    "Manfaatkan energi tahun baru. Ini waktu yang tepat untuk menetapkan tujuan emosional.",
-    "Akhir musim dingin, awal musim semi. Nikmati antisipasi perubahan.",
-    "Dengan energi musim semi, coba mulai hubungan baru.",
-    "Seperti bunga sakura, emosi Anda mekar di musim ini.",
-    "Bulan penuh energi! Bebaskan emosi melalui aktivitas di luar ruangan.",
-    "Waktu tinjauan pertengahan tahun. Renungkan emosi Anda di semester pertama.",
-    "Seperti panas musim panas, emosi dapat meningkat. Ambil waktu untuk mendingin.",
-    "Perawatan diri penting dalam panas. Istirahat yang cukup.",
-    "Awal musim gugur, waktu yang sempurna untuk mengatur emosi.",
-    "Musim membaca. Cobalah membaca buku yang merangsang emosi Anda.",
-    "Akhir tahun mendekat. Bagikan perasaan Anda dengan orang yang bersyukur.",
-    "Akhiri tahun dengan mengatur emosi Anda dan mempersiapkan tahun depan."
-  ],
-  "patterns": [
-    "Anda adalah 'Tipe Emosional Introvert' yang memproses emosi secara mendalam. Terlihat tenang dari luar, tetapi dunia batin Anda kaya. Coba buka hati Anda secara bertahap kepada orang-orang yang Anda percayai.",
-    "Anda adalah 'Tipe Emosional Seimbang'. Keselarasan logika dan emosi Anda memungkinkan Anda merespons dengan tepat di sebagian besar situasi. Hanya pastikan Anda tidak kehilangan pandangan tentang perasaan sebenarnya.",
-    "Anda adalah 'Tipe Empatik Hangat'. Anda merespons dengan sensitif terhadap emosi orang lain dan secara alami memberikan kenyamanan dan dukungan. Juga jaga energi emosional Anda sendiri dengan baik.",
-    "Anda adalah 'Tipe Emosional Penuh Gairah'. Anda merasakan semua emosi secara mendalam dan mengekspresikannya dengan berani. Ini adalah kekuatan besar, tetapi perawatan diri yang teratur penting untuk mencegah kelelahan emosional."
-  ],
   "questions": {
     "q1": {
       "text": "Bagaimana jika teman dekatmu tiba-tiba menangis?",
@@ -193,169 +113,35 @@
   "results": {
     "r1": {
       "title": "Absolute Zero Composure",
-      "subtitle": "Like a cold winter breeze",
-      "desc": "You rarely show emotions and are rational and analytical. People around you find you mysterious.",
-      "t1": "Expression: Very restrained",
-      "t2": "Decision-making: Logical and quick",
-      "t3": "Energy source: Solo contemplation time",
-      "t4": "Relationships: Prefer few deep connections",
-      "a1": "Reading and intellectual pursuits",
-      "a2": "Strategy games",
-      "a3": "Meditation and reflection",
-      "a4": "Watching documentaries",
-      "w1": "Suppressing emotions can be harmful to health",
-      "w2": "Practice expressing your feelings sometimes",
-      "compat": "Warm spring day (25~30°C) - A warm person to melt your composure",
-      "advice": "Your calmness is your greatest weapon. Your composure shines in crisis situations.",
-      "quote": "Silence is golden, and so are thoughts. - Seneca",
-      "statistics": "About 12% of people share your emotional type."
+      "subtitle": "Like a cold winter breeze"
     },
     "r2": {
       "title": "Cool Dawn Dew",
-      "subtitle": "Quiet and delicate you",
-      "desc": "Calm and observant. You have emotions but express them with restraint. You view the world through deep thought.",
-      "t1": "Expression: Feel deeply inside but rarely show it",
-      "t2": "Decision-making: Careful and profound",
-      "t3": "Energy source: Quiet environments",
-      "t4": "Relationships: Takes time to build trust",
-      "a1": "Writing and journaling",
-      "a2": "Nature walks",
-      "a3": "Classical music appreciation",
-      "a4": "Contemplation at cafes",
-      "w1": "You can be easily misunderstood, express yourself sometimes",
-      "w2": "Don't ignore your emotions, acknowledge them",
-      "compat": "Warm sunshine (20~25°C) - Someone who understands you without pressure",
-      "advice": "Your quietness breeds deep understanding of the world. That is your strength.",
-      "quote": "In silence, one can find the greatest truth. - Ramakrishna",
-      "statistics": "About 15% of people share your emotional type."
+      "subtitle": "Quiet and delicate you"
     },
     "r3": {
       "title": "Gentle Rain",
-      "subtitle": "Quiet but deep you",
-      "desc": "Like gentle rain, you are quiet but possess deep sensitivity. You love alone time while keeping a warm heart.",
-      "t1": "Expression: Subtle and quiet",
-      "t2": "Decision-making: Balance of intuition and logic",
-      "t3": "Energy source: Cozy rainy days",
-      "t4": "Relationships: Deep talks with a comfortable few",
-      "a1": "Tea by the window on rainy days",
-      "a2": "Journal writing",
-      "a3": "Listening to podcasts",
-      "a4": "Cooking",
-      "w1": "Don't confuse sadness with rain",
-      "w2": "Go outside sometimes to recharge",
-      "compat": "Sunny afternoon (15~20°C) - A bright person who gives you energy",
-      "advice": "Your introverted sensitivity leads to creativity and empathy. See the world deeply.",
-      "quote": "Sensitivity is the most beautiful quality of humanity. - Rousseau",
-      "statistics": "About 18% of people share your emotional type."
+      "subtitle": "Quiet but deep you"
     },
     "r4": {
       "title": "Cool Autumn Breeze",
-      "subtitle": "Balanced you",
-      "desc": "Good balance of emotion and reason. You regulate emotions to fit situations and deliver stable energy.",
-      "t1": "Expression: Appropriate to the situation",
-      "t2": "Decision-making: Well-balanced judgment",
-      "t3": "Energy source: Various activities",
-      "t4": "Relationships: Get along well with diverse people",
-      "a1": "Exercise and outdoor activities",
-      "a2": "Cafe dates with friends",
-      "a3": "Trying new hobbies",
-      "a4": "Planning trips",
-      "w1": "Trying to stay balanced may cause you to lose touch with your feelings",
-      "w2": "Be honest with your emotions sometimes",
-      "compat": "Similar temperature (5~15°C) - Someone who creates a comfortable rhythm with you",
-      "advice": "Your sense of balance gives stability to those around you. Keep that rhythm.",
-      "quote": "A balanced life is the most beautiful life. - Aristotle",
-      "statistics": "About 22% of people share your emotional type."
+      "subtitle": "Balanced you"
     },
     "r5": {
       "title": "Warm Spring Sunshine",
-      "subtitle": "Warm and caring you",
-      "desc": "Like spring sunshine, you give stability to people around you. Excellent empathy and deep care.",
-      "t1": "Expression: Natural and warm",
-      "t2": "Empathy for others: 80%",
-      "t3": "Energy source: Time with good people",
-      "t4": "Relationships: A comfortable presence for everyone",
-      "a1": "Small gatherings with friends",
-      "a2": "Volunteering",
-      "a3": "Gardening and flowers",
-      "a4": "Writing letters",
-      "w1": "Don't get too swayed by others' emotions",
-      "w2": "Take care of your own feelings too",
-      "compat": "Cool breeze (5~10°C) - Someone who adds stability to your warmth",
-      "advice": "Your warmth heals others' hearts. Take care of yourself that way too.",
-      "quote": "A warm word melts the winter. - Burlin",
-      "statistics": "About 18% of people share your emotional type."
+      "subtitle": "Warm and caring you"
     },
     "r6": {
       "title": "Bright Afternoon Sunlight",
-      "subtitle": "Bright and positive you",
-      "desc": "You light up your surroundings with bright energy! Positive, sociable, and always the mood maker.",
-      "t1": "Expression: Honest and bright",
-      "t2": "Empathy for others: 85%",
-      "t3": "Energy source: Connecting with people",
-      "t4": "Relationships: Wide and active network",
-      "a1": "Attending parties and gatherings",
-      "a2": "Exploring new restaurants",
-      "a3": "Social media activity",
-      "a4": "Travel and adventure",
-      "w1": "Watch for energy burnout (weekly alone time recommended)",
-      "w2": "Don't try to meet everyone's expectations",
-      "compat": "Gentle rain (1~5°C) - A thoughtful person who calms you down",
-      "advice": "Your positive energy lights up the world. Keep sharing that light.",
-      "quote": "A bright mind creates a bright future. - Thales",
-      "statistics": "About 15% of people share your emotional type."
+      "subtitle": "Bright and positive you"
     },
     "r7": {
       "title": "Passionate Midsummer",
-      "subtitle": "Emotional energizer",
-      "desc": "You possess hot passion and rich emotions! Sincere in love and friendship, expressing emotions with your whole being.",
-      "t1": "Expression: Sincere and intense",
-      "t2": "Empathy for others: 90%",
-      "t3": "Energy source: Passionate challenges",
-      "t4": "Relationships: Prefer deep, intense bonds",
-      "a1": "Creative activities (art, music, writing)",
-      "a2": "Passionate discussions",
-      "a3": "Volunteering and sharing",
-      "a4": "Consuming moving content",
-      "w1": "Emotional ups and downs can be intense (need processing time)",
-      "w2": "Don't absorb others' emotions excessively",
-      "compat": "Cool dawn (-4~0°C) - A calm person who stabilizes your passion",
-      "advice": "Your passion is infinite energy. Managing it well leads to great achievements.",
-      "quote": "Passion is the driving force of all great accomplishments. - Thomas",
-      "statistics": "About 12% of people share your emotional type."
+      "subtitle": "Emotional energizer"
     },
     "r8": {
       "title": "Blazing Flame",
-      "subtitle": "Emotional volcano, pure passionate",
-      "desc": "You feel every emotion at 120%! You have near-HSP emotional processing. Brightest when laughing, deepest when sad.",
-      "t1": "Expression: With whole body, impossible to hide",
-      "t2": "Empathy for others: 95% (near telepathic)",
-      "t3": "Energy source: Loved ones",
-      "t4": "Relationships: The soulmate-seeker type",
-      "a1": "Art appreciation and creation",
-      "a2": "Deep conversations",
-      "a3": "Processing emotions in nature",
-      "a4": "Writing diaries and emotion journals",
-      "w1": "Watch for emotional burnout! (alone time twice a week essential)",
-      "w2": "You need to practice setting boundaries",
-      "w3": "Don't try to feel everything, protect yourself",
-      "compat": "Absolute zero (-10~-5°C) - Opposites attract! A cool person to protect you",
-      "advice": "Your deep emotions are needed in this world. Learn to regulate them to prevent burnout.",
-      "quote": "True art is born from deep emotion. - Van Gogh",
-      "statistics": "About 8% of people share your emotional type."
+      "subtitle": "Emotional volcano, pure passionate"
     }
-  },
-  "engage": {
-    "result1": "36.5°C Normal -- Seimbang & Stabil",
-    "result2": "39°C Bergairah -- Intens & Termotivasi",
-    "result3": "34°C Dingin -- Tenang & Analitis",
-    "socialProof": "2,800+ suhu emosi diukur hari ini"
-  },
-  "about": {
-    "toggle": "Tentang Tes Ini",
-    "heading1": "Cara Kerja",
-    "text1": "10 pertanyaan menganalisis respons emosional Anda.",
-    "heading2": "Memahami Suhu Emosi Anda",
-    "text2": "Suhu emosi mencerminkan intensitas perasaan Anda."
   }
 }

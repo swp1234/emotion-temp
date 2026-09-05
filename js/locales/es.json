@@ -1,123 +1,43 @@
 {
   "app": {
-    "title": "Prueba de Temperatura Emocional - ¿Cuál es tu Temperatura Emocional? 🌡️",
-    "description": "¡Descubre tu temperatura emocional a través de 10 preguntas! ¿Cuál de los 8 tipos de emociones eres?",
+    "title": "Emotion Temperature Choices",
+    "description": "This author-created activity is entertainment, not a psychological or health assessment.",
     "loading": "Cargando...",
     "skipLink": "Saltar al contenido principal"
   },
+  "meta": {
+    "title": "Emotion Temperature Choices",
+    "description": "This author-created activity is entertainment, not a psychological or health assessment."
+  },
   "intro": {
-    "title": "Test de Temperatura Emocional",
-    "sub": "¿Cuál es tu temperatura emocional?",
-    "desc": "Responde 10 preguntas y\ndescubre tu temperatura emocional",
-    "questions": "📝 10 Preguntas",
-    "time": "⏱️ Aprox. 2 min",
-    "types": "🎯 8 Tipos",
-    "start": "Medir Mi Temperatura - Gratis",
-    "count": "¡personas participaron!"
-  },
-  "progress": {
-    "of": "/"
-  },
-  "loading": {
-    "text": "Analizando temperatura emocional..."
+    "title": "Emotion Temperature Choices",
+    "sub": "Which temperature metaphor fits these ten choices?",
+    "desc": "Choose one response for each everyday situation.",
+    "start": "Start 10 choices",
+    "boundary": "This author-created activity is entertainment, not a psychological or health assessment.",
+    "method": "Each option shows 0–4 intensity points. Ten answers total 0–40; the published linear formula maps that total to −10–40°C and one of eight fixed ranges."
   },
   "result": {
-    "traits": "🌸 Características Clave",
-    "activities": "💡 Actividades Recomendadas",
-    "warnings": "⚠️ Ten Cuidado Con",
-    "compat": "💕 Temperaturas Compatibles",
-    "moreTests": "Explorar más tests",
-    "percentileStat": "Solo el <strong>{percent}%</strong> comparten tu temperatura emocional",
-    "nextStepLabel": "Siguiente paso ideal",
-    "nextStepDesc": "Abre la prueba de seguimiento que mejor encaja con tu temperatura emocional actual.",
-    "nextStepCta": "Abrir prueba recomendada",
-    "jumpToMore": "Ver m?s recomendaciones"
+    "boundary": "This temperature is a playful label for these answers. It does not measure emotion, personality, health, or behavior outside this activity.",
+    "calculation": "Your displayed calculation: {total}/40 points → {temperature}°C.",
+    "nextAction": "Try a private Stress Check",
+    "moreTests": "Explore two related reflections"
   },
   "related": {
-    "hspTest": "Test HSP",
-    "stressCheck": "Control de Estrés",
-    "emotionIceberg": "Iceberg Emocional",
-    "socialBattery": "Batería Social",
-    "burnoutTest": "Test de Burnout",
-    "stressResponse": "Respuesta al Estrés",
-    "anxietyType": "Tipo de Ansiedad",
-    "eqTest": "Test EQ"
-  },
-  "premium": {
-    "patternAnalysis": "📊 Análisis de Patrón Emocional",
-    "tipsLabel": "📅 Consejos de Este Mes",
-    "compatLabel": "💕 Temperatura Compatible",
-    "compatNote": "Encontrarse con una persona de temperatura opuesta ayuda a llenar los vacíos mutuos.",
-    "routineLabel": "🧘 Rutina Personalizada (1 Semana)",
-    "title": "🧠 Análisis profundo de emociones IA",
-    "button": "Ver Análisis Profundo IA",
-    "badge": "PREMIUM"
-  },
-  "game": {
-    "back": "← DopaBrain Inicio"
+    "hspTest": "Sensitivity reflection",
+    "emotionIceberg": "Emotion Iceberg reflection"
   },
   "actions": {
-    "share": "📤 Compartir Resultado",
-    "saveImage": "📷 Guardar Imagen",
-    "retry": "🔄 Intentar de Nuevo"
-  },
-  "ads": {
-    "banner": "Publicidad",
-    "interstitial": "Espacio publicitario",
-    "close": "seg para cerrar",
-    "closeBtn": "✕ Cerrar"
-  },
-  "rec": {
-    "title": "Prueba estos también"
-  },
-  "tracker": {
-    "streak": "días seguidos!",
-    "comparison": "comparado con ayer",
-    "warmer": "Tus emociones se volvieron más cálidas",
-    "cooler": "Tus emociones se volvieron más tranquilas",
-    "same": "Tus emociones siguen igual",
-    "saved": "Tu emoción ha sido guardada. ¡Vuelve mañana! 🌡️",
-    "comeback": "Vuelve mañana 🌡️"
+    "share": "Share this activity",
+    "retry": "Try again"
   },
   "share": {
-    "title": "Temperatura Emocional",
-    "text": "🌡️ Mi temperatura emocional es"
+    "text": "Try this transparent ten-choice emotion-temperature activity.",
+    "success": "Link shared or copied."
   },
-  "canvas": {
-    "topLabel": "Mi temperatura emocional es",
-    "cta": "¿Cuál es la tuya? 👇",
-    "testName": "Prueba de Temperatura Emocional",
-    "downloadName": "temperatura_emocional"
+  "game": {
+    "back": "DopaBrain Home"
   },
-  "routine": {
-    "monday": "Lunes: Escribir diario emocional (5 min)",
-    "tuesday": "Martes: Escuchar música favorita (15 min)",
-    "wednesday": "Miércoles: Caminar para organizar pensamientos (20 min)",
-    "thursday": "Jueves: Enviar mensaje a un amigo",
-    "friday": "Viernes: Comprarse un pequeño regalo",
-    "saturday": "Sábado: Probar algo nuevo",
-    "sunday": "Domingo: Establecer meta emocional para próxima semana"
-  },
-  "advice": [
-    "Aprovecha la energía del nuevo año. Es un buen momento para establecer metas emocionales.",
-    "Fin del invierno, comienzo de la primavera. Disfruta la anticipación del cambio.",
-    "Con energía primaveral, intenta comenzar nuevas relaciones.",
-    "Como flores de cerezo, tus emociones florecen en esta temporada.",
-    "¡Un mes lleno de energía! Libera emociones a través de actividades al aire libre.",
-    "Tiempo de revisión a mitad de año. Reflexiona sobre tus emociones en el primer semestre.",
-    "Como el calor del verano, las emociones pueden intensificarse. Tómate tiempo para enfriarte.",
-    "El autocuidado es importante en el calor. Descansa lo suficiente.",
-    "Comienzo del otoño, el momento perfecto para organizar emociones.",
-    "Temporada de lectura. Intenta leer libros que estimulen tus emociones.",
-    "Se acerca fin de año. Comparte tus sentimientos con personas agradecidas.",
-    "Termina el año organizando tus emociones y preparándote para el próximo."
-  ],
-  "patterns": [
-    "Eres un 'Tipo Emocional Introvertido' que procesa emociones profundamente. Pareces calmado externamente, pero tu mundo interior es rico. Intenta abrir tu corazón gradualmente a personas en las que confías.",
-    "Eres un 'Tipo Emocional Equilibrado'. Tu armonía de lógica y emoción te permite responder apropiadamente en la mayoría de situaciones. Solo asegúrate de no perder de vista tus sentimientos verdaderos.",
-    "Eres un 'Tipo Empático Cálido'. Respondes sensiblemente a las emociones de otros y proporcionas naturalmente consuelo y apoyo. También cuida bien tu propia energía emocional.",
-    "Eres un 'Tipo Emocional Apasionado'. Sientes todas las emociones profundamente y las expresas audazmente. Esta es una gran fortaleza, pero el autocuidado regular es esencial para prevenir el agotamiento emocional."
-  ],
   "questions": {
     "q1": {
       "text": "¿Qué harías si tu amigo cercano empieza a llorar de repente?",
@@ -193,169 +113,35 @@
   "results": {
     "r1": {
       "title": "Compostura de Cero Absoluto",
-      "subtitle": "Como una brisa invernal fría",
-      "desc": "Raramente muestras emociones y eres racional y analítico. La gente te encuentra misterioso.",
-      "t1": "Expresión: Muy contenida",
-      "t2": "Toma de decisiones: Lógica y rápida",
-      "t3": "Fuente de energía: Tiempo de contemplación solo",
-      "t4": "Relaciones: Prefiere pocas conexiones profundas",
-      "a1": "Lectura y búsqueda intelectual",
-      "a2": "Juegos de estrategia",
-      "a3": "Meditación y reflexión",
-      "a4": "Ver documentales",
-      "w1": "Suprimir emociones puede ser dañino para la salud",
-      "w2": "Practica expresar tus sentimientos a veces",
-      "compat": "Día cálido de primavera (25~30°C) - Una persona cálida que derrita tu compostura",
-      "advice": "Tu calma es tu mejor arma. Tu compostura brilla en situaciones de crisis.",
-      "quote": "El silencio es oro, y los pensamientos también. - Séneca",
-      "statistics": "Aproximadamente el 12% de las personas comparten tu tipo emocional."
+      "subtitle": "Como una brisa invernal fría"
     },
     "r2": {
       "title": "Rocío Fresco del Amanecer",
-      "subtitle": "Tú, tranquilo y delicado",
-      "desc": "Tranquilo y observador. Tienes emociones pero las expresas con moderación. Ves el mundo a través del pensamiento profundo.",
-      "t1": "Expresión: Sientes profundamente pero rara vez lo muestras",
-      "t2": "Toma de decisiones: Cuidadosa y profunda",
-      "t3": "Fuente de energía: Ambientes tranquilos",
-      "t4": "Relaciones: Toma tiempo construir confianza",
-      "a1": "Escritura y diario",
-      "a2": "Paseos en la naturaleza",
-      "a3": "Apreciación de música clásica",
-      "a4": "Contemplación en cafés",
-      "w1": "Puedes ser fácilmente malinterpretado, exprésate a veces",
-      "w2": "No ignores tus emociones, reconócelas",
-      "compat": "Sol cálido (20~25°C) - Alguien que te entiende sin presión",
-      "advice": "Tu quietud genera una comprensión profunda del mundo. Esa es tu fortaleza.",
-      "quote": "En el silencio se puede encontrar la mayor verdad. - Ramakrishna",
-      "statistics": "Aproximadamente el 15% de las personas comparten tu tipo emocional."
+      "subtitle": "Tú, tranquilo y delicado"
     },
     "r3": {
       "title": "Lluvia Suave",
-      "subtitle": "Tranquilo pero profundo",
-      "desc": "Como lluvia suave, eres tranquilo pero posees sensibilidad profunda. Amas el tiempo a solas mientras mantienes un corazón cálido.",
-      "t1": "Expresión: Sutil y tranquila",
-      "t2": "Toma de decisiones: Equilibrio entre intuición y lógica",
-      "t3": "Fuente de energía: Días lluviosos acogedores",
-      "t4": "Relaciones: Conversaciones profundas con pocos cercanos",
-      "a1": "Té junto a la ventana en días lluviosos",
-      "a2": "Escribir un diario",
-      "a3": "Escuchar podcasts",
-      "a4": "Cocinar",
-      "w1": "No confundas la tristeza con la lluvia",
-      "w2": "Sal a veces para recargarte",
-      "compat": "Tarde soleada (15~20°C) - Una persona brillante que te da energía",
-      "advice": "Tu sensibilidad introvertida conduce a la creatividad y la empatía.",
-      "quote": "La sensibilidad es la cualidad más bella de la humanidad. - Rousseau",
-      "statistics": "Aproximadamente el 18% de las personas comparten tu tipo emocional."
+      "subtitle": "Tranquilo pero profundo"
     },
     "r4": {
       "title": "Brisa Fresca de Otoño",
-      "subtitle": "Tú, equilibrado",
-      "desc": "Buen equilibrio entre emoción y razón. Regulas las emociones según la situación y transmites energía estable.",
-      "t1": "Expresión: Apropiada a la situación",
-      "t2": "Toma de decisiones: Juicio equilibrado",
-      "t3": "Fuente de energía: Actividades variadas",
-      "t4": "Relaciones: Te llevas bien con personas diversas",
-      "a1": "Ejercicio y actividades al aire libre",
-      "a2": "Citas en cafés con amigos",
-      "a3": "Probar nuevos hobbies",
-      "a4": "Planificar viajes",
-      "w1": "Intentar mantener el equilibrio puede hacerte perder contacto con tus sentimientos",
-      "w2": "Sé honesto con tus emociones a veces",
-      "compat": "Temperatura similar (5~15°C) - Alguien que crea un ritmo cómodo contigo",
-      "advice": "Tu sentido del equilibrio da estabilidad a quienes te rodean. Mantén ese ritmo.",
-      "quote": "Una vida equilibrada es la vida más bella. - Aristóteles",
-      "statistics": "Aproximadamente el 22% de las personas comparten tu tipo emocional."
+      "subtitle": "Tú, equilibrado"
     },
     "r5": {
       "title": "Sol Cálido de Primavera",
-      "subtitle": "Tú, cálido y atento",
-      "desc": "Como el sol de primavera, das estabilidad a quienes te rodean. Excelente empatía y cuidado profundo.",
-      "t1": "Expresión: Natural y cálida",
-      "t2": "Empatía con otros: 80%",
-      "t3": "Fuente de energía: Tiempo con buenas personas",
-      "t4": "Relaciones: Una presencia cómoda para todos",
-      "a1": "Pequeñas reuniones con amigos",
-      "a2": "Voluntariado",
-      "a3": "Jardinería y flores",
-      "a4": "Escribir cartas",
-      "w1": "No te dejes influir demasiado por las emociones de otros",
-      "w2": "Cuida también tus propios sentimientos",
-      "compat": "Brisa fresca (5~10°C) - Alguien que agrega estabilidad a tu calidez",
-      "advice": "Tu calidez sana los corazones de otros. Cuídate a ti mismo también.",
-      "quote": "Una palabra cálida derrite el invierno. - Burlin",
-      "statistics": "Aproximadamente el 18% de las personas comparten tu tipo emocional."
+      "subtitle": "Tú, cálido y atento"
     },
     "r6": {
       "title": "Luz Brillante de la Tarde",
-      "subtitle": "Tú, brillante y positivo",
-      "desc": "¡Iluminas tu entorno con energía brillante! Positivo, sociable y siempre el animador.",
-      "t1": "Expresión: Honesta y brillante",
-      "t2": "Empatía con otros: 85%",
-      "t3": "Fuente de energía: Conectar con personas",
-      "t4": "Relaciones: Red amplia y activa",
-      "a1": "Asistir a fiestas y reuniones",
-      "a2": "Explorar nuevos restaurantes",
-      "a3": "Actividad en redes sociales",
-      "a4": "Viajes y aventura",
-      "w1": "Cuidado con el agotamiento energético (tiempo a solas semanal recomendado)",
-      "w2": "No intentes cumplir las expectativas de todos",
-      "compat": "Lluvia suave (1~5°C) - Una persona reflexiva que te calma",
-      "advice": "Tu energía positiva ilumina el mundo. Sigue compartiendo esa luz.",
-      "quote": "Una mente brillante crea un futuro brillante. - Tales",
-      "statistics": "Aproximadamente el 15% de las personas comparten tu tipo emocional."
+      "subtitle": "Tú, brillante y positivo"
     },
     "r7": {
       "title": "Verano Apasionado",
-      "subtitle": "Energizante emocional",
-      "desc": "¡Posees pasión ardiente y emociones ricas! Sincero en amor y amistad, expresando emociones con todo tu ser.",
-      "t1": "Expresión: Sincera e intensa",
-      "t2": "Empatía con otros: 90%",
-      "t3": "Fuente de energía: Desafíos apasionados",
-      "t4": "Relaciones: Prefiere vínculos profundos e intensos",
-      "a1": "Actividades creativas (arte, música, escritura)",
-      "a2": "Discusiones apasionadas",
-      "a3": "Voluntariado y compartir",
-      "a4": "Consumir contenido conmovedor",
-      "w1": "Los altibajos emocionales pueden ser intensos (necesitas tiempo de procesamiento)",
-      "w2": "No absorbas excesivamente las emociones de otros",
-      "compat": "Amanecer fresco (-4~0°C) - Una persona calmada que estabiliza tu pasión",
-      "advice": "Tu pasión es energía infinita. Gestionarla bien lleva a grandes logros.",
-      "quote": "La pasión es la fuerza motriz de todos los grandes logros. - Thomas",
-      "statistics": "Aproximadamente el 12% de las personas comparten tu tipo emocional."
+      "subtitle": "Energizante emocional"
     },
     "r8": {
       "title": "Llama Ardiente",
-      "subtitle": "Volcán emocional, pura pasión",
-      "desc": "¡Sientes cada emoción al 120%! Tienes procesamiento emocional casi PAS. Más brillante al reír, más profundo al estar triste.",
-      "t1": "Expresión: Con todo el cuerpo, imposible de ocultar",
-      "t2": "Empatía con otros: 95% (casi telepática)",
-      "t3": "Fuente de energía: Seres queridos",
-      "t4": "Relaciones: El tipo que busca almas gemelas",
-      "a1": "Apreciación y creación artística",
-      "a2": "Conversaciones profundas",
-      "a3": "Procesar emociones en la naturaleza",
-      "a4": "Escribir diarios y registros emocionales",
-      "w1": "¡Cuidado con el agotamiento emocional! (tiempo a solas dos veces por semana esencial)",
-      "w2": "Necesitas practicar establecer límites",
-      "w3": "No intentes sentirlo todo, protégete",
-      "compat": "Cero absoluto (-10~-5°C) - ¡Los opuestos se atraen! Una persona fría que te proteja",
-      "advice": "Tus emociones profundas son necesarias en este mundo. Aprende a regularlas para prevenir el agotamiento.",
-      "quote": "El verdadero arte nace de la emoción profunda. - Van Gogh",
-      "statistics": "Aproximadamente el 8% de las personas comparten tu tipo emocional."
+      "subtitle": "Volcán emocional, pura pasión"
     }
-  },
-  "engage": {
-    "result1": "36.5°C Normal -- Equilibrado y Estable",
-    "result2": "39°C Apasionado -- Intenso y Motivado",
-    "result3": "34°C Frío -- Tranquilo y Analítico",
-    "socialProof": "2,800+ temperaturas emocionales medidas hoy"
-  },
-  "about": {
-    "toggle": "Sobre Este Test",
-    "heading1": "Cómo Funciona",
-    "text1": "10 preguntas analizan tus respuestas emocionales cotidianas.",
-    "heading2": "Entendiendo Tu Temperatura Emocional",
-    "text2": "Tu temperatura emocional refleja la intensidad de tus emociones."
   }
 }

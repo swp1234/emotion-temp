@@ -1,8 +1,9 @@
 {
-  "name": "감정 온도계 테스트",
-  "short_name": "감정온도계",
-  "description": "나의 감정 온도는 몇 도? 10문항 심리테스트",
-  "start_url": ".",
+  "name": "Emotion Temperature Choices",
+  "short_name": "Emotion Temp",
+  "description": "Ten-choice author-created temperature metaphor. Not a psychological or health assessment.",
+  "start_url": "/emotion-temp/",
+  "scope": "/emotion-temp/",
   "display": "standalone",
   "background_color": "#0a0a1e",
   "theme_color": "#ff6b6b",

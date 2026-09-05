@@ -1,4 +1,5 @@
-const C='emotion-temp-v1',A=['./', './index.html','./css/style.css','./js/app.js','./js/data.js','./manifest.json','./icon-192.svg','./icon-512.svg'];
-self.addEventListener('install',e=>e.waitUntil(caches.open(C).then(c=>c.addAll(A)).then(()=>self.skipWaiting())));
-self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(n=>n!==C).map(n=>caches.delete(n)))).then(()=>self.clients.claim())));
-self.addEventListener('fetch',e=>e.respondWith(fetch(e.request).then(r=>{const c=r.clone();caches.open(C).then(cache=>cache.put(e.request,c));return r;}).catch(()=>caches.match(e.request))));
+const CACHE_PREFIX='emotion-temp-',CACHE_NAME=`${CACHE_PREFIX}v2`,APP_PATH='/emotion-temp/';
+const CORE=[APP_PATH,`${APP_PATH}css/style.css`,`${APP_PATH}js/i18n.js`,`${APP_PATH}js/data.js`,`${APP_PATH}js/app.js`,`${APP_PATH}manifest.json`,`${APP_PATH}icon-192.svg`,`${APP_PATH}icon-512.svg`];
+self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(CORE)));self.skipWaiting()});
+self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(names=>Promise.all(names.filter(name=>name.startsWith(CACHE_PREFIX)&&name!==CACHE_NAME).map(name=>caches.delete(name)))).then(()=>self.clients.claim())));
+self.addEventListener('fetch',event=>{if(event.request.method!=='GET')return;const url=new URL(event.request.url);if(url.origin!==self.location.origin||!url.pathname.startsWith(APP_PATH))return;event.respondWith(fetch(event.request).then(response=>{if(response.ok)caches.open(CACHE_NAME).then(cache=>cache.put(event.request,response.clone()));return response}).catch(()=>caches.match(event.request).then(cached=>cached||caches.match(APP_PATH))))});
